@@ -1,0 +1,39 @@
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+  body {
+      font-family: Arial, sans-serif;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    h2{
+        text-align: center;
+        font-size: large;
+        padding: 30px;
+    }
+

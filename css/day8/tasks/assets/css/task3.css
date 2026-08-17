@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 8px;
+      margin: 4px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    ul li:first-child {
+      background-color: #d1e7dd; 
+      font-weight: bold;
+    }
+
+    ul li:last-child {
+      background-color: #f8d7da; 
+      font-style: italic;
+    }

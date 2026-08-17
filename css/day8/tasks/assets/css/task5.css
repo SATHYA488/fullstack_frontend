@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+    p {
+      
+      margin: 15px 0;
+      line-height: 1.6;
+    }
+
+    p::first-letter {
+      font-size: 200%;
+      font-weight: bold;
+      color: darkred;
+    }
+
+    p::first-line {
+      color: darkblue;
+      font-style: italic;
+    }
+
+    p::selection {
+      background-color: yellow;
+      color: black;
+    }

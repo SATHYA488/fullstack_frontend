@@ -1,0 +1,47 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Times New Roman', Times, serif
+}
+.parent{
+    background-color: blueviolet;
+    color: crimson;
+    margin: 30px;
+    padding: 30px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: rgb(33, 213, 183);
+    color: rgb(159, 104, 22);
+    padding: 30px;
+    border: solid 2px blue;
+    margin: 30px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    background-color: rgb(33, 213, 183);
+    color: rgb(159, 104, 22);
+    padding: 30px;
+    border: solid 2px blue;
+    margin: 30px;
+    height: 30px;
+    display: flex;
+    display: inline-block;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    align-items: center;
+}

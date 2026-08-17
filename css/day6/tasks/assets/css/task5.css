@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+    .container {
+      height: 1500px;
+      padding-top: 20px;
+    }
+
+    .box {
+      width: 180px;
+      height: 80px;
+      margin: 20px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      line-height: 80px;
+      font-size: 16px;
+    }
+
+    .static {
+      background-color: steelblue;
+      position: static;
+    }
+
+    .relative {
+      background-color: tomato;
+      position: relative;
+     
+    }
+
+    .absolute {
+      background-color: darkorange;
+      position: absolute;
+      top: 450px;
+      left: 10vh;
+   
+    }
+
+    .fixed {
+      background-color: seagreen;
+      position: fixed;
+     top: 200px;
+     left: 40vh;
+    }
+
+    .sticky {
+      background-color: purple;
+      position: sticky;
+      top: 0;
+    }

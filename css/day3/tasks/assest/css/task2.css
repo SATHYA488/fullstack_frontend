@@ -1,0 +1,34 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+.box{
+    padding: 30px;
+    border: solid 2px whitesmoke;
+    margin: 10px;
+    background-color: aquamarine;
+    color: sienna;
+    height: 300px;
+    width: 900px;
+}    
+.child{
+    padding: 30px;
+    border: solid 2px red;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size:medium;
+    background-color: violet;
+    overflow: hidden;
+
+}

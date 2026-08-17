@@ -1,0 +1,185 @@
+/* ==========================================================================
+   Modern Era Technology Hub - Custom Styles
+   ========================================================================== */
+
+:root {
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --accent-primary: #2563eb;
+  --accent-primary-hover: #1d4ed8;
+  --accent-glow: rgba(37, 99, 235, 0.15);
+  --border-subtle: #e2e8f0;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --card-shadow-hover: 0 12px 28px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #020617;
+  --bg-surface: #0f172a;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-primary: #38bdf8;
+  --accent-primary-hover: #0ea5e9;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --border-subtle: #1e293b;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 12px 28px -5px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.65;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Reading Progress Bar */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #38bdf8, #10b981);
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+/* Glassmorphism Navigation */
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+[data-theme="dark"] .glass-nav {
+  background-color: rgba(2, 6, 23, 0.88);
+}
+
+/* Smooth Card Hover */
+.feature-card {
+  transition: var(--transition);
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--accent-primary);
+}
+
+/* Pill Badges */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  letter-spacing: 0.025em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Hide horizontal scrollbar in filters */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Filter Button Active State */
+.filter-btn.active {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #2563eb !important;
+}
+
+/* Toast Notification */
+.toast-msg {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #10b981;
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 10000;
+}
+
+.toast-msg.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Exam Mode Flashcard Style */
+.flashcard-note {
+  background: linear-gradient(135deg, rgba(37,99,235,0.05), rgba(56,189,248,0.08));
+  border-left: 4px solid var(--accent-primary);
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 1.25rem;
+}
+
+[data-theme="dark"] .flashcard-note {
+  background: linear-gradient(135deg, rgba(37,99,235,0.15), rgba(56,189,248,0.12));
+}
+
+/* Selection Highlight */
+::selection {
+  background: rgba(37, 99, 235, 0.2);
+  color: inherit;
+}

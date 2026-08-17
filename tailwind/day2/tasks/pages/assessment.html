@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Certification Assessment & Interactive Exam Simulator - Enterprise Tech Academy.">
+  <title>Certification Assessment & Exam | Enterprise Tech Academy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: { brand: { 50: '#f0f7ff', 500: '#2563eb', 600: '#1d4ed8', 900: '#0f172a' } },
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], display: ['"Outfit"', 'sans-serif'], serif: ['"Cinzel"', 'serif'] }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/mvc-components.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+  <div id="reading-progress" aria-hidden="true"></div>
+
+  <header class="sticky top-0 z-50 enterprise-navbar">
+    <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+      <div class="flex items-center justify-between h-20">
+        <a href="../index.html" class="flex items-center gap-3 text-decoration-none">
+          <div class="brand-badge"><i class="bi bi-layers-half text-xl"></i></div>
+          <div>
+            <span class="font-display font-extrabold text-lg md:text-xl text-slate-900 dark:text-white tracking-tight leading-none block">
+              Enterprise<span class="text-blue-600 dark:text-cyan-400">Tech</span>
+            </span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold tracking-wider uppercase">ACADEMY &bull; ASSESSMENT</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-1 font-semibold text-sm text-slate-600 dark:text-slate-300">
+          <a href="../index.html" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Dashboard</a>
+          <a href="syllabus.html" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Curriculum</a>
+          <a href="../index.html#course-catalog" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Modules</a>
+          <a href="revision-notes.html" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">200w Notes</a>
+          <a href="assessment.html" class="px-3.5 py-2 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 transition">Certification Exam</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" class="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 border border-slate-200 dark:border-slate-700 transition" aria-label="Toggle Theme"><i id="theme-icon-light" class="bi bi-moon-stars-fill"></i><i id="theme-icon-dark" class="bi bi-sun-fill hidden"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-10 md:py-16">
+    <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
+      
+      <nav aria-label="breadcrumb" class="mb-6">
+        <ol class="breadcrumb text-sm mb-0">
+          <li class="breadcrumb-item"><a href="../index.html"><i class="bi bi-house-door me-1"></i> Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Certification Assessment</li>
+        </ol>
+      </nav>
+
+      <!-- Exam Header -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm mb-8">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-6 mb-6">
+          <div>
+            <span class="status-pill emerald mb-2">
+              <i class="bi bi-award-fill"></i> Official Evaluation
+            </span>
+            <h1 class="font-display font-extrabold text-2xl md:text-3xl text-slate-900 dark:text-white mt-1">
+              Final Certification Assessment
+            </h1>
+            <p class="text-slate-500 dark:text-slate-400 text-sm mb-0">
+              Complete all questions to validate your mastery of Modern Technology in Society. Passing mark is 75%.
+            </p>
+          </div>
+          <div class="text-end">
+            <span class="text-xs text-slate-400 font-bold uppercase block">Candidate</span>
+            <span class="font-display font-bold text-base text-primary">Sakthi</span>
+          </div>
+        </div>
+
+        <div class="row g-3 text-xs md:text-sm text-slate-600 dark:text-slate-300">
+          <div class="col-6 col-md-3">
+            <i class="bi bi-check2-square text-emerald-500 me-1"></i> 5 Core Questions
+          </div>
+          <div class="col-6 col-md-3">
+            <i class="bi bi-clock-history text-primary me-1"></i> Self-Paced
+          </div>
+          <div class="col-6 col-md-3">
+            <i class="bi bi-patch-check text-indigo-500 me-1"></i> 75% Passing Grade
+          </div>
+          <div class="col-6 col-md-3">
+            <i class="bi bi-file-earmark-pdf text-amber-500 me-1"></i> Printable Certificate
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Container (Appears after submission) -->
+      <div id="assessment-result-container" class="d-none mb-6"></div>
+
+      <!-- Questions List Container -->
+      <div id="quiz-questions-container">
+        <!-- Rendered dynamically by AssessmentController -->
+      </div>
+
+      <!-- Submission Actions -->
+      <div class="flex items-center justify-between gap-4 p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm mt-8">
+        <button id="submit-assessment-btn" class="btn btn-primary px-6 py-3 rounded-xl font-bold shadow-md flex items-center gap-2">
+          <i class="bi bi-check-circle-fill"></i> <span>Submit &amp; Evaluate Assessment</span>
+        </button>
+        <span class="text-xs text-slate-500 dark:text-slate-400">Instant AI grading &amp; feedback</span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Certificate Modal -->
+  <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-slate-900 border-0 rounded-4 overflow-hidden">
+        <div class="modal-header border-0 pb-0 px-4 pt-4 no-print">
+          <h5 class="modal-title font-display font-bold text-white" id="certificateModalLabel">
+            <i class="bi bi-award-fill text-amber-400 me-2"></i> Official Certificate of Completion
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 p-md-6">
+          
+          <!-- Printable Certificate Frame -->
+          <div class="certificate-frame text-center p-6 md:p-10" id="printableCertificate">
+            
+            <div class="brand-badge mx-auto mb-4" style="width: 3.5rem; height: 3.5rem;">
+              <i class="bi bi-layers-half text-2xl text-white"></i>
+            </div>
+
+            <span class="text-xs uppercase tracking-widest font-bold text-primary block mb-1">ENTERPRISE TECH ACADEMY</span>
+            <h2 class="font-serif font-bold text-2xl md:text-3xl text-slate-900 dark:text-white uppercase tracking-wider mb-2">
+              Certificate of Achievement
+            </h2>
+            <p class="text-xs text-slate-500 uppercase tracking-widest mb-6">This is to officially certify that</p>
+
+            <h3 class="font-display font-extrabold text-3xl md:text-4xl text-blue-600 dark:text-cyan-400 mb-4" id="cert-student-name">
+              Sakthi
+            </h3>
+
+            <p class="text-sm md:text-base text-slate-700 dark:text-slate-300 max-w-xl mx-auto leading-relaxed mb-6">
+              has successfully passed the comprehensive curriculum and rigorous assessment in
+              <br><strong>Modern Technology and Its Role in Daily Life</strong>
+            </p>
+
+            <div class="d-flex align-items-center justify-content-center gap-4 my-6">
+              <div class="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 text-center">
+                <span class="text-xs text-slate-500 uppercase block font-bold">Grade</span>
+                <span class="font-bold text-emerald-500" id="cert-score-display">100% Grade</span>
+              </div>
+              <div class="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 text-center">
+                <span class="text-xs text-slate-500 uppercase block font-bold">Issue Date</span>
+                <span class="font-bold text-slate-800 dark:text-white" id="cert-issue-date">August 16, 2026</span>
+              </div>
+              <div class="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 text-center">
+                <span class="text-xs text-slate-500 uppercase block font-bold">Verification ID</span>
+                <span class="font-mono text-xs font-bold text-slate-800 dark:text-white" id="cert-verification-id">ETA-98X21</span>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-200 dark:border-slate-700 mt-6 d-flex align-items-center justify-content-between text-xs text-slate-500">
+              <div>
+                <span class="block fw-bold text-slate-800 dark:text-white">Enterprise Tech Academic Board</span>
+                <span>Fullstack Frontend Curriculum</span>
+              </div>
+              <div>
+                <i class="bi bi-shield-fill-check text-emerald-500 text-2xl"></i>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="modal-footer border-0 px-4 pb-4 no-print">
+          <button type="button" class="btn btn-secondary rounded-xl" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="print-certificate-btn" class="btn btn-primary rounded-xl font-semibold flex items-center gap-2">
+            <i class="bi bi-printer-fill"></i> Print / Save PDF Certificate
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-10 mt-12 text-center">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <p class="text-xs text-slate-400">&copy; 2026 Enterprise Tech Academy &bull; Certification Assessment &bull; Curated for Sakthi</p>
+    </div>
+  </footer>
+
+  <div id="toast-notification" class="toast-msg" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../app/models/CourseModel.js"></script>
+  <script src="../app/models/ProgressModel.js"></script>
+  <script src="../app/models/QuizModel.js"></script>
+  <script src="../app/controllers/AppController.js"></script>
+  <script src="../app/controllers/CourseController.js"></script>
+  <script src="../app/controllers/AssessmentController.js"></script>
+  <script src="../assets/js/core.js"></script>
+</body>
+</html>

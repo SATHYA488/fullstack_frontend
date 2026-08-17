@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete Curriculum Syllabus & Learning Roadmap - Modern Technology and Its Role in Daily Life.">
+  <title>Curriculum Syllabus & Roadmap | Enterprise Tech Academy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: { brand: { 50: '#f0f7ff', 500: '#2563eb', 600: '#1d4ed8', 900: '#0f172a' } },
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], display: ['"Outfit"', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/mvc-components.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+  <div id="reading-progress" aria-hidden="true"></div>
+
+  <header class="sticky top-0 z-50 enterprise-navbar">
+    <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+      <div class="flex items-center justify-between h-20">
+        <a href="../index.html" class="flex items-center gap-3 text-decoration-none">
+          <div class="brand-badge"><i class="bi bi-layers-half text-xl"></i></div>
+          <div>
+            <span class="font-display font-extrabold text-lg md:text-xl text-slate-900 dark:text-white tracking-tight leading-none block">
+              Enterprise<span class="text-blue-600 dark:text-cyan-400">Tech</span>
+            </span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold tracking-wider uppercase">ACADEMY &bull; SYLLABUS</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-1 font-semibold text-sm text-slate-600 dark:text-slate-300">
+          <a href="../index.html" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Dashboard</a>
+          <a href="syllabus.html" class="px-3.5 py-2 rounded-lg text-blue-600 dark:text-cyan-400 bg-blue-50 dark:bg-blue-950/60 transition">Curriculum</a>
+          <a href="../index.html#course-catalog" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Modules</a>
+          <a href="revision-notes.html" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">200w Notes</a>
+          <a href="assessment.html" class="px-3.5 py-2 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-100 transition">Certification Exam</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" class="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 border border-slate-200 dark:border-slate-700 transition" aria-label="Toggle Theme"><i id="theme-icon-light" class="bi bi-moon-stars-fill"></i><i id="theme-icon-dark" class="bi bi-sun-fill hidden"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-10 md:py-16">
+    <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+      
+      <nav aria-label="breadcrumb" class="mb-6">
+        <ol class="breadcrumb text-sm mb-0">
+          <li class="breadcrumb-item"><a href="../index.html"><i class="bi bi-house-door me-1"></i> Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Curriculum Syllabus</li>
+        </ol>
+      </nav>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm mb-8">
+        <span class="status-pill primary mb-2">
+          <i class="bi bi-journal-bookmark-fill"></i> Academic &amp; Industry Syllabus
+        </span>
+        <h1 class="font-display font-extrabold text-3xl md:text-4xl text-slate-900 dark:text-white mt-2">
+          Complete Curriculum Blueprint &amp; Learning Roadmap
+        </h1>
+        <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base mt-2">
+          Course Title: <strong>Modern Technology and Its Role in Daily Life</strong> &bull; Total 7 Modules &bull; 18 Contact Hours &bull; Curated for Sakthi
+        </p>
+      </div>
+
+      <!-- Syllabus Accordion Items -->
+      <div class="space-y-4 mb-10">
+        
+        <!-- Module 1 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 font-bold">Module 01</span>
+              <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-0">Communication &amp; Global Networks</h4>
+            </div>
+            <p class="text-xs text-slate-500 mb-0">Topics: Smartphones, instant messaging, VoIP, video conferencing platforms, intercultural exchange.</p>
+          </div>
+          <a href="communication.html" class="btn btn-outline-primary btn-sm rounded-xl font-semibold shrink-0">
+            <span>View Syllabus</span> <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-bold">Module 02</span>
+              <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-0">Home Automation &amp; IoT Ecosystems</h4>
+            </div>
+            <p class="text-xs text-slate-500 mb-0">Topics: Ambient IoT sensors, voice NLP assistants, smart grids, e-commerce, digital payments.</p>
+          </div>
+          <a href="lifestyle-iot.html" class="btn btn-outline-primary btn-sm rounded-xl font-semibold shrink-0">
+            <span>View Syllabus</span> <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge bg-cyan-100 text-cyan-800 dark:bg-cyan-950 dark:text-cyan-300 font-bold">Module 03</span>
+              <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-0">Telemedicine &amp; AI Diagnostics</h4>
+            </div>
+            <p class="text-xs text-slate-500 mb-0">Topics: Remote patient consultations, biometric wearables, machine learning diagnostics, precision medicine.</p>
+          </div>
+          <a href="healthcare-tech.html" class="btn btn-outline-primary btn-sm rounded-xl font-semibold shrink-0">
+            <span>View Syllabus</span> <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 font-bold">Module 04</span>
+              <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-0">EdTech &amp; Knowledge Democratization</h4>
+            </div>
+            <p class="text-xs text-slate-500 mb-0">Topics: Cloud LMS, online MOOCs, virtual classrooms, AR STEM simulations, self-paced mastery.</p>
+          </div>
+          <a href="education-tech.html" class="btn btn-outline-primary btn-sm rounded-xl font-semibold shrink-0">
+            <span>View Syllabus</span> <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300 font-bold">Module 05</span>
+              <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-0">Cloud Architecture &amp; Digital Economy</h4>
+            </div>
+            <p class="text-xs text-slate-500 mb-0">Topics: Distributed cloud networks, RPA automation, big data analytics, global e-commerce.</p>
+          </div>
+          <a href="work-economy.html" class="btn btn-outline-primary btn-sm rounded-xl font-semibold shrink-0">
+            <span>View Syllabus</span> <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 font-bold">Module 06</span>
+              <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-0">Streaming, AI Media &amp; Extended Reality</h4>
+            </div>
+            <p class="text-xs text-slate-500 mb-0">Topics: Edge CDN caching, neural recommendation algorithms, low-latency cloud gaming, spatial XR.</p>
+          </div>
+          <a href="entertainment-media.html" class="btn btn-outline-primary btn-sm rounded-xl font-semibold shrink-0">
+            <span>View Syllabus</span> <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 font-bold">Module 07</span>
+              <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-0">Cybersecurity Governance &amp; Digital Ethics</h4>
+            </div>
+            <p class="text-xs text-slate-500 mb-0">Topics: Zero Trust security, digital addiction, privacy telemetry, bridging the global digital divide.</p>
+          </div>
+          <a href="cybersecurity-challenges.html" class="btn btn-outline-danger btn-sm rounded-xl font-semibold shrink-0">
+            <span>View Syllabus</span> <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Quick Action CTA -->
+      <div class="flex items-center justify-between p-6 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mb-1">Looking for fast exam revision?</h4>
+          <p class="text-xs text-slate-500 mb-0">Access the structured 200-word essay summary and matrix tables.</p>
+        </div>
+        <a href="revision-notes.html" class="btn btn-primary px-4 py-2 rounded-xl text-sm font-semibold">
+          <i class="bi bi-journal-text me-1"></i> Exam Notes
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-10 mt-12 text-center">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <p class="text-xs text-slate-400">&copy; 2026 Enterprise Tech Academy &bull; Curriculum Syllabus &bull; Curated for Sakthi</p>
+    </div>
+  </footer>
+
+  <div id="toast-notification" class="toast-msg" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../app/models/CourseModel.js"></script>
+  <script src="../app/models/ProgressModel.js"></script>
+  <script src="../app/models/QuizModel.js"></script>
+  <script src="../app/controllers/AppController.js"></script>
+  <script src="../app/controllers/CourseController.js"></script>
+  <script src="../app/controllers/AssessmentController.js"></script>
+  <script src="../assets/js/core.js"></script>
+</body>
+</html>

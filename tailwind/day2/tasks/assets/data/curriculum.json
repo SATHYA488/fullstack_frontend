@@ -1,0 +1,298 @@
+{
+  "curriculumTitle": "Modern Technology and Its Role in Daily Life",
+  "organization": "Enterprise Tech Academy",
+  "curator": "Sakthi",
+  "version": "2.4.0",
+  "academicYear": "2026",
+  "totalModules": 7,
+  "estimatedHours": 18,
+  "level": "Intermediate to Advanced",
+  "modules": [
+    {
+      "id": "module-01",
+      "slug": "communication",
+      "number": "01",
+      "title": "Communication & Global Networks",
+      "category": "social",
+      "icon": "bi-broadcast-pin",
+      "badge": "Connectivity",
+      "color": "blue",
+      "readingTime": "12 mins",
+      "summary": "Modern technology has revolutionized communication. Smartphones, instant messaging apps, and video conferencing platforms allow people to connect across distances instantly. Social media networks have created global communities, enabling the exchange of ideas and cultures.",
+      "pageUrl": "pages/communication.html",
+      "image": "assets/images/module-comm.svg",
+      "topics": [
+        "Smartphones & Mobile Infrastructure",
+        "Instant Messaging Protocols & VoIP",
+        "Video Conferencing Technologies",
+        "Social Media & Global Intercultural Exchange",
+        "Satellite & 5G/6G Telecommunications"
+      ],
+      "learningObjectives": [
+        "Understand the technological shift from legacy telecommunications to packet-switched global networks.",
+        "Analyze the social and psychological impacts of instantaneous worldwide connectivity.",
+        "Examine video conferencing and collaboration protocols enabling global workforces."
+      ]
+    },
+    {
+      "id": "module-02",
+      "slug": "lifestyle-iot",
+      "number": "02",
+      "title": "Home Automation & IoT Ecosystems",
+      "category": "social",
+      "icon": "bi-house-gear-fill",
+      "badge": "Smart Living",
+      "color": "emerald",
+      "readingTime": "14 mins",
+      "summary": "Smart homes equipped with voice assistants, automated lighting, and security systems provide comfort and safety. Online shopping, food delivery apps, and digital payment systems simplify everyday tasks, saving time and effort.",
+      "pageUrl": "pages/lifestyle-iot.html",
+      "image": "assets/images/module-iot.svg",
+      "topics": [
+        "IoT Sensors & Microcontrollers",
+        "Voice Assistants & NLP Interfaces",
+        "Smart Grids & Automated Lighting",
+        "E-Commerce Logistics & On-Demand Delivery",
+        "Fintech, Unified Payments (UPI) & Digital Wallets"
+      ],
+      "learningObjectives": [
+        "Evaluate home automation architectures, protocols (Matter, Zigbee), and security frameworks.",
+        "Assess the economic implications of frictionless cashless payment platforms and on-demand services.",
+        "Analyze energy conservation gains from smart ambient sensor systems."
+      ]
+    },
+    {
+      "id": "module-03",
+      "slug": "healthcare-tech",
+      "number": "03",
+      "title": "Telemedicine & AI Diagnostics",
+      "category": "health-edu",
+      "icon": "bi-heart-pulse-fill",
+      "badge": "HealthTech",
+      "color": "cyan",
+      "readingTime": "15 mins",
+      "summary": "Technology supports society’s health needs through telemedicine, wearable devices, and AI‑based diagnostics. Patients can consult doctors remotely, track fitness goals, and receive personalized treatments, improving overall well‑being.",
+      "pageUrl": "pages/healthcare-tech.html",
+      "image": "assets/images/module-health.svg",
+      "topics": [
+        "Telehealth & Remote Patient Monitoring (RPM)",
+        "Wearable Biometric Sensors & Photoplethysmography",
+        "Machine Learning in Clinical Radiology & Oncology",
+        "Electronic Health Records (EHR) & Interoperability",
+        "Personalized Genomics & Precision Medicine"
+      ],
+      "learningObjectives": [
+        "Understand remote consultation pipelines and diagnostic accuracy metrics of machine learning models.",
+        "Explore real-time wearable physiological tracking algorithms.",
+        "Identify data compliance frameworks (HIPAA, GDPR) in health informatics."
+      ]
+    },
+    {
+      "id": "module-04",
+      "slug": "education-tech",
+      "number": "04",
+      "title": "EdTech & Knowledge Democratization",
+      "category": "health-edu",
+      "icon": "bi-mortarboard-fill",
+      "badge": "Education",
+      "color": "amber",
+      "readingTime": "13 mins",
+      "summary": "Digital learning platforms, online courses, and virtual classrooms have made education accessible to all. Students can learn at their own pace, while interactive tools like augmented reality enhance understanding. This democratization of knowledge strengthens society.",
+      "pageUrl": "pages/education-tech.html",
+      "image": "assets/images/module-edu.svg",
+      "topics": [
+        "Learning Management Systems (LMS) & MOOCs",
+        "Augmented Reality (AR) in STEM Pedagogy",
+        "Adaptive AI Tutors & Personalized Learning Paths",
+        "Gamified Assessment Engines",
+        "Open Educational Resources (OER) & Digital Accessibility"
+      ],
+      "learningObjectives": [
+        "Analyze pedagogical transformations brought about by self-paced digital classrooms.",
+        "Examine immersive AR/VR simulation impact on technical comprehension.",
+        "Assess how OER closes educational disparities globally."
+      ]
+    },
+    {
+      "id": "module-05",
+      "slug": "work-economy",
+      "number": "05",
+      "title": "Cloud Architecture & Digital Economy",
+      "category": "economy",
+      "icon": "bi-briefcase-fill",
+      "badge": "Enterprise",
+      "color": "indigo",
+      "readingTime": "16 mins",
+      "summary": "Remote work tools, cloud computing, and automation have reshaped the workplace. Businesses rely on big data and AI to make decisions, while e‑commerce and digital marketing expand opportunities. Technology drives economic growth and innovation.",
+      "pageUrl": "pages/work-economy.html",
+      "image": "assets/images/module-economy.svg",
+      "topics": [
+        "Distributed Cloud Computing (IaaS, PaaS, SaaS)",
+        "Robotic Process Automation (RPA) & Workflow Bots",
+        "Big Data Analytics & Predictive Market Intelligence",
+        "Global E-Commerce Omnichannel Strategies",
+        "Gig Economy Infrastructures & Digital Labor"
+      ],
+      "learningObjectives": [
+        "Examine cloud architectures powering hybrid and remote global enterprises.",
+        "Evaluate data pipeline automation and corporate decision support systems.",
+        "Assess macroeconomic shifts driven by borderless digital marketplaces."
+      ]
+    },
+    {
+      "id": "module-06",
+      "slug": "entertainment-media",
+      "number": "06",
+      "title": "Streaming, AI Media & Extended Reality",
+      "category": "economy",
+      "icon": "bi-controller",
+      "badge": "Digital Media",
+      "color": "purple",
+      "readingTime": "11 mins",
+      "summary": "Streaming services, online gaming, and virtual reality have transformed leisure activities. Personalized recommendations powered by AI ensure that entertainment is tailored to individual preferences.",
+      "pageUrl": "pages/entertainment-media.html",
+      "image": "assets/images/module-media.svg",
+      "topics": [
+        "Adaptive Bitrate Streaming & CDN Edge Delivery",
+        "Recommendation Engines & Collaborative Filtering",
+        "Cloud Gaming & Low-Latency Rendering Pipelines",
+        "Spatial Audio, VR Headsets & Metaverse Ecosystems",
+        "Generative AI in Digital Content Creation"
+      ],
+      "learningObjectives": [
+        "Explain content distribution network (CDN) mechanics for real-time video streaming.",
+        "Understand algorithmic machine learning behind personalized recommendation feeds.",
+        "Analyze spatial computing interfaces and interactive simulation engines."
+      ]
+    },
+    {
+      "id": "module-07",
+      "slug": "cybersecurity-challenges",
+      "number": "07",
+      "title": "Cybersecurity Governance & Digital Ethics",
+      "category": "ethics",
+      "icon": "bi-shield-exclamation",
+      "badge": "Risk & Ethics",
+      "color": "rose",
+      "readingTime": "17 mins",
+      "summary": "Despite its benefits, modern technology poses challenges such as digital addiction, privacy concerns, and cybersecurity threats. The digital divide also highlights inequality, as not everyone has equal access to these tools.",
+      "pageUrl": "pages/cybersecurity-challenges.html",
+      "image": "assets/images/module-security.svg",
+      "topics": [
+        "Zero-Trust Architecture & Threat Vectors",
+        "Surveillance Capitalism & Personal Data Privacy",
+        "Algorithmic Bias, AI Ethics & Deepfakes",
+        "Dopamine Loops & Screen Addiction Psychology",
+        "Bridging The Global Digital & Infrastructure Divide"
+      ],
+      "learningObjectives": [
+        "Identify primary cybersecurity threats and mitigation strategies.",
+        "Analyze ethical and privacy dilemmas posed by surveillance telemetry and algorithmic profiling.",
+        "Formulate socio-technical policies to bridge the digital divide in rural and marginalized communities."
+      ]
+    }
+  ],
+  "examSummary": {
+    "wordCount": 188,
+    "targetAudience": "TNPSC / Competitive Board Exams / University Essays",
+    "verbatimText": "Modern technology has become the cornerstone of everyday human life and societal growth. In communication, smartphones and video conferencing provide instant worldwide connectivity. Within households, smart appliances, automated IoT systems, and seamless digital payments simplify routines and enhance convenience. Healthcare is transformed through telemedicine, wearable biometric devices, and AI diagnostics that enable personalized and preventative care. Education has been democratized via digital learning platforms, virtual classrooms, and interactive augmented reality tools. In the workplace, cloud computing, automation, and big data empower remote work and accelerate global commerce. Meanwhile, AI-driven streaming and virtual reality redefine modern leisure. However, significant challenges persist, including digital addiction, cybersecurity vulnerabilities, personal privacy threats, and the digital divide separating privileged and underserved populations. To maximize technological advantages, society must foster responsible, ethical, and inclusive innovation that uplifts all individuals equally.",
+    "corePillars": [
+      {
+        "domain": "Communication",
+        "keyMechanism": "Instant messaging, smartphones, video conferencing",
+        "societalImpact": "Abolished geographical barriers and enabled global intercultural exchange."
+      },
+      {
+        "domain": "Home & Lifestyle",
+        "keyMechanism": "IoT smart devices, automated lighting, cashless fintech",
+        "societalImpact": "Optimized daily household routines, elevated comfort, and minimized manual overhead."
+      },
+      {
+        "domain": "Healthcare",
+        "keyMechanism": "Telemedicine, AI diagnostics, biometric wearables",
+        "societalImpact": "Shifted medicine from reactive treatment to proactive, personalized wellness monitoring."
+      },
+      {
+        "domain": "Education",
+        "keyMechanism": "MOOCs, digital classrooms, interactive AR pedagogy",
+        "societalImpact": "Democratized knowledge access and enabled individualized self-paced mastery."
+      },
+      {
+        "domain": "Work & Economy",
+        "keyMechanism": "Cloud computing, RPA workflow automation, big data",
+        "societalImpact": "Accelerated productivity and fueled borderless remote enterprise economies."
+      },
+      {
+        "domain": "Entertainment",
+        "keyMechanism": "AI recommendation algorithms, cloud gaming, XR",
+        "societalImpact": "Tailored multimedia experiences to individual preferences in real time."
+      },
+      {
+        "domain": "Challenges & Ethics",
+        "keyMechanism": "Cyber threats, data breaches, digital divide inequality",
+        "societalImpact": "Demands strict data privacy laws, ethical AI governance, and equitable tech access."
+      }
+    ]
+  },
+  "quizBank": [
+    {
+      "id": "q1",
+      "question": "Which technology infrastructure has fundamentally enabled global knowledge democratization and self-paced learning in modern society?",
+      "options": [
+        "Digital learning platforms, cloud LMS, and interactive AR simulations",
+        "Standalone physical archives with closed paper distribution",
+        "Isolated intranet mainframes without internet access",
+        "Analog magnetic audio tapes and broadcast radios"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cloud-based digital learning platforms, virtual classrooms, and augmented reality tools allow students worldwide to learn flexibly at their own pace."
+    },
+    {
+      "id": "q2",
+      "question": "In what primary way has modern technology transformed healthcare delivery from a societal perspective?",
+      "options": [
+        "By replacing all human medical doctors with mechanical robots",
+        "Through telemedicine consultations, wearable biometric trackers, and AI-assisted diagnostics",
+        "By prohibiting remote consultations and requiring all paper prescriptions",
+        "By disconnecting hospitals from internet communication systems"
+      ],
+      "correctIndex": 1,
+      "explanation": "Telemedicine, AI diagnostic models, and wearable sensors provide continuous physiological monitoring and remote doctor access."
+    },
+    {
+      "id": "q3",
+      "question": "Which set of issues constitutes the most critical societal challenge arising from pervasive technology adoption?",
+      "options": [
+        "Inability to manufacture sufficient computer microchips",
+        "Too rapid postal mail delivery times",
+        "Cybersecurity threats, digital addiction, privacy vulnerabilities, and the digital divide",
+        "Overabundance of handwritten documentation in offices"
+      ],
+      "correctIndex": 2,
+      "explanation": "Cyber threats, personal data privacy erosion, screen addiction, and inequality in technological access (the digital divide) represent the core challenges."
+    },
+    {
+      "id": "q4",
+      "question": "What is the primary operational advantage of IoT-driven smart home systems and unified digital payment platforms?",
+      "options": [
+        "They simplify everyday household routines, bolster security, and save substantial time and manual effort",
+        "They prevent users from engaging in online commercial transactions",
+        "They mandate manual paperwork for all household electricity usage",
+        "They disable automated voice recognition systems"
+      ],
+      "correctIndex": 0,
+      "explanation": "Smart home automation and seamless digital payments streamline everyday tasks and enhance domestic safety and convenience."
+    },
+    {
+      "id": "q5",
+      "question": "How does cloud computing and big data analytics primarily empower the modern enterprise workplace?",
+      "options": [
+        "By restricting employees to physical office locations only",
+        "By facilitating agile remote work, automated workflows, and data-driven corporate decision making",
+        "By eliminating the need for corporate software licenses entirely",
+        "By replacing digital marketing with physical billboards only"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cloud computing enables distributed hybrid collaboration while big data analytics optimizes business operations and predictive strategic planning."
+    }
+  ]
+}

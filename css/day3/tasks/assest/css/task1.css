@@ -1,0 +1,34 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+.box{
+    padding: 30px;
+    border: solid 3px blue ;
+    margin: 30px;
+    background-color: rgb(136, 254, 215);
+    height: 300px;
+    width: 2300px;
+
+    
+}
+.parent{
+    background-color: springgreen;
+  padding: 30px;
+  margin: 30px;
+    overflow:auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: small;
+    
+}

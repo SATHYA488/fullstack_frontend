@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+   .content {
+      position: sticky;
+      top: 10px;
+      background-color: #333;
+      padding: 10px 0;
+      z-index: 1000; 
+    }
+
+     .content {
+      display: flex;
+      justify-content: center;
+    }
+
+
+    .content{
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .content :hover {
+      color: #FFD700;
+    }
+
+
+   .container{
+      padding: 20px;
+      line-height: 1.6;
+    }

@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+a{
+    text-decoration: none;
+}
+.parent{
+    padding: 20px;
+    border: 2px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly ;
+    gap: 30px;
+ 
+}
+.child > p > img{
+    width: 100px;
+    height: 130px;
+}
+.child >p{
+    display: flex;
+    justify-content: start;
+}
+.child{
+    color: rgb(231, 4, 4);
+    background-color: slategray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    gap: 10px;
+    justify-content: center;
+    align-items: start;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}

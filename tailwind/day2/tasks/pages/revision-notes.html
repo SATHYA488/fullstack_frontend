@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="200-Word Exam Notes & Rapid Revision Hub - Standardized essay and structured flashcards curated for Sakthi.">
+  <title>200-Word Exam Revision Notes | Enterprise Tech Academy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: { brand: { 50: '#f0f7ff', 500: '#2563eb', 600: '#1d4ed8', 900: '#0f172a' } },
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], display: ['"Outfit"', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/mvc-components.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+  <div id="reading-progress" aria-hidden="true"></div>
+
+  <header class="sticky top-0 z-50 enterprise-navbar">
+    <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+      <div class="flex items-center justify-between h-20">
+        <a href="../index.html" class="flex items-center gap-3 text-decoration-none">
+          <div class="brand-badge"><i class="bi bi-layers-half text-xl"></i></div>
+          <div>
+            <span class="font-display font-extrabold text-lg md:text-xl text-slate-900 dark:text-white tracking-tight leading-none block">
+              Enterprise<span class="text-blue-600 dark:text-cyan-400">Tech</span>
+            </span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold tracking-wider uppercase">ACADEMY &bull; EXAM REVISION</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-1 font-semibold text-sm text-slate-600 dark:text-slate-300">
+          <a href="../index.html" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Dashboard</a>
+          <a href="syllabus.html" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Curriculum</a>
+          <a href="../index.html#course-catalog" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Modules</a>
+          <a href="revision-notes.html" class="px-3.5 py-2 rounded-lg text-blue-600 dark:text-cyan-400 bg-blue-50 dark:bg-blue-950/60 transition">200w Notes</a>
+          <a href="assessment.html" class="px-3.5 py-2 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-100 transition">Certification Exam</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" class="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 border border-slate-200 dark:border-slate-700 transition" aria-label="Toggle Theme"><i id="theme-icon-light" class="bi bi-moon-stars-fill"></i><i id="theme-icon-dark" class="bi bi-sun-fill hidden"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-10 md:py-16">
+    <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+      
+      <nav aria-label="breadcrumb" class="mb-6">
+        <ol class="breadcrumb text-sm mb-0">
+          <li class="breadcrumb-item"><a href="../index.html"><i class="bi bi-house-door me-1"></i> Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">200-Word Exam Notes</li>
+        </ol>
+      </nav>
+
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+        <div>
+          <span class="status-pill primary mb-2">
+            <i class="bi bi-journal-text"></i> Standardized Revision Hub
+          </span>
+          <h1 class="font-display font-extrabold text-3xl md:text-4xl text-slate-900 dark:text-white mt-2">
+            200-Word Exam Notes &amp; Flashcards
+          </h1>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">
+            Carefully curated for Sakthi — structured for TNPSC, University essays, and competitive examinations.
+          </p>
+        </div>
+
+        <button id="copy-summary-btn" class="btn btn-primary px-4 py-2.5 rounded-xl font-semibold shadow-md flex items-center gap-2">
+          <i class="bi bi-clipboard-check"></i> <span>Copy 200-Word Notes</span>
+        </button>
+      </div>
+
+      <!-- Verbatim 200w Card -->
+      <div class="bg-dark dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm mb-10">
+        <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4 mb-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-primary">
+            <i class="bi bi-quote me-1"></i> Verbatim Essay (188 Words)
+          </span>
+          <span class="badge bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 font-monospace text-xs px-3 py-1.5 rounded-pill">188 Words</span>
+        </div>
+
+        <p id="revision-summary-text" class="text-base md:text-lg text-slate-700 dark:text-slate-200 leading-relaxed italic select-all mb-0">
+          Modern technology has become the cornerstone of everyday human life and societal growth. In communication, smartphones and video conferencing provide instant worldwide connectivity. Within households, smart appliances, automated IoT systems, and seamless digital payments simplify routines and enhance convenience. Healthcare is transformed through telemedicine, wearable biometric devices, and AI diagnostics that enable personalized and preventative care. Education has been democratized via digital learning platforms, virtual classrooms, and interactive augmented reality tools. In the workplace, cloud computing, automation, and big data empower remote work and accelerate global commerce. Meanwhile, AI-driven streaming and virtual reality redefine modern leisure. However, significant challenges persist, including digital addiction, cybersecurity vulnerabilities, personal privacy threats, and the digital divide separating privileged and underserved populations. To maximize technological advantages, society must foster responsible, ethical, and inclusive innovation that uplifts all individuals equally.
+        </p>
+      </div>
+
+      <!-- Domain Matrix Table -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm mb-10">
+        <h4 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+          <i class="bi bi-table text-primary"></i> 7-Pillar Exam Quick Matrix
+        </h4>
+
+        <div class="table-responsive">
+          <table class="table table-hover align-middle text-sm mb-0">
+            <thead class="table-light dark:table-dark">
+              <tr>
+                <th scope="col" class="py-3">Pillar / Domain</th>
+                <th scope="col" class="py-3">Technological Mechanism</th>
+                <th scope="col" class="py-3">Core Societal Outcome</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+              <tr>
+                <td class="fw-bold text-primary"><i class="bi bi-broadcast-pin me-2"></i> 01. Communication</td>
+                <td>Smartphones, VoIP, video conferencing</td>
+                <td>Abolished geographical barriers &amp; created global communities.</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-emerald-500"><i class="bi bi-house-gear-fill me-2"></i> 02. Home &amp; Lifestyle</td>
+                <td>Smart IoT sensors, ambient automation, UPI</td>
+                <td>Streamlined household tasks and cashless transactions.</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-cyan-500"><i class="bi bi-heart-pulse-fill me-2"></i> 03. Healthcare</td>
+                <td>Telemedicine, wearable biometrics, AI imaging</td>
+                <td>Shifted medical care to proactive, remote, personalized wellness.</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-amber-500"><i class="bi bi-mortarboard-fill me-2"></i> 04. Education</td>
+                <td>Cloud LMS, virtual classrooms, AR modules</td>
+                <td>Democratized knowledge access with self-paced mastery.</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-indigo-500"><i class="bi bi-briefcase-fill me-2"></i> 05. Work &amp; Economy</td>
+                <td>Cloud computing, RPA, big data analytics</td>
+                <td>Enabled global hybrid workforces and accelerated digital trade.</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-purple-500"><i class="bi bi-controller me-2"></i> 06. Entertainment</td>
+                <td>Edge CDN streaming, AI feeds, spatial XR</td>
+                <td>Personalized multimedia and interactive social gaming.</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-rose-500"><i class="bi bi-shield-exclamation me-2"></i> 07. Challenges</td>
+                <td>Cyber attacks, surveillance, digital divide</td>
+                <td>Demands robust cybersecurity, privacy laws, and ethical equity.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Quick Action CTA -->
+      <div class="flex items-center justify-between p-6 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg">
+        <div>
+          <h4 class="font-bold text-lg mb-1">Ready to test your knowledge?</h4>
+          <p class="text-xs md:text-sm text-blue-100 mb-0">Take the official certification assessment and earn your downloadable certificate.</p>
+        </div>
+        <a href="assessment.html" class="btn btn-light px-4 py-2.5 rounded-xl font-bold text-blue-600 shrink-0">
+          <i class="bi bi-award-fill me-1"></i> Start Exam
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-10 mt-12 text-center">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <p class="text-xs text-slate-400">&copy; 2026 Enterprise Tech Academy &bull; 200-Word Exam Notes &bull; Curated for Sakthi</p>
+    </div>
+  </footer>
+
+  <div id="toast-notification" class="toast-msg" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../app/models/CourseModel.js"></script>
+  <script src="../app/models/ProgressModel.js"></script>
+  <script src="../app/models/QuizModel.js"></script>
+  <script src="../app/controllers/AppController.js"></script>
+  <script src="../app/controllers/CourseController.js"></script>
+  <script src="../app/controllers/AssessmentController.js"></script>
+  <script src="../assets/js/core.js"></script>
+</body>
+</html>

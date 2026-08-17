@@ -1,0 +1,30 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+    .card {
+      width: 250px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .hidden-display {
+      display: none;
+    }
+
+    .hidden-visibility {
+      visibility: hidden;
+    }

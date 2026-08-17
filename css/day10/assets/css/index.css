@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+a{
+    text-decoration: none;
+}
+
+.intro{
+    background-color: mintcream;
+    text-align: center;
+    padding: 20px;
+    height: 13vh;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.head > nav{
+    display: flex;
+    justify-content: center;
+   gap: 30px;
+}
+
+.form{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search {
+    width: 140vh;
+    height: 35px;
+    margin-left: 80px;
+    border-radius: 2px;
+}
+.category{
+    margin-right: 20vh;
+    height: 35px;
+    width: 30vh;
+}
+
+
+.content{
+    background-color: burlywood;
+    padding: 30px;
+    border: 2px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    height: 350px;
+
+}
+
+.para > img{
+    width: 250px;
+    height: 230px;
+    border-radius: 10px;
+
+}
+.para{
+    background-color: white;
+    padding: 20px;
+    border: 1px ;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px silver solid;
+}
+.word{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+}

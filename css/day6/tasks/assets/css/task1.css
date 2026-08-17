@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    background-color: wheat;
+    padding: 20px;
+  
+}
+.content{
+    color: silver;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+.image{
+    color: silver;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+.image > a > button {
+    background-color: rgba(197, 230, 244, 0.784);
+    color: rgb(123, 99, 99);
+    position: relative;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 3px 4px 8px 1px;
+    margin-top: 20px;
+    
+}

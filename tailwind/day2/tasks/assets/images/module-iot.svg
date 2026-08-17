@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="iotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#iotGrad)" rx="12"/>
+  <!-- Smart House Blueprint Wireframe -->
+  <polygon points="300,70 170,160 430,160" fill="none" stroke="#10b981" stroke-width="2.5"/>
+  <rect x="190" y="160" width="220" height="100" fill="none" stroke="#10b981" stroke-width="2"/>
+  <rect x="230" y="180" width="40" height="40" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+  <rect x="330" y="180" width="40" height="40" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+  <rect x="280" y="210" width="40" height="50" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+  <!-- Orbiting IoT Nodes -->
+  <circle cx="120" cy="120" r="22" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+  <text x="120" y="125" fill="#34d399" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">LIGHTS</text>
+
+  <circle cx="480" cy="120" r="22" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+  <text x="480" y="125" fill="#34d399" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">VOICE</text>
+
+  <circle cx="120" cy="220" r="22" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+  <text x="120" y="225" fill="#34d399" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">PAY</text>
+
+  <circle cx="480" cy="220" r="22" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+  <text x="480" y="225" fill="#34d399" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">SECURITY</text>
+
+  <!-- Connectors -->
+  <line x1="142" y1="120" x2="235" y2="120" stroke="#34d399" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="458" y1="120" x2="365" y2="120" stroke="#34d399" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="142" y1="220" x2="190" y2="220" stroke="#34d399" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="458" y1="220" x2="410" y2="220" stroke="#34d399" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Title Badge -->
+  <rect x="180" y="285" width="240" height="34" rx="17" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+  <text x="300" y="307" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1">SMART IOT &amp; LIFESTYLE</text>
+</svg>

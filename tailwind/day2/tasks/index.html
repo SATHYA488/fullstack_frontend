@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enterprise Learning Portal - Modern Technology and Its Role in Daily Life. Complete course curriculum, exam notes, and certification simulator.">
+  <meta name="author" content="Sakthi">
+  <title>Enterprise Tech Academy | Modern Technology & Society Portal</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+              900: '#0f172a'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Enterprise CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/mvc-components.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress" aria-hidden="true"></div>
+
+  <!-- Enterprise Top Navigation Bar -->
+  <header class="sticky top-0 z-50 enterprise-navbar">
+    <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 text-decoration-none">
+          <div class="brand-badge">
+            <i class="bi bi-layers-half text-xl"></i>
+          </div>
+          <div>
+            <span class="font-display font-extrabold text-lg md:text-xl text-slate-900 dark:text-white tracking-tight leading-none block">
+              Enterprise<span class="text-blue-600 dark:text-cyan-400">Tech</span>
+            </span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold tracking-wider uppercase">ACADEMY &bull; MVC ARCHITECTURE</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 font-semibold text-sm text-slate-600 dark:text-slate-300" aria-label="Main Navigation">
+          <a href="index.html" class="px-3.5 py-2 rounded-lg text-blue-600 dark:text-cyan-400 bg-blue-50 dark:bg-blue-950/60 transition">Dashboard</a>
+          <a href="pages/syllabus.html" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Curriculum</a>
+          <a href="#course-catalog" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">Modules (7)</a>
+          <a href="pages/revision-notes.html" class="px-3.5 py-2 rounded-lg hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">200w Notes</a>
+          <a href="pages/assessment.html" class="px-3.5 py-2 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition">Certification Exam</a>
+        </nav>
+
+        <!-- Right Quick Controls -->
+        <div class="flex items-center gap-2">
+          
+          <!-- Font Sizer -->
+          <div class="hidden sm:flex items-center bg-slate-100 dark:bg-slate-800 rounded-lg p-1 border border-slate-200 dark:border-slate-700">
+            <button id="font-decrease" class="w-7 h-7 flex items-center justify-center text-xs font-bold rounded text-slate-700 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700 transition" title="Decrease Font Size">A-</button>
+            <button id="font-reset" class="w-7 h-7 flex items-center justify-center text-xs font-medium rounded text-slate-700 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700 transition" title="Reset Font Size">100%</button>
+            <button id="font-increase" class="w-7 h-7 flex items-center justify-center text-xs font-bold rounded text-slate-700 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700 transition" title="Increase Font Size">A+</button>
+          </div>
+
+          <!-- Audio Read Aloud -->
+          <button id="audio-play-btn" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 dark:bg-blue-950 dark:text-cyan-300 border border-blue-200 dark:border-blue-800 transition">
+            <i class="bi bi-volume-up-fill"></i>
+            <span class="hidden md:inline">Listen</span>
+          </button>
+          <button id="audio-stop-btn" class="hidden inline-flex items-center px-2 py-1.5 text-xs font-semibold rounded-lg bg-rose-50 text-rose-600 hover:bg-rose-100 dark:bg-rose-950 dark:text-rose-300 border border-rose-200 dark:border-rose-800 transition">
+            <i class="bi bi-stop-fill"></i>
+          </button>
+
+          <!-- Dark/Light Theme Toggle -->
+          <button id="theme-toggle" class="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 border border-slate-200 dark:border-slate-700 transition" aria-label="Toggle Theme">
+            <i id="theme-icon-light" class="bi bi-moon-stars-fill"></i>
+            <i id="theme-icon-dark" class="bi bi-sun-fill hidden"></i>
+          </button>
+
+          <!-- Mobile Collapse Button -->
+          <button class="lg:hidden w-9 h-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+            <i class="bi bi-list text-xl"></i>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div class="collapse lg:hidden pb-4" id="mobileNav">
+        <div class="pt-2 pb-3 space-y-1 border-t border-slate-200 dark:border-slate-800 flex flex-col font-semibold text-sm">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-blue-600 dark:text-cyan-400 bg-blue-50 dark:bg-blue-950/60">Dashboard</a>
+          <a href="pages/syllabus.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Curriculum Syllabus</a>
+          <a href="pages/communication.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Module 1: Communication</a>
+          <a href="pages/lifestyle-iot.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Module 2: Home &amp; Lifestyle</a>
+          <a href="pages/healthcare-tech.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Module 3: Healthcare</a>
+          <a href="pages/education-tech.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Module 4: Education</a>
+          <a href="pages/work-economy.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Module 5: Work &amp; Economy</a>
+          <a href="pages/entertainment-media.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Module 6: Entertainment</a>
+          <a href="pages/cybersecurity-challenges.html" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Module 7: Challenges</a>
+          <a href="pages/revision-notes.html" class="px-3 py-2 rounded-lg text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60">200-Word Exam Notes</a>
+          <a href="pages/assessment.html" class="px-3 py-2 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60">Certification Assessment</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Audio Status Bar -->
+  <div id="audio-status-bar" class="d-none bg-primary text-white text-xs py-2 px-4 text-center font-medium sticky top-20 z-40 shadow-sm">
+    <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span>
+    <span id="audio-status">Audio Read-Aloud in Progress...</span>
+  </div>
+
+  <main id="main-article-content">
+    
+    <!-- Hero Banner Section -->
+    <section class="py-12 md:py-20 border-b border-slate-200 dark:border-slate-800 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950">
+      <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+        <div class="row align-items-center g-5">
+          
+          <div class="col-12 col-lg-7">
+            <!-- Badges -->
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+              <span class="status-pill primary">
+                <i class="bi bi-shield-check"></i> Enterprise MVC Platform
+              </span>
+              <span class="status-pill emerald">
+                <i class="bi bi-mortarboard-fill"></i> Curated for Sakthi
+              </span>
+              <span class="status-pill amber">
+                <i class="bi bi-clock-fill"></i> 7 Modules &bull; 18 Hours
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-slate-900 dark:text-white leading-tight mb-4">
+              Modern Technology and Its Role in Daily Life
+            </h1>
+
+            <p class="text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+              Technology in the modern era has become the foundation of society, influencing how people live, work, and interact. It is no longer limited to industries or laboratories; instead, it has entered every household, shaping daily routines and social structures.
+            </p>
+
+            <!-- CTA Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3 mb-8">
+              <a href="#course-catalog" class="btn btn-primary px-4 py-2.5 rounded-xl font-semibold shadow-md flex items-center gap-2">
+                <i class="bi bi-grid-fill"></i> Explore Course Modules
+              </a>
+              <a href="pages/revision-notes.html" class="btn btn-outline-secondary dark:text-slate-200 dark:border-slate-700 px-4 py-2.5 rounded-xl font-semibold flex items-center gap-2">
+                <i class="bi bi-journal-check"></i> 200-Word Exam Notes
+              </a>
+              <a href="pages/assessment.html" class="btn btn-outline-success dark:text-emerald-400 dark:border-emerald-700 px-4 py-2.5 rounded-xl font-semibold flex items-center gap-2">
+                <i class="bi bi-award-fill"></i> Certification Exam
+              </a>
+            </div>
+
+            <!-- Progress Metric Card -->
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm max-w-lg">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  <i class="bi bi-graph-up-arrow text-primary me-1"></i> Your Course Completion
+                </span>
+                <span class="text-sm font-extrabold text-primary user-progress-percentage">0%</span>
+              </div>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary user-progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Vector Illustration -->
+          <div class="col-12 col-lg-5">
+            <div class="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl bg-slate-900">
+              <img src="assets/images/tech-banner.svg" alt="Modern Technology Ecosystem Diagram" class="w-100 h-auto">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Metrics Ribbon -->
+    <section class="py-6 bg-slate-100 dark:bg-slate-900/60 border-b border-slate-200 dark:border-slate-800">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <span class="font-display font-extrabold text-2xl md:text-3xl text-primary block">7</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase">Core Modules</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <span class="font-display font-extrabold text-2xl md:text-3xl text-emerald-500 block">100%</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase">Exam-Aligned</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <span class="font-display font-extrabold text-2xl md:text-3xl text-indigo-500 block">188w</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase">Verbatim Essay</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <span class="font-display font-extrabold text-2xl md:text-3xl text-amber-500 block">MVC</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase">Enterprise Pattern</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Catalog Section -->
+    <section id="course-catalog" class="py-16 md:py-24">
+      <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div>
+            <span class="text-xs uppercase tracking-widest font-bold text-primary">Curriculum Catalog</span>
+            <h2 class="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-slate-900 dark:text-white mt-1">
+              Course Modules &amp; Syllabus
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400 text-sm max-w-2xl mt-1">
+              Select any domain to explore in-depth technical analysis, societal impacts, case studies, and exam notes.
+            </p>
+          </div>
+
+          <!-- Search Filter -->
+          <div class="w-full md:w-72">
+            <div class="input-group">
+              <span class="input-group-text bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-400">
+                <i class="bi bi-search"></i>
+              </span>
+              <input type="text" id="course-search-input" class="form-control bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white text-sm" placeholder="Search modules...">
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="flex flex-wrap items-center gap-2 mb-8" id="category-filter-tabs">
+          <button class="btn btn-primary btn-sm rounded-lg category-filter-btn active" data-category="all">
+            <i class="bi bi-grid-3x3-gap-fill me-1"></i> All Modules (7)
+          </button>
+          <button class="btn btn-outline-secondary btn-sm rounded-lg category-filter-btn dark:text-slate-300 dark:border-slate-700" data-category="social">
+            <i class="bi bi-people-fill me-1"></i> Social &amp; Lifestyle
+          </button>
+          <button class="btn btn-outline-secondary btn-sm rounded-lg category-filter-btn dark:text-slate-300 dark:border-slate-700" data-category="health-edu">
+            <i class="bi bi-heart-pulse-fill me-1"></i> Healthcare &amp; Education
+          </button>
+          <button class="btn btn-outline-secondary btn-sm rounded-lg category-filter-btn dark:text-slate-300 dark:border-slate-700" data-category="economy">
+            <i class="bi bi-briefcase-fill me-1"></i> Economy &amp; Media
+          </button>
+          <button class="btn btn-outline-secondary btn-sm rounded-lg category-filter-btn dark:text-slate-300 dark:border-slate-700" data-category="ethics">
+            <i class="bi bi-shield-exclamation me-1"></i> Challenges &amp; Ethics
+          </button>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="row g-4" id="modules-container">
+          
+          <!-- Card 1: Communication -->
+          <div class="col-12 col-md-6 col-lg-4 course-module-item" data-category="social">
+            <div class="enterprise-card h-100 flex flex-col justify-between">
+              <div>
+                <img src="assets/images/module-comm.svg" alt="Communication & Global Networks" class="enterprise-card-img">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="status-pill primary">01 &bull; Connectivity</span>
+                    <span class="text-xs text-slate-400 font-medium"><i class="bi bi-clock"></i> 12 mins</span>
+                  </div>
+                  <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-2">
+                    Communication &amp; Global Networks
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm line-clamp-3 mb-4">
+                    Modern technology has revolutionized communication. Smartphones, instant messaging apps, and video conferencing platforms allow people to connect across distances instantly.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="pages/communication.html" class="btn btn-outline-primary w-100 rounded-xl font-semibold flex items-center justify-center gap-2">
+                  <span>Start Module</span> <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Home & Lifestyle -->
+          <div class="col-12 col-md-6 col-lg-4 course-module-item" data-category="social">
+            <div class="enterprise-card h-100 flex flex-col justify-between">
+              <div>
+                <img src="assets/images/module-iot.svg" alt="Home Automation & IoT Ecosystems" class="enterprise-card-img">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="status-pill emerald">02 &bull; Smart Living</span>
+                    <span class="text-xs text-slate-400 font-medium"><i class="bi bi-clock"></i> 14 mins</span>
+                  </div>
+                  <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-2">
+                    Home Automation &amp; IoT
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm line-clamp-3 mb-4">
+                    Smart homes equipped with voice assistants, automated lighting, and security systems provide comfort and safety. Online shopping, food delivery apps, and digital payments simplify tasks.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="pages/lifestyle-iot.html" class="btn btn-outline-primary w-100 rounded-xl font-semibold flex items-center justify-center gap-2">
+                  <span>Start Module</span> <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Healthcare -->
+          <div class="col-12 col-md-6 col-lg-4 course-module-item" data-category="health-edu">
+            <div class="enterprise-card h-100 flex flex-col justify-between">
+              <div>
+                <img src="assets/images/module-health.svg" alt="Telemedicine & AI Diagnostics" class="enterprise-card-img">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="status-pill cyan" style="background-color: rgba(6,182,212,0.12); color: #06b6d4; border: 1px solid rgba(6,182,212,0.3);">03 &bull; HealthTech</span>
+                    <span class="text-xs text-slate-400 font-medium"><i class="bi bi-clock"></i> 15 mins</span>
+                  </div>
+                  <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-2">
+                    Telemedicine &amp; AI Diagnostics
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm line-clamp-3 mb-4">
+                    Technology supports society’s health needs through telemedicine, wearable devices, and AI‑based diagnostics. Patients can consult doctors remotely and receive personalized treatments.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="pages/healthcare-tech.html" class="btn btn-outline-primary w-100 rounded-xl font-semibold flex items-center justify-center gap-2">
+                  <span>Start Module</span> <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Education -->
+          <div class="col-12 col-md-6 col-lg-4 course-module-item" data-category="health-edu">
+            <div class="enterprise-card h-100 flex flex-col justify-between">
+              <div>
+                <img src="assets/images/module-edu.svg" alt="EdTech & Knowledge Democratization" class="enterprise-card-img">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="status-pill amber">04 &bull; Education</span>
+                    <span class="text-xs text-slate-400 font-medium"><i class="bi bi-clock"></i> 13 mins</span>
+                  </div>
+                  <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-2">
+                    EdTech &amp; Virtual Classrooms
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm line-clamp-3 mb-4">
+                    Digital learning platforms, online courses, and virtual classrooms have made education accessible to all. Interactive tools like augmented reality democratize global knowledge.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="pages/education-tech.html" class="btn btn-outline-primary w-100 rounded-xl font-semibold flex items-center justify-center gap-2">
+                  <span>Start Module</span> <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Work & Economy -->
+          <div class="col-12 col-md-6 col-lg-4 course-module-item" data-category="economy">
+            <div class="enterprise-card h-100 flex flex-col justify-between">
+              <div>
+                <img src="assets/images/module-economy.svg" alt="Cloud Architecture & Digital Economy" class="enterprise-card-img">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="status-pill primary" style="background-color: rgba(99,102,241,0.12); color: #6366f1; border: 1px solid rgba(99,102,241,0.3);">05 &bull; Economy</span>
+                    <span class="text-xs text-slate-400 font-medium"><i class="bi bi-clock"></i> 16 mins</span>
+                  </div>
+                  <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-2">
+                    Cloud &amp; Digital Economy
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm line-clamp-3 mb-4">
+                    Remote work tools, cloud computing, and automation have reshaped the workplace. Businesses rely on big data and AI to make decisions, while e‑commerce expands opportunities.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="pages/work-economy.html" class="btn btn-outline-primary w-100 rounded-xl font-semibold flex items-center justify-center gap-2">
+                  <span>Start Module</span> <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Entertainment -->
+          <div class="col-12 col-md-6 col-lg-4 course-module-item" data-category="economy">
+            <div class="enterprise-card h-100 flex flex-col justify-between">
+              <div>
+                <img src="assets/images/module-media.svg" alt="Streaming, AI Media & XR" class="enterprise-card-img">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="status-pill" style="background-color: rgba(168,85,247,0.12); color: #a855f7; border: 1px solid rgba(168,85,247,0.3);">06 &bull; Digital Media</span>
+                    <span class="text-xs text-slate-400 font-medium"><i class="bi bi-clock"></i> 11 mins</span>
+                  </div>
+                  <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-2">
+                    Streaming &amp; XR Entertainment
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm line-clamp-3 mb-4">
+                    Streaming services, online gaming, and virtual reality have transformed leisure activities. Personalized recommendations powered by AI tailor multimedia to individuals.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="pages/entertainment-media.html" class="btn btn-outline-primary w-100 rounded-xl font-semibold flex items-center justify-center gap-2">
+                  <span>Start Module</span> <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Challenges (Span Full or Regular) -->
+          <div class="col-12 col-md-6 col-lg-4 course-module-item" data-category="ethics">
+            <div class="enterprise-card h-100 flex flex-col justify-between border-rose-200 dark:border-rose-900/60">
+              <div>
+                <img src="assets/images/module-security.svg" alt="Cybersecurity Governance & Digital Ethics" class="enterprise-card-img">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="status-pill rose">07 &bull; Risk &amp; Ethics</span>
+                    <span class="text-xs text-slate-400 font-medium"><i class="bi bi-clock"></i> 17 mins</span>
+                  </div>
+                  <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white mb-2">
+                    Cybersecurity &amp; Ethics
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm line-clamp-3 mb-4">
+                    Despite its benefits, modern technology poses challenges such as digital addiction, privacy concerns, and cybersecurity threats. The digital divide also highlights inequality.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="pages/cybersecurity-challenges.html" class="btn btn-outline-danger w-100 rounded-xl font-semibold flex items-center justify-center gap-2">
+                  <span>Start Module</span> <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Synthesis & Conclusion Section -->
+    <section class="py-14 bg-gradient-to-b from-blue-50/50 to-white dark:from-slate-900/60 dark:to-slate-950 border-t border-slate-200 dark:border-slate-800">
+      <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
+        <div class="p-8 md:p-10 rounded-3xl bg-white dark:bg-slate-900 border border-blue-200/80 dark:border-blue-900/60 shadow-xl">
+          <div class="flex items-center gap-3 text-emerald-600 dark:text-emerald-400 font-display font-bold text-lg mb-3">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-950 flex items-center justify-center">
+              <i class="bi bi-check2-circle"></i>
+            </span>
+            <span>Conclusion &amp; Synthesis</span>
+          </div>
+
+          <h3 class="font-display font-bold text-2xl md:text-3xl text-slate-900 dark:text-white mb-4">
+            Building a Responsible &amp; Inclusive Digital Society
+          </h3>
+
+          <p class="text-slate-700 dark:text-slate-900 text-base md:text-lg leading-relaxed mb-6">
+            Modern technology is a powerful force that supports society in daily life. It connects people, improves health, enhances education, and strengthens economies. However, responsible and inclusive use is essential to ensure that progress benefits all members of society.
+          </p>
+
+          <div class="row g-3 text-center">
+            <div class="col-12 col-md-4">
+              <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/60 dark:border-slate-700/60">
+                <i class="bi bi-globe-americas text-primary text-xl block mb-1"></i>
+                <span class="font-bold text-xs md:text-sm text-slate-800 dark:text-slate-200">Global Connectivity</span>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/60 dark:border-slate-700/60">
+                <i class="bi bi-graph-up-arrow text-emerald-500 text-xl block mb-1"></i>
+                <span class="font-bold text-xs md:text-sm text-slate-800 dark:text-slate-200">Economic Dynamism</span>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/60 dark:border-slate-700/60">
+                <i class="bi bi-shield-check text-amber-500 text-xl block mb-1"></i>
+                <span class="font-bold text-xs md:text-sm text-slate-800 dark:text-slate-200">Ethical Governance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Exam Revision Notes Section -->
+    <section class="py-14 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+      <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <span class="text-xs uppercase tracking-widest font-bold text-primary">Rapid Revision Notes</span>
+            <h3 class="font-display font-bold text-2xl text-slate-900 dark:text-white mt-1">
+              200-Word Essay &amp; Exam Summary
+            </h3>
+          </div>
+          <button id="copy-summary-btn" class="btn btn-primary px-4 py-2 rounded-xl font-semibold flex items-center gap-2">
+            <i class="bi bi-clipboard-check"></i> Copy 200w Summary
+          </button>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <p id="revision-summary-text" class="text-sm md:text-base text-slate-700 dark:text-slate-900 leading-relaxed italic select-all">
+            Modern technology has become the cornerstone of everyday human life and societal growth. In communication, smartphones and video conferencing provide instant worldwide connectivity. Within households, smart appliances, automated IoT systems, and seamless digital payments simplify routines and enhance convenience. Healthcare is transformed through telemedicine, wearable biometric devices, and AI diagnostics that enable personalized and preventative care. Education has been democratized via digital learning platforms, virtual classrooms, and interactive augmented reality tools. In the workplace, cloud computing, automation, and big data empower remote work and accelerate global commerce. Meanwhile, AI-driven streaming and virtual reality redefine modern leisure. However, significant challenges persist, including digital addiction, cybersecurity vulnerabilities, personal privacy threats, and the digital divide separating privileged and underserved populations. To maximize technological advantages, society must foster responsible, ethical, and inclusive innovation that uplifts all individuals equally.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Enterprise Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12">
+    <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-center gap-3">
+          <div class="brand-badge">
+            <i class="bi bi-layers-half text-lg"></i>
+          </div>
+          <div>
+            <span class="font-display font-bold text-base text-slate-900 dark:text-white">Enterprise Tech Academy</span>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Curated for Sakthi &bull; MVC Architecture</p>
+          </div>
+        </div>
+
+        <!-- Tech Stack Badges -->
+        <div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-600 dark:text-slate-400">
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800"><i class="bi bi-code-slash text-blue-600 me-1"></i> HTML5</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800"><i class="bi bi-palette text-indigo-500 me-1"></i> CSS3</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800"><i class="bi bi-bootstrap text-purple-600 me-1"></i> Bootstrap 5.3</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800"><i class="bi bi-wind text-cyan-500 me-1"></i> Tailwind CSS</span>
+          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800"><i class="bi bi-diagram-3 text-emerald-500 me-1"></i> MVC Pattern</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="#" class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center hover:bg-primary hover:text-white transition" title="Back to Top">
+            <i class="bi bi-arrow-up"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-100 dark:border-slate-800 mt-8 pt-6 text-center">
+        <p class="text-xs text-slate-400 dark:text-slate-500">
+          &copy; 2026 Enterprise Tech Academy. Built with Client-Side MVC Architecture for Fullstack Frontend.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="toast-msg" role="status" aria-live="polite"></div>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- MVC Application Scripts -->
+  <script src="app/models/CourseModel.js"></script>
+  <script src="app/models/ProgressModel.js"></script>
+  <script src="app/models/QuizModel.js"></script>
+  <script src="app/controllers/AppController.js"></script>
+  <script src="app/controllers/CourseController.js"></script>
+  <script src="app/controllers/AssessmentController.js"></script>
+  <script src="assets/js/core.js"></script>
+</body>
+</html>

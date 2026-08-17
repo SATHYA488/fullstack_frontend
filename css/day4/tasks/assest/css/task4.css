@@ -1,0 +1,41 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.box{
+    background-color: darkcyan;
+    color: darkred;
+    padding: 30px;
+    border: 2px solid;
+    margin: 10px;
+    font-size: medium;
+    font-weight: bold;
+}
+.box1{
+    background-color: darkkhaki;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.box2{
+    background-color: rgb(204, 113, 181);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.child1{
+    display: none;
+}
+.child2{
+    background-color: burlywood;
+    visibility: hidden;
+}

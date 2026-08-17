@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="commGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#commGrad)" rx="12"/>
+  <!-- Waves -->
+  <circle cx="300" cy="170" r="130" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.3"/>
+  <circle cx="300" cy="170" r="95" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="8 6" opacity="0.5"/>
+  <circle cx="300" cy="170" r="60" fill="none" stroke="#93c5fd" stroke-width="2.5" opacity="0.7"/>
+  <!-- Center Tower / Signal Hub -->
+  <circle cx="300" cy="170" r="28" fill="#2563eb" stroke="#ffffff" stroke-width="3"/>
+  <!-- Phone & Devices -->
+  <rect x="110" y="125" width="60" height="90" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="140" cy="200" r="3" fill="#38bdf8"/>
+  <rect x="120" y="135" width="40" height="50" rx="4" fill="#0f172a"/>
+  
+  <rect x="430" y="125" width="60" height="90" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="460" cy="200" r="3" fill="#38bdf8"/>
+  <rect x="440" y="135" width="40" height="50" rx="4" fill="#0f172a"/>
+
+  <!-- Connection Beams -->
+  <line x1="170" y1="170" x2="272" y2="170" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="328" y1="170" x2="430" y2="170" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- Title Badge -->
+  <rect x="180" y="280" width="240" height="34" rx="17" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="300" y="302" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1">GLOBAL COMMUNICATION</text>
+</svg>

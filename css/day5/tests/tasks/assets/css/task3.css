@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+a{
+    text-decoration: none;
+}
+.main{
+    background-color: beige;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    box-shadow: 1px 1px 3px 0px burlywood;
+    
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    
+}
+.logo > img{
+    width: 150px;
+    height: 150px;
+}
+.bar{
+    color: rgba(25, 25, 45, 0.559);
+    padding: 20px;
+    display: flex;
+    gap: 70px;
+    margin: 30px;
+    margin-right: 70px;
+    font-size: medium;
+    font-weight: bold;
+}

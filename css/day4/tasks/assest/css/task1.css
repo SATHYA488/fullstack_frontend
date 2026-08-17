@@ -1,0 +1,46 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+.parent{
+    background-color: coral;
+    color: rgb(150, 16, 61);
+    padding: 30px;
+    border: solid 2px;
+    margin: 30px;
+    text-align: center;
+    height: 600px;
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+    
+
+    
+
+}
+.child{
+    background-color: rgb(87, 225, 108);
+    color: rgb(11, 102, 127);
+    padding: 30px;
+    border: solid 2px;
+    margin: 30px;
+    text-align: center;
+    height: 60px;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
