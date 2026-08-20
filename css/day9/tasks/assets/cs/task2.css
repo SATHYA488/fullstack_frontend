@@ -1,0 +1,34 @@
+ *{
+     padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   }
+ html{
+    scroll-behavior: smooth;
+ }  
+    body {
+      font-family: Arial, sans-serif;
+    }
+a{
+    text-decoration: none;   
+}
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 435px;
+      height: 414px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: 0.5s; 
+    }
+
+    .gallery img:hover {
+      transform: scale(1.2); 
+    }
+ 

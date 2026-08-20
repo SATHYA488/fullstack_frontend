@@ -1,0 +1,42 @@
+ *{
+     padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   }
+ html{
+    scroll-behavior: smooth;
+ }  
+    body {
+      font-family: Arial, sans-serif;
+    }
+a{
+    text-decoration: none;   
+}
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 1s;
+    }
+
+    .logo:hover {
+      transform: rotate(360deg);
+    }
+
+    
+    .google { color: #4285F4; }
+    .microsoft { color: #F25022; }
+    .apple { color: #555; }
+    .amazon { color: #FF9900; }
+    .tesla { color: #E82127; }

@@ -1,0 +1,38 @@
+ *{
+     padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   }
+ html{
+    scroll-behavior: smooth;
+ }  
+    body {
+      font-family: Arial, sans-serif;
+    }
+a{
+    text-decoration: none;   
+}
+
+    .btn {
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor:pointer;
+      transition: 0.5s;
+    }
+
+    .login { background-color: #2196F3; color: white; }
+    .register { background-color: #FF9800; color: white; }
+    .submit { background-color: #9C27B0; color: white; }
+    .save { background-color: #4CAF50; color: white; }
+    .delete { background-color: #f44336; color: white; }
+
+
+    .login:hover { background-color: white; color: #2196F3; transform: scale(1.1); border: 2px solid #2196F3; }
+    .register:hover { background-color: white; color: #FF9800; transform: scale(1.1); border: 2px solid #FF9800; }
+    .submit:hover { background-color: white; color: #9C27B0; transform: scale(1.1); border: 2px solid #9C27B0; }
+    .save:hover { background-color: white; color: #4CAF50; transform: scale(1.1); border: 2px solid #4CAF50; }
+    .delete:hover { background-color: white; color: #f44336; transform: scale(1.1); border: 2px solid #f44336; }
