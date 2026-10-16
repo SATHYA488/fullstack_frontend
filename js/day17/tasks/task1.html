@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Details Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input {
+      margin: 5px;
+      padding: 8px;
+    }
+    button {
+      padding: 8px 12px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+<body>
+  <h2>Student Registration</h2>
+  
+  <form id="studentForm">
+    <input type="text" id="name" placeholder="Enter Name" required><br>
+    <input type="number" id="age" placeholder="Enter Age" required><br>
+    <input type="text" id="city" placeholder="Enter City" required><br>
+    <button id="addStudent">Add Student</button>
+  </form>
+  
+  <h3>Student List:</h3>
+  <div id="studentList"></div>
+  
+    <script src="assets/js/task1.js"></script>
+</body>
+</html>

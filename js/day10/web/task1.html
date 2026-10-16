@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1 - Hoisting & TDZ / Conditional Logic</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <script src="assets/js/task1.js"></script>
+    <div class="task-page-wrapper">
+        <a href="index.html" class="task-nav-back">← Back to Main Dashboard</a>
+        <div class="hero-badge">Topic 1</div>
+        <h1>Hoisting & TDZ</h1>
+        <p style="color: var(--text-secondary); margin: 1rem 0;">
+            Inspect the browser Developer Tools Console (F12) to see execution outputs, or check the script in <code>assets/js/task1.js</code>.
+        </p>
+        <pre class="tech-code-snippet"><code>// Var Hoisting vs Let/Const TDZ
+var x = 10;
+let age = 20;
+if (age >= 18) {
+  console.log("Eligible to vote");
+}</code></pre>
+        <div style="margin-top: 1.5rem;">
+            <a href="task2.html" class="btn btn-primary">Next: Task 2 (Arrow Functions) →</a>
+        </div>
+    </div>
+</body>
+</html>

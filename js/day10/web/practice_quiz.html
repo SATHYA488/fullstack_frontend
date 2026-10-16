@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 10 Self-Assessment Quiz | FullStack JS</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { background-color: #0b0f19; color: #f9fafb; font-family: 'Inter', sans-serif; }
+    .quiz-card { background-color: #111827; border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; }
+    .option-btn {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #e2e8f0;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    .option-btn:hover {
+      background: rgba(59, 130, 246, 0.15);
+      border-color: #3b82f6;
+      color: #ffffff;
+    }
+    .option-btn.correct {
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: #10b981 !important;
+      color: #34d399 !important;
+      font-weight: 600;
+    }
+    .option-btn.incorrect {
+      background: rgba(239, 68, 68, 0.2) !important;
+      border-color: #ef4444 !important;
+      color: #f87171 !important;
+    }
+    .explanation-box {
+      display: none;
+      background: #030712;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 0.5rem;
+      padding: 0.85rem 1rem;
+      font-size: 0.85rem;
+      margin-top: 0.75rem;
+    }
+  </style>
+</head>
+<body class="py-5">
+
+  <div class="container" style="max-width: 800px;">
+    
+    <!-- Top Navigation -->
+    <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-secondary">
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge bg-primary px-3 py-1 rounded-pill">Assessment Arena</span>
+        <h4 class="fw-bold mb-0 text-white">JavaScript &amp; Math Viva Assessment</h4>
+      </div>
+      <div class="d-flex gap-2">
+        <a href="index.html" class="btn btn-sm btn-outline-info"><i class="bi bi-speedometer2 me-1"></i>Master Dashboard</a>
+        <a href="math_calculators.html" class="btn btn-sm btn-outline-warning"><i class="bi bi-calculator me-1"></i>21 Math Hub</a>
+      </div>
+    </div>
+
+    <!-- Score Bar -->
+    <div class="quiz-card p-3 mb-4 d-flex align-items-center justify-content-between">
+      <div>
+        <span class="text-muted small">Your Assessment Score:</span>
+        <h3 class="fw-bold text-success mb-0" id="scoreDisplay">0 / 8</h3>
+      </div>
+      <button class="btn btn-outline-light btn-sm" onclick="resetQuiz()">
+        <i class="bi bi-arrow-clockwise me-1"></i>Reset Quiz
+      </button>
+    </div>
+
+    <!-- Questions Container -->
+    <div class="d-flex flex-column gap-4" id="quizContainer">
+      
+      <!-- Q1 -->
+      <div class="quiz-card p-4">
+        <span class="badge bg-info text-dark mb-2">Question 1 &bull; Array Methods</span>
+        <h5 class="fw-bold mb-3">Which method transforms each array element without mutating the original array?</h5>
+        <div class="options">
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp1')">A) <code>push()</code></button>
+          <button class="option-btn" onclick="checkAnswer(this, true, 'exp1')">B) <code>map()</code></button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp1')">C) <code>pop()</code></button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp1')">D) <code>splice()</code></button>
+        </div>
+        <div class="explanation-box" id="exp1">
+          <i class="bi bi-info-circle text-info me-1"></i> <strong>Explanation:</strong> <code>map()</code> creates a brand new array populated with the results of calling a provided function on every element, preserving immutability.
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="quiz-card p-4">
+        <span class="badge bg-info text-dark mb-2">Question 2 &bull; Arithmetic & Loops</span>
+        <h5 class="fw-bold mb-3">What is the mathematical output of <code>factorial(5)</code> ($5!$)?</h5>
+        <div class="options">
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp2')">A) 25</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp2')">B) 60</button>
+          <button class="option-btn" onclick="checkAnswer(this, true, 'exp2')">C) 120</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp2')">D) 720</button>
+        </div>
+        <div class="explanation-box" id="exp2">
+          <i class="bi bi-info-circle text-info me-1"></i> <strong>Explanation:</strong> \(5! = 5 \times 4 \times 3 \times 2 \times 1 = 120\).
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="quiz-card p-4">
+        <span class="badge bg-info text-dark mb-2">Question 3 &bull; Number Theory</span>
+        <h5 class="fw-bold mb-3">What is the Greatest Common Divisor (GCD) of 48 and 18?</h5>
+        <div class="options">
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp3')">A) 3</button>
+          <button class="option-btn" onclick="checkAnswer(this, true, 'exp3')">B) 6</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp3')">C) 12</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp3')">D) 9</button>
+        </div>
+        <div class="explanation-box" id="exp3">
+          <i class="bi bi-info-circle text-info me-1"></i> <strong>Explanation:</strong> Using the Euclidean algorithm: \(\text{GCD}(48, 18) = \text{GCD}(18, 12) = \text{GCD}(12, 6) = 6\).
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="quiz-card p-4">
+        <span class="badge bg-info text-dark mb-2">Question 4 &bull; Scope & TDZ</span>
+        <h5 class="fw-bold mb-3">What occurs when accessing a <code>let</code> variable before its declaration?</h5>
+        <div class="options">
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp4')">A) Returns <code>undefined</code></button>
+          <button class="option-btn" onclick="checkAnswer(this, true, 'exp4')">B) Throws <code>ReferenceError</code> (Temporal Dead Zone)</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp4')">C) Returns <code>null</code></button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp4')">D) Automatically defaults to <code>0</code></button>
+        </div>
+        <div class="explanation-box" id="exp4">
+          <i class="bi bi-info-circle text-info me-1"></i> <strong>Explanation:</strong> <code>let</code> and <code>const</code> reside in the Temporal Dead Zone (TDZ) from the start of the block until the declaration is processed.
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="quiz-card p-4">
+        <span class="badge bg-info text-dark mb-2">Question 5 &bull; Financial Math</span>
+        <h5 class="fw-bold mb-3">What is the Simple Interest on $10,000 at 5% per annum for 3 years?</h5>
+        <div class="options">
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp5')">A) $500</button>
+          <button class="option-btn" onclick="checkAnswer(this, true, 'exp5')">B) $1,500</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp5')">C) $1,576.25</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp5')">D) $3,000</button>
+        </div>
+        <div class="explanation-box" id="exp5">
+          <i class="bi bi-info-circle text-info me-1"></i> <strong>Explanation:</strong> \(\text{SI} = \frac{P \times R \times T}{100} = \frac{10000 \times 5 \times 3}{100} = \$1,500\).
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="quiz-card p-4">
+        <span class="badge bg-info text-dark mb-2">Question 6 &bull; Higher-Order Reducers</span>
+        <h5 class="fw-bold mb-3">What does <code>[10, 20, 30].reduce((sum, val) => sum + val, 0)</code> return?</h5>
+        <div class="options">
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp6')">A) <code>[10, 20, 30]</code></button>
+          <button class="option-btn" onclick="checkAnswer(this, true, 'exp6')">B) 60</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp6')">C) 0</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp6')">D) <code>undefined</code></button>
+        </div>
+        <div class="explanation-box" id="exp6">
+          <i class="bi bi-info-circle text-info me-1"></i> <strong>Explanation:</strong> <code>reduce()</code> executes the reducer callback, accumulating \(0 + 10 + 20 + 30 = 60\).
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="quiz-card p-4">
+        <span class="badge bg-info text-dark mb-2">Question 7 &bull; Sequences</span>
+        <h5 class="fw-bold mb-3">What are the first 6 terms of the Fibonacci sequence?</h5>
+        <div class="options">
+          <button class="option-btn" onclick="checkAnswer(this, true, 'exp7')">A) 0, 1, 1, 2, 3, 5</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp7')">B) 1, 2, 3, 4, 5, 6</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp7')">C) 0, 2, 4, 6, 8, 10</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp7')">D) 1, 3, 5, 7, 9, 11</button>
+        </div>
+        <div class="explanation-box" id="exp7">
+          <i class="bi bi-info-circle text-info me-1"></i> <strong>Explanation:</strong> \(F(0)=0, F(1)=1, F(2)=1, F(3)=2, F(4)=3, F(5)=5\).
+        </div>
+      </div>
+
+      <!-- Q8 -->
+      <div class="quiz-card p-4">
+        <span class="badge bg-info text-dark mb-2">Question 8 &bull; Modern CSS</span>
+        <h5 class="fw-bold mb-3">What is the core architectural philosophy behind Tailwind CSS?</h5>
+        <div class="options">
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp8')">A) Heavy JavaScript-dependent widget library</button>
+          <button class="option-btn" onclick="checkAnswer(this, true, 'exp8')">B) Utility-first composable atomic classes</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp8')">C) Fixed HTML tag replacement without class names</button>
+          <button class="option-btn" onclick="checkAnswer(this, false, 'exp8')">D) Backend database styling framework</button>
+        </div>
+        <div class="explanation-box" id="exp8">
+          <i class="bi bi-info-circle text-info me-1"></i> <strong>Explanation:</strong> Tailwind CSS uses utility classes directly in markup to build custom responsive interfaces with JIT compilation.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Actions -->
+    <div class="text-center mt-5 pt-4 border-top border-secondary">
+      <a href="index.html" class="btn btn-primary px-4"><i class="bi bi-house-door me-1"></i>Return to Project Dashboard</a>
+    </div>
+
+  </div>
+
+  <script>
+    let score = 0;
+    const answeredQuestions = new Set();
+    const totalQuestions = 8;
+
+    function checkAnswer(button, isCorrect, expId) {
+      const parentCard = button.closest('.quiz-card');
+      const questionId = expId;
+
+      if (answeredQuestions.has(questionId)) return;
+      answeredQuestions.add(questionId);
+
+      const buttons = parentCard.querySelectorAll('.option-btn');
+      buttons.forEach(btn => btn.disabled = true);
+
+      if (isCorrect) {
+        button.classList.add('correct');
+        score++;
+      } else {
+        button.classList.add('incorrect');
+      }
+
+      document.getElementById('scoreDisplay').textContent = `${score} / ${totalQuestions}`;
+      const exp = document.getElementById(expId);
+      if (exp) exp.style.display = 'block';
+    }
+
+    function resetQuiz() {
+      score = 0;
+      answeredQuestions.clear();
+      document.getElementById('scoreDisplay').textContent = `0 / ${totalQuestions}`;
+      
+      document.querySelectorAll('.option-btn').forEach(btn => {
+        btn.disabled = false;
+        btn.classList.remove('correct', 'incorrect');
+      });
+
+      document.querySelectorAll('.explanation-box').forEach(exp => {
+        exp.style.display = 'none';
+      });
+    }
+  </script>
+</body>
+</html>

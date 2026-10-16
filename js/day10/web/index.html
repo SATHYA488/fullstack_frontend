@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FullStack JS & Math Master Submission | Sakthi</title>
+  <meta name="description" content="Unified Master Project: Web Technologies, 10 Business Logics, 10 Practical Methods, 21 Mathematical Computations, 20 Tasks Explorer, and Viva Assessment.">
+  
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-white" href="#">
+        <span class="badge bg-primary px-2 py-1 rounded">DAY 10</span>
+        <span>Sakthi <span class="text-primary">Master Project</span></span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1">
+          <li class="nav-item"><a class="nav-link active" href="#intro-topics">1. Intro</a></li>
+          <li class="nav-item"><a class="nav-link" href="#logical-topics">2. 10 Logics</a></li>
+          <li class="nav-item"><a class="nav-link" href="#practical-methods">3. 10 Methods</a></li>
+          <li class="nav-item"><a class="nav-link" href="#math-hub">4. 21 Math Engine</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tasks-explorer">5. 20 Tasks</a></li>
+          <li class="nav-item"><a class="nav-link" href="#engineering-dictionary">8. 📖 Dictionary</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a href="test_25_questions.html" class="btn btn-sm btn-outline-warning">
+              <i class="bi bi-patch-check me-1"></i>25 Qs Test
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#studyGuideModal">
+              <i class="bi bi-book-half me-1"></i>Study Guide
+            </button>
+          </li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a href="#practical-methods" class="btn btn-sm btn-outline-primary" id="quickRunAllBtn">
+              <i class="bi bi-play-fill me-1"></i>Run Playground
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section text-center">
+    <div class="container">
+      <div class="hero-badge">
+        <i class="bi bi-code-slash"></i> FullStack Web Development &bull; Unified Master Project
+      </div>
+      <h1 class="display-4 gradient-title mb-3">
+        Web Technologies, Logic &amp; Mathematical Computing Hub
+      </h1>
+      <p class="hero-subtitle mb-5">
+        A complete all-in-one submission engineered for Sakthi featuring Web Foundations, 10 Enterprise Business Logics, 10 Practical Methods Playground with Terminal, 21 Interactive Mathematical Calculators, 20-Task Explorer, and Viva Assessment.
+      </p>
+
+      <!-- Stat Badges -->
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-2">
+          <div class="stat-pill">
+            <div class="stat-num">5</div>
+            <div class="stat-label">Web Techs</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="stat-pill">
+            <div class="stat-num">10</div>
+            <div class="stat-label">Business Logics</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="stat-pill">
+            <div class="stat-num">10</div>
+            <div class="stat-label">JS Methods</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="stat-pill">
+            <div class="stat-num">21</div>
+            <div class="stat-label">Math Formulas</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="stat-pill">
+            <div class="stat-num">20</div>
+            <div class="stat-label">Practice Tasks</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="stat-pill">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Interactive</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container my-5">
+
+    <!-- ==========================================================================
+         SECTION 1: Introduction Topics (Web Technologies)
+         ========================================================================== -->
+    <section id="intro-topics" class="mb-5 pt-4">
+      <div class="section-header">
+        <span class="section-tag">Section 1 &bull; Technical Foundations</span>
+        <h2 class="section-title">📘 Introduction Topics (Web Technologies)</h2>
+        <p class="section-desc">
+          Core architectural pillars of web engineering: formal standards, layout parsing engines, execution runtimes, and enterprise CSS frameworks.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. HTML -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="card-header-tag badge-html">01 &bull; Structure</span>
+              <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-50">W3C / WHATWG</span>
+            </div>
+            <h4 class="fw-bold mb-2">HTML (HyperText Markup Language)</h4>
+            
+            <div class="definition-box">
+              <div class="def-title"><i class="bi bi-info-circle-fill"></i> Formal Definition</div>
+              <p class="def-text mb-0">The standard declarative markup language that structures raw data into a hierarchical <strong>Document Object Model (DOM)</strong> tree, defining semantic relationships, input interfaces, and multimedia embedding for browser parsing.</p>
+            </div>
+
+            <div class="small text-muted mb-2">
+              <strong class="text-white">Core Architectural Pillars:</strong>
+              <ul class="ps-3 mb-2 mt-1">
+                <li><strong>Semantic DOM Nodes:</strong> <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code> for SEO and accessibility (ARIA).</li>
+                <li><strong>Native Constraint Validation:</strong> Form input rules (<code>type="email"</code>, <code>required</code>, <code>pattern</code>).</li>
+                <li><strong>Multimedia &amp; Graphics:</strong> Native <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;canvas&gt;</code>, and <code>&lt;svg&gt;</code>.</li>
+              </ul>
+            </div>
+
+            <div class="tech-code-snippet"><code>&lt;article class="card shadow"&gt;
+  &lt;header&gt;&lt;h2&gt;Enterprise Suite&lt;/h2&gt;&lt;/header&gt;
+  &lt;p&gt;High availability architecture.&lt;/p&gt;
+  &lt;button type="button"&gt;Launch&lt;/button&gt;
+&lt;/article&gt;</code></div>
+            
+            <div class="d-flex gap-2 mt-auto pt-2">
+              <span class="usecase-tag"><i class="bi bi-check-circle"></i> SEO &amp; ARIA Semantics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. CSS -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="card-header-tag badge-css">02 &bull; Presentation</span>
+              <span class="badge bg-primary bg-opacity-25 text-primary border border-primary border-opacity-50">W3C Style Engine</span>
+            </div>
+            <h4 class="fw-bold mb-2">CSS (Cascading Style Sheets)</h4>
+            
+            <div class="definition-box">
+              <div class="def-title"><i class="bi bi-info-circle-fill"></i> Formal Definition</div>
+              <p class="def-text mb-0">A style sheet language used for describing the visual presentation, geometry, typography, color palette, animations, and responsive layout adaptations of an HTML document.</p>
+            </div>
+
+            <div class="small text-muted mb-2">
+              <strong class="text-white">Core Architectural Pillars:</strong>
+              <ul class="ps-3 mb-2 mt-1">
+                <li><strong>Box Model:</strong> Content &rarr; Padding &rarr; Border &rarr; Margin (<code>box-sizing: border-box</code>).</li>
+                <li><strong>Cascade &amp; Specificity:</strong> Specificity scoring: Inline (1000) &gt; ID (100) &gt; Class (10) &gt; Element (1).</li>
+                <li><strong>Layout Engines:</strong> 1D Flexbox for dynamic distribution &amp; 2D CSS Grid for complex grids.</li>
+              </ul>
+            </div>
+
+            <div class="tech-code-snippet"><code>:root { --primary: #3b82f6; }
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}</code></div>
+
+            <div class="d-flex gap-2 mt-auto pt-2">
+              <span class="usecase-tag"><i class="bi bi-phone"></i> Responsive Viewports</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. JavaScript -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="card-header-tag badge-js">03 &bull; Interactivity</span>
+              <span class="badge bg-warning bg-opacity-25 text-warning border border-warning border-opacity-50">ECMAScript 2024</span>
+            </div>
+            <h4 class="fw-bold mb-2">JavaScript (JS)</h4>
+            
+            <div class="definition-box definition-warning">
+              <div class="def-title"><i class="bi bi-info-circle-fill"></i> Formal Definition</div>
+              <p class="def-text mb-0">A high-level, single-threaded, garbage-collected, dynamic multi-paradigm programming language with first-class functions and non-blocking asynchronous event loop execution.</p>
+            </div>
+
+            <div class="small text-muted mb-2">
+              <strong class="text-white">Core Architectural Pillars:</strong>
+              <ul class="ps-3 mb-2 mt-1">
+                <li><strong>Concurrency Engine:</strong> Call Stack + Web APIs + Microtask/Macrotask Queue loop.</li>
+                <li><strong>Scope &amp; Closures:</strong> Lexical environment retaining outer scope references.</li>
+                <li><strong>Modern ES6+ Standards:</strong> Arrow functions, Promises/Async-Await, Destructuring.</li>
+              </ul>
+            </div>
+
+            <div class="tech-code-snippet"><code>async function fetchMetrics(endpoint) {
+  const res = await fetch(endpoint);
+  const data = await res.json();
+  return data.filter(item => item.active);
+}</code></div>
+
+            <div class="d-flex gap-2 mt-auto pt-2">
+              <span class="usecase-tag"><i class="bi bi-lightning-charge"></i> Dynamic Logic &amp; APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Bootstrap -->
+        <div class="col-md-6 col-lg-6">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="card-header-tag badge-bs">04 &bull; Component Framework</span>
+              <span class="badge bg-purple bg-opacity-25 text-light border border-secondary">Bootstrap 5.3+</span>
+            </div>
+            <h4 class="fw-bold mb-2">Bootstrap (BS 5)</h4>
+            
+            <div class="definition-box definition-purple">
+              <div class="def-title"><i class="bi bi-info-circle-fill"></i> Formal Definition</div>
+              <p class="def-text mb-0">A production-grade CSS &amp; JavaScript component framework featuring a mobile-first 12-column flexbox grid system, pre-styled UI components, and accessible interaction patterns without jQuery dependency.</p>
+            </div>
+
+            <div class="small text-muted mb-2">
+              <strong class="text-white">Core Advantages:</strong>
+              <span class="d-block mt-1">Pre-built responsive navbars, interactive modals, responsive tables, form layouts, and standard breakpoint mixins (<code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code>).</span>
+            </div>
+
+            <div class="tech-code-snippet"><code>&lt;div class="container py-4"&gt;
+  &lt;div class="row g-3"&gt;
+    &lt;div class="col-12 col-md-6 shadow-sm p-3 rounded bg-dark"&gt;Column A&lt;/div&gt;
+    &lt;div class="col-12 col-md-6 shadow-sm p-3 rounded bg-dark"&gt;Column B&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></div>
+
+            <div class="sandbox-card mt-2">
+              <div class="sandbox-label">Live Bootstrap Component Render</div>
+              <div class="d-flex gap-2 align-items-center">
+                <span class="badge bg-primary">Primary</span>
+                <span class="badge bg-success">Success</span>
+                <span class="badge bg-danger">Danger</span>
+                <span class="badge bg-warning text-dark">Warning</span>
+                <div class="spinner-border spinner-border-sm text-info ms-auto" role="status"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Tailwind CSS -->
+        <div class="col-md-6 col-lg-6">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="card-header-tag badge-tw">05 &bull; Utility Framework</span>
+              <span class="badge bg-info bg-opacity-25 text-info border border-info border-opacity-50">Atomic CSS / JIT</span>
+            </div>
+            <h4 class="fw-bold mb-2">Tailwind CSS</h4>
+            
+            <div class="definition-box">
+              <div class="def-title"><i class="bi bi-info-circle-fill"></i> Formal Definition</div>
+              <p class="def-text mb-0">A utility-first atomic CSS framework powered by a Just-in-Time (JIT) compilation engine that compiles only the classes actively used in markup, delivering minimal bundle overhead and bespoke UI composition.</p>
+            </div>
+
+            <div class="small text-muted mb-2">
+              <strong class="text-white">Core Advantages:</strong>
+              <span class="d-block mt-1">Zero CSS bloat, rapid prototyping without leaving HTML, arbitrary value support (e.g. <code>top-[117px]</code>), unified design token constraints, and instant responsive modifiers.</span>
+            </div>
+
+            <div class="tech-code-snippet"><code>&lt;div class="flex items-center justify-between p-4 bg-slate-900 rounded-xl shadow-lg border border-slate-700 hover:border-cyan-500 transition-all"&gt;
+  &lt;span class="text-cyan-400 font-bold tracking-wide"&gt;Utility Engine&lt;/span&gt;
+&lt;/div&gt;</code></div>
+
+            <div class="sandbox-card mt-2">
+              <div class="sandbox-label">Utility Preview</div>
+              <div class="d-flex justify-content-between align-items-center p-2 rounded bg-black border border-secondary">
+                <span class="text-info fw-bold small font-monospace">flex items-center justify-between</span>
+                <span class="badge bg-info text-dark">JIT Tree-Shaken</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: 10 Logical & Business Logic Topics in JavaScript
+         ========================================================================== -->
+    <section id="logical-topics" class="mb-5 pt-4">
+      <div class="section-header">
+        <span class="section-tag">Section 2</span>
+        <h2 class="section-title">🔢 10 Logical &amp; Business Logic Topics in JavaScript</h2>
+        <p class="section-desc">
+          Core architectural pillars of web applications with live interactive functional widgets for every business scenario.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- 6. Conditional Logic (if/else) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="card-header-tag badge-logic">Topic 06</span>
+              <span class="complexity-pill">O(1) Constant</span>
+            </div>
+            <h5 class="fw-bold">Conditional Logic (if/else)</h5>
+            
+            <div class="definition-box definition-success">
+              <div class="def-title"><i class="bi bi-diagram-3"></i> Formal Definition</div>
+              <p class="def-text mb-0">Control flow structure that evaluates boolean expressions (truthy/falsy) to branch execution paths deterministically across single or multiple conditions.</p>
+            </div>
+
+            <div class="d-flex gap-2 mb-2">
+              <span class="usecase-tag"><i class="bi bi-shield-lock"></i> KYC &amp; Age Eligibility Gate</span>
+            </div>
+
+            <div class="sandbox-card">
+              <div class="sandbox-label">Interactive: Age Eligibility</div>
+              <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text bg-dark border-secondary text-muted">Age</span>
+                <input type="number" id="logicAgeInput" class="form-control form-control-dark" value="20" min="0" max="120">
+                <button class="btn btn-sm btn-primary" id="checkAgeBtn">Check</button>
+              </div>
+              <div class="result-display" id="logicAgeResult">Eligible to Vote &amp; License Granted (Age: 20)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Looping Logic (for/while) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="card-header-tag badge-logic">Topic 07</span>
+              <span class="complexity-pill">O(N) Linear</span>
+            </div>
+            <h5 class="fw-bold">Looping Logic (for/while)</h5>
+            
+            <div class="definition-box definition-success">
+              <div class="def-title"><i class="bi bi-arrow-repeat"></i> Formal Definition</div>
+              <p class="def-text mb-0">Iterative control structure that repeatedly executes a block of statements while a predicate condition evaluates to <code>true</code>, driving sequence traversals and mathematical reductions.</p>
+            </div>
+
+            <div class="d-flex gap-2 mb-2">
+              <span class="usecase-tag"><i class="bi bi-cpu"></i> Batch Processing &amp; Pagination</span>
+            </div>
+
+            <div class="sandbox-card">
+              <div class="sandbox-label">Interactive: Sequence Generator</div>
+              <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text bg-dark border-secondary text-muted">Limit (N)</span>
+                <input type="number" id="logicLoopInput" class="form-control form-control-dark" value="5" min="1" max="10">
+                <button class="btn btn-sm btn-primary" id="runLoopBtn">Generate</button>
+              </div>
+              <div class="result-display" id="logicLoopResult">Sequence: [1, 2, 3, 4, 5] (Sum: 15)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Functions & Modular Logic -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="card-header-tag badge-logic">Topic 08</span>
+              <span class="complexity-pill">O(1) / Reusable</span>
+            </div>
+            <h5 class="fw-bold">Functions &amp; Modular Logic</h5>
+            
+            <div class="definition-box definition-success">
+              <div class="def-title"><i class="bi bi-box-seam"></i> Formal Definition</div>
+              <p class="def-text mb-0">First-class citizen computational blocks that encapsulate parameters, maintain private lexical scope, execute logic, and return computed outputs (pure vs impure).</p>
+            </div>
+
+            <div class="d-flex gap-2 mb-2">
+              <span class="usecase-tag"><i class="bi bi-receipt"></i> Currency &amp; GST Calculator</span>
+            </div>
+
+            <div class="sandbox-card">
+              <div class="sandbox-label">Interactive: Currency &amp; Tax Function</div>
+              <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text bg-dark border-secondary text-muted">$ Amount</span>
+                <input type="number" id="logicAmountInput" class="form-control form-control-dark" value="250">
+                <button class="btn btn-sm btn-primary" id="calcTaxBtn">Compute</button>
+              </div>
+              <div class="result-display" id="logicTaxResult">Base: $250 + GST (18%) = $295.00</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Array Handling Logic -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="card-header-tag badge-logic">Topic 09</span>
+              <span class="complexity-pill">O(N) Search / Filter</span>
+            </div>
+            <h5 class="fw-bold">Array Handling Logic</h5>
+            
+            <div class="definition-box definition-success">
+              <div class="def-title"><i class="bi bi-collection"></i> Formal Definition</div>
+              <p class="def-text mb-0">Contiguous ordered zero-indexed data collections that store heterogeneous elements and support declarative transformation pipelines (map, filter, reduce).</p>
+            </div>
+
+            <div class="d-flex gap-2 mb-2">
+              <span class="usecase-tag"><i class="bi bi-cart-check"></i> E-Commerce Catalog Filtering</span>
+            </div>
+
+            <div class="sandbox-card">
+              <div class="sandbox-label">Interactive: Filter High-Value Items</div>
+              <div class="d-flex gap-2 mb-2">
+                <button class="btn btn-sm btn-outline-info flex-grow-1" id="filterHighPriceBtn">Filter &gt; $50</button>
+                <button class="btn btn-sm btn-outline-secondary" id="resetArrayBtn">Reset</button>
+              </div>
+              <div class="result-display" id="logicArrayResult">Items: [Laptop: $1200, Phone: $800]</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Object Handling Logic -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="card-header-tag badge-logic">Topic 10</span>
+              <span class="complexity-pill">O(1) Key Lookup</span>
+            </div>
+            <h5 class="fw-bold">Object Handling Logic</h5>
+            
+            <div class="definition-box definition-success">
+              <div class="def-title"><i class="bi bi-person-badge"></i> Formal Definition</div>
+              <p class="def-text mb-0">Unordered associative hash-map structures storing key-value pairs, nested schemas, and member methods to represent entities and state payloads.</p>
+            </div>
+
+            <div class="d-flex gap-2 mb-2">
+              <span class="usecase-tag"><i class="bi bi-database"></i> Student &amp; User Record Registry</span>
+            </div>
+
+            <div class="sandbox-card">
+              <div class="sandbox-label">Interactive: Student Record Inspector</div>
+              <div class="input-group input-group-sm mb-2">
+                <select id="studentSelect" class="form-select form-select-dark">
+                  <option value="sakthi">Sakthi (FullStack)</option>
+                  <option value="priya">Priya (AI Engineer)</option>
+                  <option value="kiran">Kiran (Cloud Arch)</option>
+                </select>
+                <button class="btn btn-sm btn-primary" id="inspectStudentBtn">Inspect</button>
+              </div>
+              <div class="result-display" id="logicObjectResult">{ name: "Sakthi", GPA: 3.9, Status: "Distinction" }</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Form Validation Logic -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="card-header-tag badge-logic">Topic 11</span>
+              <span class="complexity-pill">O(L) Regex Scan</span>
+            </div>
+            <h5 class="fw-bold">Form Validation Logic</h5>
+            
+            <div class="definition-box definition-success">
+              <div class="def-title"><i class="bi bi-shield-check"></i> Formal Definition</div>
+              <p class="def-text mb-0">Client-side integrity engine combining Regular Expressions (RegEx), length constraints, and sanitization rules to verify data safety before network transmission.</p>
+            </div>
+
+            <div class="d-flex gap-2 mb-2">
+              <span class="usecase-tag"><i class="bi bi-lock"></i> XSS Defense &amp; Input Sanitization</span>
+            </div>
+
+            <div class="sandbox-card">
+              <div class="sandbox-label">Interactive: Email &amp; Password Validator</div>
+              <input type="text" id="valEmailInput" class="form-control form-control-sm form-control-dark mb-1" placeholder="user@domain.com" value="sakthi@example.com">
+              <input type="password" id="valPassInput" class="form-control form-control-sm form-control-dark mb-2" placeholder="Password (min 6 chars)" value="SecurePass99">
+              <div class="result-display" id="logicValResult">Valid Email &amp; Strong Password (Length 12)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. Authentication Logic -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="card-header-tag badge-logic">Topic 12</span>
+              <span class="complexity-pill">O(1) Token Auth</span>
+            </div>
+            <h5 class="fw-bold">Authentication Logic</h5>
+            
+            <div class="definition-box definition-success">
+              <div class="def-title"><i class="bi bi-key"></i> Formal Definition</div>
+              <p class="def-text mb-0">Identity verification protocol evaluating user credentials against stored authorization records, returning session tokens, and enforcing Role-Based Access Control (RBAC).</p>
+            </div>
+
+            <div class="d-flex gap-2 mb-2">
+              <span class="usecase-tag"><i class="bi bi-person-check"></i> JWT &amp; Role-Based Route Guards</span>
+            </div>
+
+            <div class="sandbox-card">
+              <div class="sandbox-label">Interactive: Mock Login Authenticator</div>
+              <div class="input-group input-group-sm mb-2">
+                <input type="text" id="authUser" class="form-control form-control-dark" placeholder="Username" value="admin">
+                <input type="password" id="authPass" class="form-control form-control-dark" placeholder="Password" value="1234">
+                <button class="btn btn-sm btn-primary" id="authBtn">Login</button>
+              </div>
+              <div class="result-display" id="logicAuthResult">Access Granted: Role = ADMIN (Token: auth_9921)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. Payment Calculation Logic -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="card-header-tag badge-logic">Topic 13</span>
+              <span class="complexity-pill">O(1) Precision Math</span>
+            </div>
+            <h5 class="fw-bold">Payment Calculation Logic</h5>
+            
+            <div class="definition-box definition-success">
+              <div class="def-title"><i class="bi bi-credit-card"></i> Formal Definition</div>
+              <p class="def-text mb-0">Financial computational pipeline that calculates cart gross subtotals, applies promo discounts, integrates tiered taxes, and rounds to exact currency decimal precision.</p>
+            </div>
+
+            <div class="d-flex gap-2 mb-2">
+              <span class="usecase-tag"><i class="bi bi-bag-check"></i> E-Commerce Checkout Pipeline</span>
+            </div>
+
+            <div class="sandbox-card">
+              <div class="sandbox-label">Interactive: Cart Checkout Calculator</div>
+              <div class="d-flex gap-2 mb-2">
+                <input type="number" id="payPrice" class="form-control form-control-sm form-control-dark" placeholder="Subtotal" value="100">
+                <input type="number" id="payDiscount" class="form-control form-control-sm form-control-dark" placeholder="Disc %" value="15">
+                <button class="btn btn-sm btn-primary" id="calcPayBtn">Bill</button>
+              </div>
+              <div class="result-display" id="logicPayResult">Sub: $100 - 15% Disc + 5% Tax = $89.25</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14. Inventory Management Logic -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="card-header-tag badge-logic">Topic 14</span>
+              <span class="complexity-pill">O(1) State Mutation</span>
+            </div>
+            <h5 class="fw-bold">Inventory Management Logic</h5>
+            
+            <div class="definition-box definition-success">
+              <div class="def-title"><i class="bi bi-boxes"></i> Formal Definition</div>
+              <p class="def-text mb-0">State-driven warehouse tracking mechanism monitoring stock levels, validating dispatch constraints, preventing negative balances, and triggering low-stock threshold warnings.</p>
+            </div>
+
+            <div class="d-flex gap-2 mb-2">
+              <span class="usecase-tag"><i class="bi bi-box-arrow-in-down"></i> Automated Reorder Warnings</span>
+            </div>
+
+            <div class="sandbox-card">
+              <div class="sandbox-label">Interactive: Stock Units Manager</div>
+              <div class="d-flex gap-2 mb-2">
+                <button class="btn btn-sm btn-success flex-grow-1" id="stockAddBtn">+ Restock (Push)</button>
+                <button class="btn btn-sm btn-danger flex-grow-1" id="stockRemoveBtn">- Dispatch (Pop)</button>
+              </div>
+              <div class="result-display" id="logicStockResult">Warehouse Stock: 14 Units [Status: OK]</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15. Reporting & Analytics Logic -->
+        <div class="col-md-12 col-lg-8">
+          <div class="custom-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="card-header-tag badge-logic">Topic 15 &bull; Analytics Engine</span>
+              <span class="complexity-pill">O(N) Reduction Aggregation</span>
+            </div>
+            <h5 class="fw-bold">Reporting &amp; Analytics Logic</h5>
+            
+            <div class="definition-box definition-success">
+              <div class="def-title"><i class="bi bi-graph-up-arrow"></i> Formal Definition</div>
+              <p class="def-text mb-0">Statistical business intelligence engine that consumes raw event logs, computes aggregations (sum, mean, variance, peak/low bounds), and drives real-time data visualizers.</p>
+            </div>
+
+            <div class="d-flex gap-2 mb-3">
+              <span class="usecase-tag"><i class="bi bi-bar-chart"></i> Executive KPI Dashboard &amp; Trends</span>
+            </div>
+
+            <div class="sandbox-card">
+              <div class="sandbox-label">
+                <span>Daily Sales Trend ($k)</span>
+                <button class="btn btn-sm btn-outline-info py-0 px-2" id="randomizeSalesBtn"><i class="bi bi-shuffle me-1"></i>Regenerate Data</button>
+              </div>
+              
+              <!-- Mini Bar Chart -->
+              <div class="analytics-chart" id="salesChartContainer">
+                <div class="chart-bar-item"><div class="chart-bar-visual" style="height: 60%;"></div><span class="chart-bar-lbl">Mon</span></div>
+                <div class="chart-bar-item"><div class="chart-bar-visual" style="height: 85%;"></div><span class="chart-bar-lbl">Tue</span></div>
+                <div class="chart-bar-item"><div class="chart-bar-visual" style="height: 45%;"></div><span class="chart-bar-lbl">Wed</span></div>
+                <div class="chart-bar-item"><div class="chart-bar-visual" style="height: 95%;"></div><span class="chart-bar-lbl">Thu</span></div>
+                <div class="chart-bar-item"><div class="chart-bar-visual" style="height: 70%;"></div><span class="chart-bar-lbl">Fri</span></div>
+                <div class="chart-bar-item"><div class="chart-bar-visual" style="height: 100%;"></div><span class="chart-bar-lbl">Sat</span></div>
+                <div class="chart-bar-item"><div class="chart-bar-visual" style="height: 50%;"></div><span class="chart-bar-lbl">Sun</span></div>
+              </div>
+
+              <div class="result-display" id="logicAnalyticsResult">Total: $5,050 | Avg: $721/day | Peak: $1,000 (Sat) | Low: $450 (Wed)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: 10 Practical JavaScript Methods with Code Examples
+         ========================================================================== -->
+    <section id="practical-methods" class="mb-5 pt-4">
+      <div class="section-header">
+        <span class="section-tag">Section 3</span>
+        <h2 class="section-title">💻 10 Practical JavaScript Methods with Code Examples</h2>
+        <p class="section-desc">
+          Interactive Code Playground &amp; Execution Terminal runner featuring the exact 10 practical methods with code examples.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Left: Method Navigator -->
+        <div class="col-lg-4">
+          <div class="custom-card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="fw-bold small text-muted text-uppercase">Method Catalog</span>
+              <button class="btn btn-sm btn-primary" id="runAllMethodsBtn">
+                <i class="bi bi-play-circle-fill me-1"></i>Run All 10
+              </button>
+            </div>
+            
+            <div class="list-group method-list-group" id="methodList">
+              <button class="list-group-item list-group-item-action active" data-method-idx="0">
+                16. push() <span class="badge bg-secondary float-end">Array</span>
+              </button>
+              <button class="list-group-item list-group-item-action" data-method-idx="1">
+                17. pop() <span class="badge bg-secondary float-end">Array</span>
+              </button>
+              <button class="list-group-item list-group-item-action" data-method-idx="2">
+                18. map() <span class="badge bg-secondary float-end">Array</span>
+              </button>
+              <button class="list-group-item list-group-item-action" data-method-idx="3">
+                19. filter() <span class="badge bg-secondary float-end">Array</span>
+              </button>
+              <button class="list-group-item list-group-item-action" data-method-idx="4">
+                20. reduce() <span class="badge bg-secondary float-end">Array</span>
+              </button>
+              <button class="list-group-item list-group-item-action" data-method-idx="5">
+                21. forEach() <span class="badge bg-secondary float-end">Iterate</span>
+              </button>
+              <button class="list-group-item list-group-item-action" data-method-idx="6">
+                22. find() <span class="badge bg-secondary float-end">Search</span>
+              </button>
+              <button class="list-group-item list-group-item-action" data-method-idx="7">
+                23. includes() <span class="badge bg-secondary float-end">Boolean</span>
+              </button>
+              <button class="list-group-item list-group-item-action" data-method-idx="8">
+                24. toUpperCase() <span class="badge bg-secondary float-end">String</span>
+              </button>
+              <button class="list-group-item list-group-item-action" data-method-idx="9">
+                25. addEventListener() <span class="badge bg-secondary float-end">DOM</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Code Viewer & Interactive Console Terminal -->
+        <div class="col-lg-8">
+          
+          <!-- Method Specification & Definition Box -->
+          <div class="custom-card p-3 mb-4" id="methodSpecContainer">
+            <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-primary" id="specCategoryBadge">Array Method</span>
+                <h5 class="fw-bold text-white mb-0" id="specMethodName">16. push()</h5>
+              </div>
+              <div class="d-flex gap-2" id="specPills">
+                <span class="badge bg-danger" id="specMutabilityBadge">Mutates Original</span>
+                <span class="complexity-pill" id="specComplexityPill">O(1) Time</span>
+              </div>
+            </div>
+            
+            <div class="definition-box definition-warning mb-2 py-2">
+              <div class="def-title"><i class="bi bi-file-code"></i> Formal Specification</div>
+              <p class="def-text mb-0 small" id="specDefinition">Adds one or more elements to the end of an array and returns the new length of the array.</p>
+            </div>
+
+            <div class="row g-2 small font-monospace">
+              <div class="col-md-6"><span class="text-secondary">Signature:</span> <code class="text-info" id="specSignature">arr.push(element1, ... , elementN)</code></div>
+              <div class="col-md-6"><span class="text-secondary">Returns:</span> <code class="text-warning" id="specReturns">Number (New length)</code></div>
+            </div>
+            <div class="small mt-2"><span class="text-secondary">Use Case:</span> <span class="text-light" id="specUseCase">Adding incoming stream packets, cart items, stack data structures.</span></div>
+          </div>
+
+          <!-- Code Preview Box -->
+          <div class="terminal-window mb-4">
+            <div class="terminal-header">
+              <div class="d-flex align-items-center gap-3">
+                <div class="window-buttons">
+                  <div class="win-dot dot-red"></div>
+                  <div class="win-dot dot-yellow"></div>
+                  <div class="win-dot dot-green"></div>
+                </div>
+                <span class="terminal-title" id="currentSnippetTitle">example_16_push.js</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-outline-secondary py-1 px-2" id="copyCodeBtn" title="Copy snippet">
+                  <i class="bi bi-clipboard me-1"></i>Copy
+                </button>
+                <button class="btn btn-sm btn-success py-1 px-3" id="runSingleSnippetBtn">
+                  <i class="bi bi-play-fill me-1"></i>Run Code
+                </button>
+              </div>
+            </div>
+            <pre class="p-3 m-0" style="background: #090d16; overflow-x: auto;"><code id="codeDisplayArea" class="font-monospace text-light small">let fruits = ["Apple", "Banana"];
+fruits.push("Orange");
+console.log(fruits); // ["Apple", "Banana", "Orange"]</code></pre>
+          </div>
+
+          <!-- Terminal Output Simulator -->
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-terminal-fill text-primary"></i>
+                <span class="terminal-title">Interactive Terminal ($ node runner.js)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-secondary py-0 px-2" id="clearTerminalBtn">
+                <i class="bi bi-trash3 me-1"></i>Clear
+              </button>
+            </div>
+            <div class="terminal-body" id="terminalOutput">
+              <div class="term-line">
+                <span class="term-prompt">&gt;</span>
+                <span class="term-text-info">JavaScript Execution Environment initialized.</span>
+              </div>
+              <div class="term-line">
+                <span class="term-prompt">&gt;</span>
+                <span class="term-text-muted">Click any method or 'Run All 10' to view real-time console outputs.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: 21 Mathematical & Algorithmic Computations Engine
+         ========================================================================== -->
+    <section id="math-hub" class="mb-5 pt-4">
+      <div class="section-header">
+        <span class="section-tag">Section 4</span>
+        <h2 class="section-title">🧮 21 Mathematical &amp; Algorithmic Computations Hub</h2>
+        <p class="section-desc">
+          Real-time interactive mathematical formulas, algorithmic values, and instant calculation engines.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. Factorial -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h6 class="fw-bold mb-0 text-white">1. Factorial (n!)</h6>
+              <span class="badge bg-primary">n!</span>
+            </div>
+            <small class="text-muted mb-2">n! = n &times; (n-1) &times; ... &times; 1</small>
+            <div class="input-group input-group-sm mb-2">
+              <span class="input-group-text bg-dark border-secondary text-muted">n =</span>
+              <input type="number" id="factInput" class="form-control form-control-dark" value="5" min="0">
+              <button class="btn btn-primary btn-sm" onclick="calcFactorial()">Calc</button>
+            </div>
+            <div class="result-display" id="factResult">5! = 120</div>
+          </div>
+        </div>
+
+        <!-- 2. Sum -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h6 class="fw-bold mb-0 text-white">2. Sum of Numbers</h6>
+              <span class="badge bg-primary">&Sigma;</span>
+            </div>
+            <small class="text-muted mb-2">Sum = a1 + a2 + ... + an</small>
+            <div class="input-group input-group-sm mb-2">
+              <input type="text" id="sumInput" class="form-control form-control-dark" value="10, 20, 30, 40">
+              <button class="btn btn-primary btn-sm" onclick="calcSum()">Sum</button>
+            </div>
+            <div class="result-display" id="sumResult">Sum([10, 20, 30, 40]) = 100</div>
+          </div>
+        </div>
+
+        <!-- 3. Average -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h6 class="fw-bold mb-0 text-white">3. Average (Mean)</h6>
+              <span class="badge bg-primary">Mean</span>
+            </div>
+            <small class="text-muted mb-2">Mean = &Sigma;x / count</small>
+            <div class="input-group input-group-sm mb-2">
+              <input type="text" id="avgInput" class="form-control form-control-dark" value="10, 20, 30, 40, 50">
+              <button class="btn btn-primary btn-sm" onclick="calcAverage()">Avg</button>
+            </div>
+            <div class="result-display" id="avgResult">Average([10..50]) = 30</div>
+          </div>
+        </div>
+
+        <!-- 4. Square & Cube -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h6 class="fw-bold mb-0 text-white">4 &amp; 5. Square &amp; Cube</h6>
+              <span class="badge bg-primary">x&sup2; / x&sup3;</span>
+            </div>
+            <small class="text-muted mb-2">Square: x&sup2; | Cube: x&sup3;</small>
+            <div class="input-group input-group-sm mb-2">
+              <span class="input-group-text bg-dark border-secondary text-muted">x =</span>
+              <input type="number" id="squareInput" class="form-control form-control-dark" value="7">
+              <button class="btn btn-primary btn-sm" onclick="calcSquare()">x&sup2;</button>
+              <button class="btn btn-info btn-sm" onclick="calcCubeCustom()">x&sup3;</button>
+            </div>
+            <div class="result-display" id="squareResult">7&sup2; = 49 | 7&sup3; = 343</div>
+          </div>
+        </div>
+
+        <!-- 6. Power -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h6 class="fw-bold mb-0 text-white">6. Power (x^y)</h6>
+              <span class="badge bg-primary">Exponent</span>
+            </div>
+            <small class="text-muted mb-2">Power = Math.pow(x, y)</small>
+            <div class="d-flex gap-2 mb-2">
+              <input type="number" id="powBase" class="form-control form-control-sm form-control-dark" placeholder="Base" value="2">
+              <input type="number" id="powExp" class="form-control form-control-sm form-control-dark" placeholder="Exp" value="5">
+              <button class="btn btn-primary btn-sm" onclick="calcPower()">Pow</button>
+            </div>
+            <div class="result-display" id="powerResult">2^5 = 32</div>
+          </div>
+        </div>
+
+        <!-- 7. Simple & Compound Interest -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h6 class="fw-bold mb-0 text-white">9 &amp; 10. Simple / Compound Interest</h6>
+              <span class="badge bg-warning text-dark">Finance</span>
+            </div>
+            <small class="text-muted mb-2">SI = (P&times;R&times;T)/100 | CI = P(1+r/n)^nt</small>
+            <div class="d-flex gap-1 mb-2">
+              <input type="number" id="siP" class="form-control form-control-sm form-control-dark" placeholder="P" value="10000">
+              <input type="number" id="siR" class="form-control form-control-sm form-control-dark" placeholder="R%" value="5">
+              <input type="number" id="siT" class="form-control form-control-sm form-control-dark" placeholder="T" value="3">
+              <button class="btn btn-primary btn-sm" onclick="calcSI()">SI</button>
+              <button class="btn btn-warning btn-sm" onclick="calcCI()">CI</button>
+            </div>
+            <div class="result-display" id="siResult">SI = $1,500 | CI = $1,576.25</div>
+          </div>
+        </div>
+
+        <!-- 8. Geometry: Area / Peri / Vol -->
+        <div class="col-md-6 col-lg-6">
+          <div class="custom-card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h6 class="fw-bold mb-0 text-white">11, 12, 13. Area, Perimeter, Volume</h6>
+              <span class="badge bg-info text-dark">Geometry</span>
+            </div>
+            <small class="text-muted mb-2">Area: L&times;W | Perimeter: 2(L+W) | Volume: L&times;W&times;H</small>
+            <div class="d-flex gap-2 mb-2">
+              <input type="number" id="areaL" class="form-control form-control-sm form-control-dark" placeholder="L" value="10">
+              <input type="number" id="areaW" class="form-control form-control-sm form-control-dark" placeholder="W" value="5">
+              <input type="number" id="volH" class="form-control form-control-sm form-control-dark" placeholder="H" value="4">
+              <button class="btn btn-primary btn-sm" onclick="calcGeom()">Compute</button>
+            </div>
+            <div class="result-display" id="areaResult">Area = 50 | Perimeter = 30 | Volume = 200</div>
+          </div>
+        </div>
+
+        <!-- 9. Number Theory: LCM & GCD -->
+        <div class="col-md-6 col-lg-6">
+          <div class="custom-card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h6 class="fw-bold mb-0 text-white">17 &amp; 18. LCM &amp; GCD / HCF</h6>
+              <span class="badge bg-success">Number Theory</span>
+            </div>
+            <small class="text-muted mb-2">Euclidean algorithm &amp; LCM relation (|a&times;b|/GCD)</small>
+            <div class="d-flex gap-2 mb-2">
+              <input type="number" id="gcdA" class="form-control form-control-sm form-control-dark" value="48">
+              <input type="number" id="gcdB" class="form-control form-control-sm form-control-dark" value="18">
+              <button class="btn btn-primary btn-sm" onclick="calcGCD(); calcLCM();">Compute</button>
+            </div>
+            <div class="result-display" id="gcdResult">GCD(48, 18) = 6 | LCM(48, 18) = 144</div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="text-center mt-3">
+        <a href="math_calculators.html" class="btn btn-outline-warning btn-sm">
+          <i class="bi bi-arrows-fullscreen me-1"></i>Open Dedicated 21 Math Calculators Fullscreen Hub &rarr;
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: 20 Tasks Explorer
+         ========================================================================== -->
+    <section id="tasks-explorer" class="mb-5 pt-4">
+      <div class="section-header">
+        <span class="section-tag">Section 5</span>
+        <h2 class="section-title">📁 20 Tasks Interactive File Explorer</h2>
+        <p class="section-desc">
+          Direct access to the 10 Logical Programs in <code>tests/</code> and 10 ES6+ Topics in <code>tasks/</code>.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 10 Logical Tasks Card -->
+        <div class="col-lg-6">
+          <div class="custom-card p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-bold text-success mb-0"><i class="bi bi-cpu me-2"></i>10 Logical Programs (tests/)</h5>
+              <span class="badge bg-success">10 Programs</span>
+            </div>
+            <div class="row g-2 small">
+              <div class="col-6"><a href="../tests/task1.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">1. Even Numbers 1-50</a></div>
+              <div class="col-6"><a href="../tests/task2.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">2. Factorial While Loop</a></div>
+              <div class="col-6"><a href="../tests/task3.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">3. Reverse String</a></div>
+              <div class="col-6"><a href="../tests/task4.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">4. Find Highest in Array</a></div>
+              <div class="col-6"><a href="../tests/task5.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">5. Odd Numbers &amp; Total</a></div>
+              <div class="col-6"><a href="../tests/task6.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">6. Student Details Object</a></div>
+              <div class="col-6"><a href="../tests/task7.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">7. Filter Students &gt; 75</a></div>
+              <div class="col-6"><a href="../tests/task8.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">8. Square Functions</a></div>
+              <div class="col-6"><a href="../tests/task9.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">9. Template Literals</a></div>
+              <div class="col-6"><a href="../tests/task10.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">10. Scope Demo</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 ES6+ Topics Card -->
+        <div class="col-lg-6">
+          <div class="custom-card p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-bold text-info mb-0"><i class="bi bi-journal-code me-2"></i>10 ES6+ Topics (tasks/)</h5>
+              <span class="badge bg-info text-dark">10 Topics</span>
+            </div>
+            <div class="row g-2 small">
+              <div class="col-6"><a href="../tasks/task1.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">1. Hoisting &amp; TDZ</a></div>
+              <div class="col-6"><a href="../tasks/task2.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">2. Arrow Functions</a></div>
+              <div class="col-6"><a href="../tasks/task3.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">3. Destructuring</a></div>
+              <div class="col-6"><a href="../tasks/task4.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">4. Rest &amp; Spread</a></div>
+              <div class="col-6"><a href="../tasks/task5.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">5. Default Parameters</a></div>
+              <div class="col-6"><a href="../tasks/task6.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">6. Classes &amp; OOP</a></div>
+              <div class="col-6"><a href="../tasks/task7.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">7. Promises &amp; Async</a></div>
+              <div class="col-6"><a href="../tasks/task8.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">8. Optional Chaining</a></div>
+              <div class="col-6"><a href="../tasks/task9.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">9. Array Methods</a></div>
+              <div class="col-6"><a href="../tasks/task10.html" class="btn btn-sm btn-outline-secondary w-100 text-start text-truncate">10. ES6+ Features</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: Viva Assessment Quiz Arena
+         ========================================================================== -->
+    <section id="viva-quiz" class="mb-5 pt-4">
+      <div class="section-header">
+        <span class="section-tag">Section 6</span>
+        <h2 class="section-title">🎯 Viva &amp; Self-Assessment Arena</h2>
+        <p class="section-desc">
+          Test your technical proficiency on modern JavaScript and mathematical fundamentals.
+        </p>
+      </div>
+
+      <div class="custom-card p-4 text-center">
+        <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+          <i class="bi bi-patch-question-fill fs-1 text-danger"></i>
+          <div class="text-start">
+            <h4 class="fw-bold mb-0 text-white">Interactive Viva Assessment Quiz</h4>
+            <p class="text-muted small mb-0">8 Curated questions covering Scope/TDZ, Math Formulas, Reducers, Fibonacci, and Modern CSS.</p>
+          </div>
+        </div>
+        <a href="practice_quiz.html" class="btn btn-danger px-4 py-2">
+          <i class="bi bi-play-circle me-1"></i>Launch Assessment Arena &rarr;
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: JavaScript 25 Questions Test & Solutions Suite
+         ========================================================================== -->
+    <section id="test-section" class="mb-5 pt-4">
+      <div class="section-header">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+          <div>
+            <span class="section-tag">Section 7</span>
+            <h2 class="section-title">📝 JavaScript &ndash; 25 Questions Test &amp; Solutions</h2>
+            <p class="section-desc">
+              Comprehensive examination covering Theory, Logical Code, Practical Business Logics, and Logic Thinking MCQs.
+            </p>
+          </div>
+          <a href="test_25_questions.html" class="btn btn-outline-warning btn-sm">
+            <i class="bi bi-arrows-fullscreen me-1"></i>Open Standalone Test Hub &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Embedded Test Tabs -->
+      <div class="custom-card p-4 mb-4">
+        <ul class="nav nav-pills mb-4 gap-2 border-bottom border-secondary pb-3" id="mainTestTabs" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active btn-sm" data-bs-toggle="pill" data-bs-target="#mPartA">
+              <i class="bi bi-journal-text me-1"></i>Part A: Theory (5 Qs)
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn-sm" data-bs-toggle="pill" data-bs-target="#mPartB">
+              <i class="bi bi-cpu me-1"></i>Part B: Logical Code (5 Qs)
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn-sm" data-bs-toggle="pill" data-bs-target="#mPartC">
+              <i class="bi bi-briefcase me-1"></i>Part C: Business Logic (5 Qs)
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn-sm" data-bs-toggle="pill" data-bs-target="#mPartD">
+              <i class="bi bi-check2-circle me-1"></i>Part D: 10 MCQs Quiz
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="mainTestTabsContent">
+          
+          <!-- Part A: Theory (1 to 5) -->
+          <div class="tab-pane fade show active" id="mPartA" role="tabpanel">
+            <div class="accordion accordion-flush" id="accTheory">
+              <!-- Q1 -->
+              <div class="accordion-item bg-dark border-secondary">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-black text-light" type="button" data-bs-toggle="collapse" data-bs-target="#tc1">
+                    1. Difference between for loop, while loop, and do...while loop?
+                  </button>
+                </h2>
+                <div id="tc1" class="accordion-collapse collapse show" data-bs-parent="#accTheory">
+                  <div class="accordion-body small text-muted">
+                    <strong>for loop:</strong> Entry-controlled, used when count is known in advance.<br>
+                    <strong>while loop:</strong> Entry-controlled, used when condition is dynamic (0 or more executions).<br>
+                    <strong>do...while loop:</strong> Exit-controlled, guarantees at least 1 execution before checking condition.
+                    <pre class="bg-black p-2 mt-2 rounded text-info"><code>for (let i=0; i<5; i++) { ... } // for
+while (flag) { ... }           // while
+do { ... } while (condition);  // do...while</code></pre>
+                  </div>
+                </div>
+              </div>
+              <!-- Q2 -->
+              <div class="accordion-item bg-dark border-secondary">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-black text-light" type="button" data-bs-toggle="collapse" data-bs-target="#tc2">
+                    2. Normal Function vs Function Expression vs Arrow Function?
+                  </button>
+                </h2>
+                <div id="tc2" class="accordion-collapse collapse" data-bs-parent="#accTheory">
+                  <div class="accordion-body small text-muted">
+                    <strong>Declaration:</strong> Hoisted completely, has own <code>this</code>.<br>
+                    <strong>Expression:</strong> Assigned to variable, not hoisted before initialization.<br>
+                    <strong>Arrow Function:</strong> Concise, implicit return, lexical <code>this</code>.
+                  </div>
+                </div>
+              </div>
+              <!-- Q3 -->
+              <div class="accordion-item bg-dark border-secondary">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-black text-light" type="button" data-bs-toggle="collapse" data-bs-target="#tc3">
+                    3. Parameters vs Arguments?
+                  </button>
+                </h2>
+                <div id="tc3" class="accordion-collapse collapse" data-bs-parent="#accTheory">
+                  <div class="accordion-body small text-muted">
+                    <strong>Parameters:</strong> Variables in function definition (e.g. <code>function(price, qty)</code>).<br>
+                    <strong>Arguments:</strong> Real values passed during invocation (e.g. <code>calculate(25, 4)</code>).
+                  </div>
+                </div>
+              </div>
+              <!-- Q4 -->
+              <div class="accordion-item bg-dark border-secondary">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-black text-light" type="button" data-bs-toggle="collapse" data-bs-target="#tc4">
+                    4. Scope in JavaScript: Global, Function, and Block Scope?
+                  </button>
+                </h2>
+                <div id="tc4" class="accordion-collapse collapse" data-bs-parent="#accTheory">
+                  <div class="accordion-body small text-muted">
+                    <strong>Global:</strong> Accessible throughout the entire script.<br>
+                    <strong>Function:</strong> Confined within the enclosing function boundary.<br>
+                    <strong>Block (ES6):</strong> <code>let</code>/<code>const</code> confined inside <code>{ ... }</code> blocks.
+                  </div>
+                </div>
+              </div>
+              <!-- Q5 -->
+              <div class="accordion-item bg-dark border-secondary">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-black text-light" type="button" data-bs-toggle="collapse" data-bs-target="#tc5">
+                    5. Hoisting, var vs let/const, and Temporal Dead Zone (TDZ)?
+                  </button>
+                </h2>
+                <div id="tc5" class="accordion-collapse collapse" data-bs-parent="#accTheory">
+                  <div class="accordion-body small text-muted">
+                    <code>var</code> is hoisted and initialized with <code>undefined</code>. <code>let</code> and <code>const</code> are hoisted into the <strong>Temporal Dead Zone (TDZ)</strong> uninitialized, throwing a <code>ReferenceError</code> if accessed before line of declaration.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Part B: Logical Code (6 to 10) -->
+          <div class="tab-pane fade" id="mPartB" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="p-3 rounded bg-black border border-secondary h-100">
+                  <h6 class="fw-bold text-success">6. Highest Number in Array</h6>
+                  <pre class="bg-dark p-2 rounded text-info small mb-2"><code>const nums = [45, 12, 89, 34, 67, 90, 23];
+let max = nums[0];
+for (let n of nums) if (n > max) max = n;
+console.log(max); // 90</code></pre>
+                  <span class="badge bg-success">Result: 90</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 rounded bg-black border border-secondary h-100">
+                  <h6 class="fw-bold text-success">7. Reverse String without Built-in</h6>
+                  <pre class="bg-dark p-2 rounded text-info small mb-2"><code>let str = "JavaScript", rev = "";
+for (let i = str.length-1; i >= 0; i--) rev += str[i];
+console.log(rev); // "tpircSavaJ"</code></pre>
+                  <span class="badge bg-success">Result: "tpircSavaJ"</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded bg-black border border-secondary h-100">
+                  <h6 class="fw-bold text-success">8. Factorial</h6>
+                  <pre class="bg-dark p-2 rounded text-info small mb-2"><code>let f=1, i=1;
+while(i<=5) { f *= i++; }
+console.log(f); // 120</code></pre>
+                  <span class="badge bg-success">Result: 120</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded bg-black border border-secondary h-100">
+                  <h6 class="fw-bold text-success">9. Fibonacci Series (n=8)</h6>
+                  <pre class="bg-dark p-2 rounded text-info small mb-2"><code>let fib=[0,1];
+for(let i=2; i<8; i++) fib.push(fib[i-1]+fib[i-2]);
+console.log(fib);</code></pre>
+                  <span class="badge bg-success">[0,1,1,2,3,5,8,13]</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded bg-black border border-secondary h-100">
+                  <h6 class="fw-bold text-success">10. Even/Odd Ternary</h6>
+                  <pre class="bg-dark p-2 rounded text-info small mb-2"><code>let num = 17;
+let res = (num%2===0) ? "Even" : "Odd";
+console.log(res);</code></pre>
+                  <span class="badge bg-success">Result: "Odd"</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Part C: Business Logic (11 to 15) -->
+          <div class="tab-pane fade" id="mPartC" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="p-3 rounded bg-black border border-secondary h-100">
+                  <h6 class="fw-bold text-warning">11. Products push/pop/unshift/shift</h6>
+                  <pre class="bg-dark p-2 rounded text-info small"><code>let p = ["Laptop", "Phone", "Tablet"];
+p.push("Smartwatch"); // add end
+p.pop();              // remove end
+p.unshift("Monitor"); // add start
+p.shift();            // remove start
+console.log(p); // ["Laptop", "Phone", "Tablet"]</code></pre>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 rounded bg-black border border-secondary h-100">
+                  <h6 class="fw-bold text-warning">12. Employee Object Updates</h6>
+                  <pre class="bg-dark p-2 rounded text-info small"><code>let emp = { name: "Sakthi", age: 24, dept: "Eng", salary: 65000 };
+emp.salary = 85000;
+emp.experience = "3 Years";
+console.log(emp);</code></pre>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded bg-black border border-secondary h-100">
+                  <h6 class="fw-bold text-warning">13. Student Names with Index</h6>
+                  <pre class="bg-dark p-2 rounded text-info small"><code>const s = ["Sakthi","Priya","Kiran","Ravi","Anitha"];
+for(let i=0; i<s.length; i++) {
+  console.log(`Index ${i}: ${s[i]}`);
+}</code></pre>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded bg-black border border-secondary h-100">
+                  <h6 class="fw-bold text-warning">14. calculateTotal(price, qty)</h6>
+                  <pre class="bg-dark p-2 rounded text-info small"><code>function calculateTotal(price, qty) {
+  return price * qty;
+}
+console.log(calculateTotal(25, 4)); // 100</code></pre>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded bg-black border border-secondary h-100">
+                  <h6 class="fw-bold text-warning">15. Discount &ge; 1000 Ternary</h6>
+                  <pre class="bg-dark p-2 rounded text-info small"><code>let bill = 1250;
+let msg = (bill >= 1000) ? "Discount Applied" : "No Discount";
+console.log(msg); // "Discount Applied"</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Part D: 10 MCQs Quiz (16 to 25) -->
+          <div class="tab-pane fade" id="mPartD" role="tabpanel">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-muted small">Part D Interactive 10 MCQs:</span>
+              <a href="test_25_questions.html" class="btn btn-sm btn-primary">Take Full Interactive Quiz &rarr;</a>
+            </div>
+            <div class="row g-2 small">
+              <div class="col-md-6"><div class="p-2 rounded bg-black border border-secondary"><strong>16. Block 5 times?</strong> &rarr; <span class="text-success">A) for loop</span></div></div>
+              <div class="col-md-6"><div class="p-2 rounded bg-black border border-secondary"><strong>17. Execute at least once?</strong> &rarr; <span class="text-success">C) do...while loop</span></div></div>
+              <div class="col-md-6"><div class="p-2 rounded bg-black border border-secondary"><strong>18. Add to end of array?</strong> &rarr; <span class="text-success">B) push()</span></div></div>
+              <div class="col-md-6"><div class="p-2 rounded bg-black border border-secondary"><strong>19. First customer removed first?</strong> &rarr; <span class="text-success">C) shift()</span></div></div>
+              <div class="col-md-6"><div class="p-2 rounded bg-black border border-secondary"><strong>20. Combine arrays without mutation?</strong> &rarr; <span class="text-success">A) concat()</span></div></div>
+              <div class="col-md-6"><div class="p-2 rounded bg-black border border-secondary"><strong>21. Give calculated value back?</strong> &rarr; <span class="text-success">C) return</span></div></div>
+              <div class="col-md-6"><div class="p-2 rounded bg-black border border-secondary"><strong>22. Accessible only inside if block?</strong> &rarr; <span class="text-success">B) let</span></div></div>
+              <div class="col-md-6"><div class="p-2 rounded bg-black border border-secondary"><strong>23. Never reassigned?</strong> &rarr; <span class="text-success">C) const</span></div></div>
+              <div class="col-md-6"><div class="p-2 rounded bg-black border border-secondary"><strong>24. True/False 1-line assignment?</strong> &rarr; <span class="text-success">B) ternary operator</span></div></div>
+              <div class="col-md-6"><div class="p-2 rounded bg-black border border-secondary"><strong>25. Short 'Positive'/'Not Positive'?</strong> &rarr; <span class="text-success">C) Ternary operator</span></div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: Master Engineering Dictionary & Technical Glossary Hub
+         ========================================================================== -->
+    <section id="engineering-dictionary" class="mb-5 pt-4">
+      <div class="section-header">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+          <div>
+            <span class="section-tag">Section 8 &bull; Theory &amp; Lexicon</span>
+            <h2 class="section-title">📖 Master Engineering Dictionary &amp; Technical Glossary</h2>
+            <p class="section-desc">
+              Comprehensive, formal definitions and mechanical specifications for 24+ core software engineering, ECMAScript, algorithmic, and mathematical concepts.
+            </p>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <input type="text" id="dictSearchInput" class="form-control form-control-sm form-control-dark" placeholder="Search definitions..." style="width: 240px;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Buttons -->
+      <div class="d-flex flex-wrap gap-2 mb-4" id="dictFilterGroup">
+        <button class="btn btn-sm btn-primary active" data-dict-cat="all">All Topics (24)</button>
+        <button class="btn btn-sm btn-outline-secondary" data-dict-cat="web">Web Standards (6)</button>
+        <button class="btn btn-sm btn-outline-secondary" data-dict-cat="js">JavaScript &amp; ES6+ (6)</button>
+        <button class="btn btn-sm btn-outline-secondary" data-dict-cat="math">Math &amp; Complexity (6)</button>
+        <button class="btn btn-sm btn-outline-secondary" data-dict-cat="enterprise">Enterprise Systems (6)</button>
+      </div>
+
+      <!-- Dictionary Grid -->
+      <div class="row g-3" id="dictGridContainer">
+
+        <!-- 1. DOM -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="web">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Document Object Model (DOM)</span>
+              <span class="dict-category badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-50">Web Standards</span>
+            </div>
+            <p class="small text-light mb-2">A language-neutral application programming interface (API) that represents an HTML document as a node-tree hierarchy, enabling programmatic DOM mutation, traversal, and event handling.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>document.getElementById("btn").classList.add("active");</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Bridges markup with interactive scripting engines.</div>
+          </div>
+        </div>
+
+        <!-- 2. CSS Box Model -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="web">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">CSS Box Model</span>
+              <span class="dict-category badge bg-primary bg-opacity-25 text-primary border border-primary border-opacity-50">Web Standards</span>
+            </div>
+            <p class="small text-light mb-2">The fundamental geometry layout engine describing the 4 concentric rectangular layers wrapping every rendered element: <strong>Content</strong>, <strong>Padding</strong>, <strong>Border</strong>, and <strong>Margin</strong>.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>box-sizing: border-box; /* Includes padding &amp; border */</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Determines element geometry and spacing calculations.</div>
+          </div>
+        </div>
+
+        <!-- 3. CSS Specificity -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="web">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Cascade &amp; Specificity</span>
+              <span class="dict-category badge bg-primary bg-opacity-25 text-primary border border-primary border-opacity-50">Web Standards</span>
+            </div>
+            <p class="small text-light mb-2">The conflict-resolution algorithm in CSS that determines which rule wins when multiple rules target the same element. Scored as <code>(Inline, ID, Class, Element)</code>.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>#header .nav a { /* 100 + 10 + 1 = Specificity 111 */ }</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Enforces deterministic styling cascade precedence.</div>
+          </div>
+        </div>
+
+        <!-- 4. Semantic HTML -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="web">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Semantic Elements</span>
+              <span class="dict-category badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-50">Web Standards</span>
+            </div>
+            <p class="small text-light mb-2">HTML tags that convey human and machine-readable meaning about their content (e.g. <code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>) rather than generic presentation (<code>&lt;div&gt;</code>).</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>&lt;main role="main"&gt;&lt;article&gt;&lt;h1&gt;News&lt;/h1&gt;&lt;/article&gt;&lt;/main&gt;</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Vital for Search Engine Optimization (SEO) &amp; ARIA accessibility.</div>
+          </div>
+        </div>
+
+        <!-- 5. Flexbox vs Grid -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="web">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Flexbox vs CSS Grid</span>
+              <span class="dict-category badge bg-primary bg-opacity-25 text-primary border border-primary border-opacity-50">Web Standards</span>
+            </div>
+            <p class="small text-light mb-2"><strong>Flexbox</strong> is a 1-dimensional layout engine (row OR column flow). <strong>CSS Grid</strong> is a 2-dimensional layout engine (simultaneous row AND column placement with tracks).</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>display: grid; grid-template-columns: repeat(3, 1fr);</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Forms the backbone of responsive web layout architectures.</div>
+          </div>
+        </div>
+
+        <!-- 6. Atomic CSS / JIT -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="web">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Atomic CSS &amp; JIT Compiler</span>
+              <span class="dict-category badge bg-info bg-opacity-25 text-info border border-info border-opacity-50">Web Standards</span>
+            </div>
+            <p class="small text-light mb-2">An architectural philosophy (epitomized by Tailwind CSS) where single-purpose utility classes are composed to build UIs, compiled Just-in-Time into tiny purged stylesheets.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>&lt;button class="px-4 py-2 bg-blue-600 rounded-lg"&gt;Go&lt;/button&gt;</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Eliminates stylesheet bloat and prevents CSS regression bugs.</div>
+          </div>
+        </div>
+
+        <!-- 7. Execution Context & Call Stack -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="js">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Execution Context &amp; Call Stack</span>
+              <span class="dict-category badge bg-warning bg-opacity-25 text-warning border border-warning border-opacity-50">JavaScript Core</span>
+            </div>
+            <p class="small text-light mb-2">The abstract environment in which JavaScript code is evaluated (Creation Phase allocates memory &amp; hoists declarations; Execution Phase runs code line-by-line in a LIFO Call Stack).</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>Global Context &rarr; Function Context &rarr; Call Stack (LIFO)</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Governs variable scoping, this-binding, and execution order.</div>
+          </div>
+        </div>
+
+        <!-- 8. Event Loop -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="js">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">The Event Loop &amp; Queues</span>
+              <span class="dict-category badge bg-warning bg-opacity-25 text-warning border border-warning border-opacity-50">JavaScript Core</span>
+            </div>
+            <p class="small text-light mb-2">The non-blocking concurrency mechanism monitoring the Call Stack and processing asynchronous callbacks from the <strong>Microtask Queue</strong> (Promises) before the <strong>Macrotask Queue</strong> (setTimeout).</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>Promise.resolve().then() [Microtask] &gt; setTimeout() [Macrotask]</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Enables responsive single-threaded async operations.</div>
+          </div>
+        </div>
+
+        <!-- 9. Closures -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="js">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Closures &amp; Lexical Scope</span>
+              <span class="dict-category badge bg-warning bg-opacity-25 text-warning border border-warning border-opacity-50">JavaScript Core</span>
+            </div>
+            <p class="small text-light mb-2">A closure is the bundle of a function combined with references to its surrounding lexical environment, allowing an inner function to access an outer function’s scope even after the outer function has returned.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>function makeCounter() { let count=0; return () => ++count; }</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Foundation for private state, currying, and memoization.</div>
+          </div>
+        </div>
+
+        <!-- 10. Hoisting & TDZ -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="js">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Hoisting &amp; Temporal Dead Zone</span>
+              <span class="dict-category badge bg-warning bg-opacity-25 text-warning border border-warning border-opacity-50">JavaScript Core</span>
+            </div>
+            <p class="small text-light mb-2">JavaScript's compile-phase allocation of declarations. While <code>var</code> is initialized with <code>undefined</code>, <code>let</code> and <code>const</code> enter a Temporal Dead Zone (TDZ) where access throws a <code>ReferenceError</code>.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>// console.log(a); // ReferenceError (TDZ)
+let a = 10;</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Enforces block-scoped safety and prevents variable leakage.</div>
+          </div>
+        </div>
+
+        <!-- 11. Promises & Async/Await -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="js">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Promises &amp; Async / Await</span>
+              <span class="dict-category badge bg-warning bg-opacity-25 text-warning border border-warning border-opacity-50">JavaScript Core</span>
+            </div>
+            <p class="small text-light mb-2">A Promise is an object representing eventual completion or failure of an async operation with 3 states (<code>pending</code>, <code>fulfilled</code>, <code>rejected</code>). <code>async/await</code> provides synchronous-like syntax over Promises.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>const data = await fetch('/api/user').then(r => r.json());</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Eliminates callback hell and standardizes error handling (try/catch).</div>
+          </div>
+        </div>
+
+        <!-- 12. Immutability & Pure Functions -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="js">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Immutability &amp; Pure Functions</span>
+              <span class="dict-category badge bg-warning bg-opacity-25 text-warning border border-warning border-opacity-50">JavaScript Core</span>
+            </div>
+            <p class="small text-light mb-2">A <strong>Pure Function</strong> produces identical output for identical arguments with zero observable side effects. <strong>Immutability</strong> guarantees state is never modified in-place, returning new cloned references.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>const updated = [...cart, newItem]; // Pure, immutable clone</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Prevents state bugs in Redux, React, and distributed architectures.</div>
+          </div>
+        </div>
+
+        <!-- 13. Big-O Complexity -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="math">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Asymptotic Complexity (Big-O)</span>
+              <span class="dict-category badge bg-success bg-opacity-25 text-success border border-success border-opacity-50">Math &amp; Algorithms</span>
+            </div>
+            <p class="small text-light mb-2">Mathematical notation characterizing the limiting behavior of an algorithm's execution time or memory space requirement as the input dataset size ($N$) approaches infinity.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>O(1) Constant &lt; O(log N) &lt; O(N) Linear &lt; O(N²) Quadratic</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Enables empirical performance benchmarking of software algorithms.</div>
+          </div>
+        </div>
+
+        <!-- 14. Factorial & Permutations -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="math">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Factorial (n!)</span>
+              <span class="dict-category badge bg-success bg-opacity-25 text-success border border-success border-opacity-50">Math &amp; Algorithms</span>
+            </div>
+            <p class="small text-light mb-2">The product of all positive integers less than or equal to $n$, formally expressed as $n! = \prod_{k=1}^n k$ with base case $0! = 1$.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>5! = 5 × 4 × 3 × 2 × 1 = 120 | Complexity: O(N)</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Core foundation of combinatorics, probability, and permutations ($^n P_r$).</div>
+          </div>
+        </div>
+
+        <!-- 15. Fibonacci & Golden Ratio -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="math">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Fibonacci Sequence</span>
+              <span class="dict-category badge bg-success bg-opacity-25 text-success border border-success border-opacity-50">Math &amp; Algorithms</span>
+            </div>
+            <p class="small text-light mb-2">An integer recurrence sequence where each term is the sum of the two preceding ones: $F_0=0, F_1=1, F_n = F_{n-1} + F_{n-2}$. Its ratio converges to the Golden Ratio $\Phi \approx 1.6180339$.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>Sequence: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55...]</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Used in Fibonacci heaps, search algorithms, and algorithmic recursion.</div>
+          </div>
+        </div>
+
+        <!-- 16. Euclidean GCD & LCM -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="math">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Euclidean GCD &amp; LCM</span>
+              <span class="dict-category badge bg-success bg-opacity-25 text-success border border-success border-opacity-50">Math &amp; Algorithms</span>
+            </div>
+            <p class="small text-light mb-2">The Euclidean algorithm computes the Greatest Common Divisor via repeated modulus $\text{GCD}(a,b) = \text{GCD}(b, a \bmod b)$. LCM is derived as $\text{LCM}(a,b) = \frac{|a \times b|}{\text{GCD}(a,b)}$.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>function gcd(a,b) { return b === 0 ? a : gcd(b, a % b); }</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Essential for RSA Cryptography, fraction reduction, and periodic scheduling.</div>
+          </div>
+        </div>
+
+        <!-- 17. Arithmetic Progression -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="math">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Arithmetic Progression (AP)</span>
+              <span class="dict-category badge bg-success bg-opacity-25 text-success border border-success border-opacity-50">Math &amp; Algorithms</span>
+            </div>
+            <p class="small text-light mb-2">A numerical sequence where the difference between consecutive terms is constant ($d$). The $n$-th term is $a_n = a + (n-1)d$ and the sum of $n$ terms is $S_n = \frac{n}{2}[2a + (n-1)d]$.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>AP: 3, 7, 11, 15 (a=3, d=4) &rarr; a₅ = 3 + 4(4) = 19</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Linear billing models, amortized depreciation, and telemetry intervals.</div>
+          </div>
+        </div>
+
+        <!-- 18. Gauss Summation Theorem -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="math">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Gauss Natural Summation</span>
+              <span class="dict-category badge bg-success bg-opacity-25 text-success border border-success border-opacity-50">Math &amp; Algorithms</span>
+            </div>
+            <p class="small text-light mb-2">Carl Friedrich Gauss's theorem computing the sum of the first $n$ natural numbers in $O(1)$ constant time using the formula $S_n = \sum_{i=1}^n i = \frac{n(n+1)}{2}$.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>Sum(1..100) = (100 × 101) / 2 = 5,050 [O(1) Time]</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Replaces $O(N)$ for-loops with instantaneous $O(1)$ arithmetic.</div>
+          </div>
+        </div>
+
+        <!-- 19. JWT Authentication -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="enterprise">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">JWT &amp; Token Authentication</span>
+              <span class="dict-category badge bg-purple bg-opacity-25 text-light border border-secondary">Enterprise Systems</span>
+            </div>
+            <p class="small text-light mb-2">JSON Web Token (RFC 7519) is a stateless compact URL-safe container transmitting cryptographically signed claims across client and server composed of <code>Header.Payload.Signature</code>.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Stateless session authorization across distributed microservices.</div>
+          </div>
+        </div>
+
+        <!-- 20. XSS & Input Sanitization -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="enterprise">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">XSS &amp; Input Sanitization</span>
+              <span class="dict-category badge bg-purple bg-opacity-25 text-light border border-secondary">Enterprise Systems</span>
+            </div>
+            <p class="small text-light mb-2">Cross-Site Scripting (XSS) vulnerability remediation that filters untrusted client inputs, enforces HTML entity escaping, and validates regular expression schemas prior to DOM insertion.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>element.textContent = sanitizeInput(userInput); // Prevents script injection</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> OWASP Top-10 client-side security defense standard.</div>
+          </div>
+        </div>
+
+        <!-- 21. Compound Growth & Finance -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="enterprise">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Compound Interest &amp; Time Value</span>
+              <span class="dict-category badge bg-purple bg-opacity-25 text-light border border-secondary">Enterprise Systems</span>
+            </div>
+            <p class="small text-light mb-2">Exponential capital growth equation where interest earns additional interest over consecutive compounding cycles: $A = P(1 + \frac{r}{n})^{nt}$.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>Amount = Principal * Math.pow(1 + (rate / (100 * n)), n * time);</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Powers banking deposit engines, mutual funds, and mortgage amortization.</div>
+          </div>
+        </div>
+
+        <!-- 22. Warehouse Inventory MRP -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="enterprise">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Inventory Stock &amp; Thresholds</span>
+              <span class="dict-category badge bg-purple bg-opacity-25 text-light border border-secondary">Enterprise Systems</span>
+            </div>
+            <p class="small text-light mb-2">State-driven stock allocation logic enforcing atomic stock adjustments (restock/dispatch), non-negative constraints, and triggering automated Materials Requirement Planning (MRP) alerts.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>if (stock <= REORDER_POINT) triggerSupplierPurchaseOrder();</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Supply chain logistics, warehouse operations, and point-of-sale systems.</div>
+          </div>
+        </div>
+
+        <!-- 23. E-Commerce Checkout Pipeline -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="enterprise">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Invoice &amp; Tax Calculation Pipeline</span>
+              <span class="dict-category badge bg-purple bg-opacity-25 text-light border border-secondary">Enterprise Systems</span>
+            </div>
+            <p class="small text-light mb-2">Multi-stage financial computation pipeline: $\text{Gross Subtotal} \rightarrow \text{Discount Deduction} \rightarrow \text{Tax (GST/VAT)} \rightarrow \text{Shipping} \rightarrow \text{Net Payable}$ rounded to currency precision.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>const total = (subtotal - discount) * (1 + taxRate) + shipping;</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Production billing engines for Stripe, PayPal, and Shopify.</div>
+          </div>
+        </div>
+
+        <!-- 24. Business Analytics & KPIs -->
+        <div class="col-md-6 col-lg-4 dict-item" data-cat="enterprise">
+          <div class="dictionary-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="dict-term">Statistical Aggregation &amp; KPIs</span>
+              <span class="dict-category badge bg-purple bg-opacity-25 text-light border border-secondary">Enterprise Systems</span>
+            </div>
+            <p class="small text-light mb-2">Data reduction techniques aggregating telemetry logs into actionable Key Performance Indicators (KPIs), computing mean, median, peak variance, and real-time visualization trends.</p>
+            <div class="tech-code-snippet small py-1 my-1"><code>const mean = sales.reduce((a, b) => a + b, 0) / sales.length;</code></div>
+            <div class="small text-muted"><strong class="text-secondary">Key Role:</strong> Executive dashboards, metric analytics, and capacity planning.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 9: Conclusion
+         ========================================================================== -->
+    <section id="conclusion" class="mb-5 pt-4">
+      <div class="conclusion-box">
+        <div class="section-tag">Section 9</div>
+        <h2 class="section-title mb-4">🏆 Comprehensive Project Conclusion</h2>
+        
+        <p class="lead text-light mb-4">
+          This comprehensive Day 10 project illustrates the full lifecycle of modern full-stack web engineering: unifying semantic markup, responsive design frameworks, modular algorithmic reasoning, and production-grade JavaScript business logic.
+        </p>
+
+        <div class="row g-4 mt-2 mb-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <h6 class="fw-bold text-primary mb-2"><i class="bi bi-layers me-1"></i> 1. Web Foundations</h6>
+              <p class="small text-muted mb-0">
+                HTML5 semantic architecture combined with CSS3 layouts delivers accessible, SEO-optimized, and device-responsive web standards.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <h6 class="fw-bold text-info mb-2"><i class="bi bi-palette me-1"></i> 2. CSS Ecosystems</h6>
+              <p class="small text-muted mb-0">
+                Bootstrap 5 provides rapid component prototyping, while Tailwind CSS brings composable utility-first agility for custom interfaces.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <h6 class="fw-bold text-warning mb-2"><i class="bi bi-gear-wide-connected me-1"></i> 3. Business Architectures</h6>
+              <p class="small text-muted mb-0">
+                10 enterprise logic modules prove mastery over auth guards, form validation, payment checkout pipelines, and warehouse analytics.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <h6 class="fw-bold text-success mb-2"><i class="bi bi-lightning-charge me-1"></i> 4. Method Efficiency</h6>
+              <p class="small text-muted mb-0">
+                Higher-order array operations (`map`, `filter`, `reduce`) ensure clean, declarative, immutability-driven data transformations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap align-items-center justify-content-between p-3 rounded bg-black border border-secondary gap-3">
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-patch-check-fill fs-2 text-success"></i>
+            <div>
+              <div class="fw-bold text-white">Submitted by Sakthi</div>
+              <div class="small text-muted">FullStack Web &amp; JavaScript Specialization &bull; Day 10 Complete</div>
+            </div>
+          </div>
+          <a href="#intro-topics" class="btn btn-outline-light btn-sm px-4">
+            <i class="bi bi-arrow-up-circle me-1"></i>Back to Top
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Detailed Study Guide & Interview Cheatsheet Modal -->
+  <div class="modal fade" id="studyGuideModal" tabindex="-1" aria-labelledby="studyGuideModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content bg-dark text-light border-secondary">
+        <div class="modal-header border-secondary bg-black">
+          <h5 class="modal-title d-flex align-items-center gap-2" id="studyGuideModalLabel">
+            <i class="bi bi-journal-code text-info"></i>
+            <span class="fw-bold">Comprehensive Study Guide, Architecture &amp; Interview Cheatsheet</span>
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          
+          <!-- Modal Tabs -->
+          <ul class="nav nav-pills mb-4 gap-2" id="guideTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active btn-sm" id="tab-webtech-btn" data-bs-toggle="pill" data-bs-target="#tab-webtech" type="button" role="tab">
+                1. Web Tech Deep-Dive
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link btn-sm" id="tab-business-btn" data-bs-toggle="pill" data-bs-target="#tab-business" type="button" role="tab">
+                2. 10 Business Logics Guide
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link btn-sm" id="tab-methods-btn" data-bs-toggle="pill" data-bs-target="#tab-methods" type="button" role="tab">
+                3. 10 Methods Complexity Matrix
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link btn-sm" id="tab-viva-btn" data-bs-toggle="pill" data-bs-target="#tab-viva" type="button" role="tab">
+                4. Viva &amp; Interview Q&amp;A
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="guideTabsContent">
+            
+            <!-- Tab 1: Web Tech Deep-Dive -->
+            <div class="tab-pane fade show active" id="tab-webtech" role="tabpanel">
+              <h6 class="text-primary fw-bold text-uppercase mb-3">Core Web Ecosystem &amp; Architectural Foundations</h6>
+              
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="p-3 rounded bg-black border border-secondary h-100">
+                    <h6 class="fw-bold text-danger"><i class="bi bi-filetype-html me-1"></i> HTML5 Architecture &amp; Semantics</h6>
+                    <ul class="small text-muted ps-3 mb-0">
+                      <li><strong>DOM Construction:</strong> Raw bytes &rarr; Characters &rarr; Tokens &rarr; Nodes &rarr; DOM Tree.</li>
+                      <li><strong>Semantic Roles:</strong> <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> improve screen reader accessibility (ARIA) and search index ranking.</li>
+                      <li><strong>Forms &amp; Validation:</strong> Built-in constraints (<code>required</code>, <code>pattern</code>, <code>type="email"</code>) prevent invalid submissions before JS execution.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="p-3 rounded bg-black border border-secondary h-100">
+                    <h6 class="fw-bold text-primary"><i class="bi bi-filetype-css me-1"></i> CSS3 Layout Engine &amp; Cascade</h6>
+                    <ul class="small text-muted ps-3 mb-0">
+                      <li><strong>Box Model:</strong> Content &rarr; Padding &rarr; Border &rarr; Margin. Using <code>box-sizing: border-box</code> standardizes sizing.</li>
+                      <li><strong>Flexbox vs CSS Grid:</strong> Flexbox is 1-dimensional (row/column flow); Grid is 2-dimensional (simultaneous rows and columns).</li>
+                      <li><strong>Specificity Hierarchy:</strong> Inline (1000) &gt; ID (100) &gt; Class/Pseudo-class (10) &gt; Element (1).</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="p-3 rounded bg-black border border-secondary h-100">
+                    <h6 class="fw-bold text-warning"><i class="bi bi-filetype-js me-1"></i> JavaScript (V8 Engine &amp; Event Loop)</h6>
+                    <ul class="small text-muted ps-3 mb-0">
+                      <li><strong>Execution Context:</strong> Creation phase (hoisting variables with <code>undefined</code> and functions) and Execution phase.</li>
+                      <li><strong>Concurrency Model:</strong> Call Stack (synchronous) &rarr; Web APIs (Async fetch, timers) &rarr; Microtask Queue (Promises) &rarr; Macrotask Queue (setTimeout).</li>
+                      <li><strong>Memory Management:</strong> Primitives stored in Stack; Objects and Arrays stored in Heap with Garbage Collection (Mark-and-Sweep).</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="p-3 rounded bg-black border border-secondary h-100">
+                    <h6 class="fw-bold text-info"><i class="bi bi-layers-half me-1"></i> Bootstrap 5 vs Tailwind CSS</h6>
+                    <div class="table-responsive">
+                      <table class="table table-dark table-sm small mb-0">
+                        <thead><tr><th>Feature</th><th>Bootstrap 5</th><th>Tailwind CSS</th></tr></thead>
+                        <tbody>
+                          <tr><td><strong>Paradigm</strong></td><td>Pre-built components</td><td>Utility-first atomic classes</td></tr>
+                          <tr><td><strong>Customization</strong></td><td>Sass overrides</td><td>Arbitrary values &amp; config</td></tr>
+                          <tr><td><strong>Bundle Size</strong></td><td>Standard fixed size</td><td>Purged/JIT tree-shaken (tiny)</td></tr>
+                          <tr><td><strong>Speed</strong></td><td>Instant UI scaffolding</td><td>Pixel-perfect bespoke design</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: 10 Business Logics Guide -->
+            <div class="tab-pane fade" id="tab-business" role="tabpanel">
+              <h6 class="text-success fw-bold text-uppercase mb-3">10 Enterprise JavaScript Business Logic Modules</h6>
+              
+              <div class="accordion accordion-flush" id="businessLogicAccordion">
+                <div class="accordion-item bg-dark border-secondary">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-black text-light" type="button" data-bs-toggle="collapse" data-bs-target="#cl1">
+                      1. Conditional Logic (if/else &amp; Ternary Guards)
+                    </button>
+                  </h2>
+                  <div id="cl1" class="accordion-collapse collapse" data-bs-parent="#businessLogicAccordion">
+                    <div class="accordion-body small text-muted">
+                      <strong>Core Mechanism:</strong> Strict equality <code>===</code> vs loose equality <code>==</code>. Used in authorization gates, credit eligibility checks, and form validation flows.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-dark border-secondary">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-black text-light" type="button" data-bs-toggle="collapse" data-bs-target="#cl2">
+                      2. Looping Logic (Iterative Algorithms)
+                    </button>
+                  </h2>
+                  <div id="cl2" class="accordion-collapse collapse" data-bs-parent="#businessLogicAccordion">
+                    <div class="accordion-body small text-muted">
+                      <strong>Core Mechanism:</strong> <code>for</code>, <code>while</code>, and <code>for...of</code> loops for chunk processing and sequence aggregation.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 3: 10 Methods Complexity Matrix -->
+            <div class="tab-pane fade" id="tab-methods" role="tabpanel">
+              <h6 class="text-warning fw-bold text-uppercase mb-3">10 Practical JavaScript Methods: Technical Specification</h6>
+              
+              <div class="table-responsive">
+                <table class="table table-dark table-striped table-hover small border border-secondary">
+                  <thead>
+                    <tr class="table-primary text-dark">
+                      <th>Method</th>
+                      <th>Target</th>
+                      <th>Mutates?</th>
+                      <th>Return Value</th>
+                      <th>Time Complexity</th>
+                      <th>Primary Use Case</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><code>push()</code></td><td>Array</td><td><span class="badge bg-danger">Yes</span></td><td>New length</td><td>O(1)</td><td>Appending elements</td></tr>
+                    <tr><td><code>pop()</code></td><td>Array</td><td><span class="badge bg-danger">Yes</span></td><td>Removed item</td><td>O(1)</td><td>Stack undo operations</td></tr>
+                    <tr><td><code>map()</code></td><td>Array</td><td><span class="badge bg-success">No</span></td><td>New array</td><td>O(N)</td><td>Transforming data lists</td></tr>
+                    <tr><td><code>filter()</code></td><td>Array</td><td><span class="badge bg-success">No</span></td><td>Filtered copy</td><td>O(N)</td><td>Condition searching</td></tr>
+                    <tr><td><code>reduce()</code></td><td>Array</td><td><span class="badge bg-success">No</span></td><td>Accumulated val</td><td>O(N)</td><td>Summing / Aggregating</td></tr>
+                    <tr><td><code>forEach()</code></td><td>Array</td><td><span class="badge bg-success">No</span></td><td>undefined</td><td>O(N)</td><td>Side effects &amp; logging</td></tr>
+                    <tr><td><code>find()</code></td><td>Array</td><td><span class="badge bg-success">No</span></td><td>First match</td><td>O(N)</td><td>Unique record lookup</td></tr>
+                    <tr><td><code>includes()</code></td><td>Array/String</td><td><span class="badge bg-success">No</span></td><td>true/false</td><td>O(N)</td><td>Existence check</td></tr>
+                    <tr><td><code>toUpperCase()</code></td><td>String</td><td><span class="badge bg-success">No</span></td><td>New String</td><td>O(N)</td><td>Case formatting</td></tr>
+                    <tr><td><code>addEventListener()</code></td><td>EventTarget</td><td><span class="badge bg-info">Registers</span></td><td>undefined</td><td>O(1)</td><td>Event Handling</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Tab 4: Viva & Interview Q&A -->
+            <div class="tab-pane fade" id="tab-viva" role="tabpanel">
+              <h6 class="text-info fw-bold text-uppercase mb-3">Top Interview Questions &amp; Model Answers</h6>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="p-3 rounded bg-black border border-secondary">
+                    <div class="fw-bold text-light mb-1">Q1: Difference between <code>map()</code> and <code>forEach()</code>?</div>
+                    <p class="small text-muted mb-0"><code>map()</code> allocates memory and returns a new transformed array. <code>forEach()</code> returns <code>undefined</code> and only performs side effects.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 rounded bg-black border border-secondary">
+                    <div class="fw-bold text-light mb-1">Q2: Why provide an initial value to <code>reduce()</code>?</div>
+                    <p class="small text-muted mb-0">Prevents runtime <code>TypeError</code> when reducing empty arrays and ensures consistent type safety.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="modal-footer border-secondary bg-black">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close Guide</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inline Helper Scripts -->
+  <script>
+    function calcCubeCustom() {
+      const x = parseFloat(document.getElementById('squareInput').value) || 0;
+      document.getElementById('squareResult').textContent = `${x}² = ${x * x} | ${x}³ = ${x * x * x}`;
+    }
+
+    function calcGeom() {
+      const l = parseFloat(document.getElementById('areaL')?.value) || 0;
+      const w = parseFloat(document.getElementById('areaW')?.value) || 0;
+      const h = parseFloat(document.getElementById('volH')?.value) || 0;
+      const a = l * w;
+      const p = 2 * (l + w);
+      const v = l * w * h;
+      document.getElementById('areaResult').textContent = `Area = ${a} | Perimeter = ${p} | Volume = ${v}`;
+    }
+  </script>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main Project Script -->
+  <script src="script.js"></script>
+</body>
+</html>

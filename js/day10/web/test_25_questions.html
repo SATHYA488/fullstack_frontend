@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 25 Questions Test &amp; Solutions | Day 10</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: #f9fafb;
+      font-family: 'Inter', sans-serif;
+    }
+    .custom-card {
+      background-color: #111827;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 1rem;
+      transition: all 0.2s ease;
+    }
+    .custom-card:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+    .code-box {
+      background: #030712;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      color: #93c5fd;
+      overflow-x: auto;
+    }
+    .output-box {
+      background: #030712;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      color: #34d399;
+    }
+    .option-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #e2e8f0;
+      text-align: left;
+      padding: 0.7rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+    .option-btn:hover {
+      background: rgba(59, 130, 246, 0.15);
+      border-color: #3b82f6;
+      color: #ffffff;
+    }
+    .option-btn.correct {
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: #10b981 !important;
+      color: #34d399 !important;
+      font-weight: 600;
+    }
+    .option-btn.incorrect {
+      background: rgba(239, 68, 68, 0.2) !important;
+      border-color: #ef4444 !important;
+      color: #f87171 !important;
+    }
+    .exp-box {
+      display: none;
+      background: #030712;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+    .nav-pills .nav-link {
+      color: #94a3b8;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+    }
+    .nav-pills .nav-link.active {
+      background-color: #2563eb;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="py-5">
+
+  <div class="container">
+    
+    <!-- Top Header -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between mb-4 pb-3 border-bottom border-secondary gap-3">
+      <div>
+        <div class="badge bg-primary px-3 py-1 rounded-pill mb-2">Examination &amp; Assessment Suite</div>
+        <h1 class="display-6 fw-bold text-white mb-1">JavaScript &ndash; 25 Questions Test &amp; Solutions</h1>
+        <p class="text-muted mb-0">Theory, Logical Programming, Practical Business Logics, and 10 Logic Thinking MCQs.</p>
+      </div>
+      <div class="d-flex gap-2">
+        <a href="index.html" class="btn btn-outline-info btn-sm"><i class="bi bi-speedometer2 me-1"></i>Master Dashboard</a>
+        <a href="math_calculators.html" class="btn btn-outline-warning btn-sm"><i class="bi bi-calculator me-1"></i>21 Math Hub</a>
+        <a href="../tasks/index.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-folder me-1"></i>20 Tasks</a>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs for Test Parts -->
+    <ul class="nav nav-pills mb-4 gap-2 border-bottom border-secondary pb-3" id="testTabs" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#partA">
+          <i class="bi bi-journal-text me-1"></i> Part A: Theory (5 Qs)
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#partB">
+          <i class="bi bi-cpu me-1"></i> Part B: Logical Code (5 Qs)
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#partC">
+          <i class="bi bi-briefcase me-1"></i> Part C: Business Logic (5 Qs)
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#partD">
+          <i class="bi bi-check2-circle me-1"></i> Part D: 10 MCQs Quiz
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="testTabsContent">
+
+      <!-- ==========================================================================
+           PART A: THEORY / INTERVIEW QUESTIONS (1 to 5)
+           ========================================================================== -->
+      <div class="tab-pane fade show active" id="partA" role="tabpanel">
+        <div class="d-flex flex-column gap-4">
+
+          <!-- Q1 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-primary mb-2">Question 01 &bull; Loops Comparison</span>
+            <h5 class="fw-bold text-white mb-2">What is the difference between <code>for</code> loop, <code>while</code> loop, and <code>do...while</code> loop? When would you choose each one?</h5>
+            <div class="text-muted small mb-3">
+              <strong>Answer &amp; Breakdown:</strong>
+              <div class="table-responsive my-2">
+                <table class="table table-dark table-bordered table-sm mb-0">
+                  <thead><tr class="table-primary text-dark"><th>Loop Type</th><th>Condition Check</th><th>Minimum Executions</th><th>When to Choose</th></tr></thead>
+                  <tbody>
+                    <tr><td><code>for</code></td><td>Entry-controlled (at the start)</td><td>0 times</td><td>When number of iterations is known beforehand (e.g., iterating an array by length).</td></tr>
+                    <tr><td><code>while</code></td><td>Entry-controlled (at the start)</td><td>0 times</td><td>When iterations depend on a dynamic condition (e.g., waiting for a flag or user input).</td></tr>
+                    <tr><td><code>do...while</code></td><td>Exit-controlled (at the end)</td><td><strong>1 time guaranteed</strong></td><td>When the code block must execute at least once before condition evaluation (e.g., displaying a menu).</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <pre class="code-box"><code>// for loop: known iterations
+for (let i = 0; i < 5; i++) { console.log(i); }
+
+// while loop: condition-based
+let count = 3;
+while (count > 0) { console.log(count--); }
+
+// do...while loop: executes at least once
+let num = 10;
+do {
+  console.log("Runs once even if condition false:", num);
+} while (num < 5);</code></pre>
+          </div>
+
+          <!-- Q2 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-primary mb-2">Question 02 &bull; Functions Taxonomy</span>
+            <h5 class="fw-bold text-white mb-2">Explain the difference between a normal function, function expression, and arrow function with suitable examples.</h5>
+            <div class="text-muted small mb-3">
+              <strong>Answer &amp; Key Distinctions:</strong>
+              <ul class="mb-2">
+                <li><strong>Function Declaration:</strong> Hoisted completely (can be called before its definition in code). Has its own <code>this</code> and <code>arguments</code> binding.</li>
+                <li><strong>Function Expression:</strong> Stored inside a variable. Hoisting depends on variable declaration (e.g., <code>let/const</code> in TDZ).</li>
+                <li><strong>Arrow Function (ES6):</strong> Concise syntax, implicit return support. Does <strong>not</strong> bind its own <code>this</code> (inherits lexical <code>this</code>), cannot be used as a constructor with <code>new</code>.</li>
+              </ul>
+            </div>
+            <pre class="code-box"><code>// 1. Function Declaration (Hoisted)
+function greet(name) {
+  return "Hello " + name;
+}
+
+// 2. Function Expression (Not hoisted before initialization)
+const square = function(n) {
+  return n * n;
+};
+
+// 3. Arrow Function (Lexical this & concise implicit return)
+const add = (a, b) => a + b;
+
+console.log(greet("Sakthi"), square(4), add(10, 20));</code></pre>
+          </div>
+
+          <!-- Q3 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-primary mb-2">Question 03 &bull; Parameters vs Arguments</span>
+            <h5 class="fw-bold text-white mb-2">What are parameters and arguments? Explain the difference between them.</h5>
+            <div class="text-muted small mb-3">
+              <strong>Answer:</strong>
+              <ul>
+                <li><strong>Parameters:</strong> The named placeholder variables declared in the function's signature definition.</li>
+                <li><strong>Arguments:</strong> The real concrete values passed into the function when it is invoked.</li>
+              </ul>
+            </div>
+            <pre class="code-box"><code>// 'price' and 'taxRate' are PARAMETERS (Placeholders)
+function calculateBill(price, taxRate) {
+  return price + (price * taxRate);
+}
+
+// 500 and 0.18 are ARGUMENTS (Actual Values passed)
+console.log(calculateBill(500, 0.18)); // 590</code></pre>
+          </div>
+
+          <!-- Q4 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-primary mb-2">Question 04 &bull; Scope in JavaScript</span>
+            <h5 class="fw-bold text-white mb-2">What is scope in JavaScript? Explain global scope, function scope, and block scope.</h5>
+            <div class="text-muted small mb-3">
+              <strong>Answer:</strong> Scope defines the accessibility/visibility of variables, functions, and objects in different execution contexts.
+              <ol class="mt-2">
+                <li><strong>Global Scope:</strong> Variables declared outside any function/block; accessible everywhere in the script.</li>
+                <li><strong>Function Scope:</strong> Variables declared inside a function (using <code>var</code>, <code>let</code>, or <code>const</code>) are only accessible within that function.</li>
+                <li><strong>Block Scope (ES6):</strong> Variables declared with <code>let</code> and <code>const</code> inside curly brackets <code>{ ... }</code> (such as <code>if</code>, <code>for</code>) cannot be accessed outside the block.</li>
+              </ol>
+            </div>
+            <pre class="code-box"><code>let globalVar = "Global"; // Global Scope
+
+function testScope() {
+  var funcVar = "Function-Scoped"; // Function Scope
+  if (true) {
+    let blockVar = "Block-Scoped";  // Block Scope
+    const blockConst = "Constant";  // Block Scope
+    console.log(blockVar, blockConst);
+  }
+  // console.log(blockVar); // ReferenceError: blockVar is not defined
+}</code></pre>
+          </div>
+
+          <!-- Q5 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-primary mb-2">Question 05 &bull; Hoisting &amp; TDZ</span>
+            <h5 class="fw-bold text-white mb-2">What is hoisting? Explain how <code>var</code>, <code>let</code>, and <code>const</code> behave during hoisting and what TDZ means.</h5>
+            <div class="text-muted small mb-3">
+              <strong>Answer:</strong>
+              <ul>
+                <li><strong>Hoisting:</strong> JavaScript engine's behavior of allocating memory for variable and function declarations during the Creation Phase before code execution.</li>
+                <li><strong><code>var</code> Hoisting:</strong> Hoisted and initialized with <code>undefined</code>. Accessing it before declaration returns <code>undefined</code> without crashing.</li>
+                <li><strong><code>let</code> &amp; <code>const</code> Hoisting:</strong> Hoisted into memory but remain <strong>uninitialized</strong>.</li>
+                <li><strong>Temporal Dead Zone (TDZ):</strong> The time window between entering scope and the line where <code>let</code>/<code>const</code> is initialized. Accessing a variable in its TDZ throws a <code>ReferenceError</code>.</li>
+              </ul>
+            </div>
+            <pre class="code-box"><code>console.log(a); // undefined (var is hoisted and initialized to undefined)
+var a = 10;
+
+// console.log(b); // ReferenceError: Cannot access 'b' before initialization (TDZ)
+let b = 20;</code></pre>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================================================
+           PART B: LOGICAL PROGRAMMING QUESTIONS (6 to 10)
+           ========================================================================== -->
+      <div class="tab-pane fade" id="partB" role="tabpanel">
+        <div class="d-flex flex-column gap-4">
+
+          <!-- Q6 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-success mb-2">Question 06 &bull; Highest Number</span>
+            <h5 class="fw-bold text-white mb-2">Write a program to find the highest number from an array using a <code>for</code> loop.</h5>
+            <pre class="code-box"><code>const numbers = [45, 12, 89, 34, 67, 90, 23];
+let max = numbers[0];
+
+for (let i = 1; i < numbers.length; i++) {
+  if (numbers[i] > max) {
+    max = numbers[i];
+  }
+}
+console.log("Highest number:", max);</code></pre>
+            <div class="output-box">Output: Highest number: 90</div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-success mb-2">Question 07 &bull; Reverse String without Built-in Methods</span>
+            <h5 class="fw-bold text-white mb-2">Write a program to reverse a string using a loop without using built-in reverse methods.</h5>
+            <pre class="code-box"><code>let str = "JavaScript";
+let reversed = "";
+
+for (let i = str.length - 1; i >= 0; i--) {
+  reversed += str[i];
+}
+console.log("Original:", str);
+console.log("Reversed:", reversed);</code></pre>
+            <div class="output-box">Output: Original: "JavaScript" &rarr; Reversed: "tpircSavaJ"</div>
+          </div>
+
+          <!-- Q8 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-success mb-2">Question 08 &bull; Factorial Calculation</span>
+            <h5 class="fw-bold text-white mb-2">Write a program to calculate the factorial of a given number.</h5>
+            <pre class="code-box"><code>function getFactorial(num) {
+  let fact = 1;
+  let i = 1;
+  while (i <= num) {
+    fact *= i;
+    i++;
+  }
+  return fact;
+}
+console.log("Factorial of 5:", getFactorial(5)); // 120</code></pre>
+            <div class="output-box">Output: Factorial of 5: 120</div>
+          </div>
+
+          <!-- Q9 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-success mb-2">Question 09 &bull; Fibonacci Series for n terms</span>
+            <h5 class="fw-bold text-white mb-2">Write a program to print the Fibonacci series for n terms.</h5>
+            <pre class="code-box"><code>function printFibonacci(n) {
+  let fib = [0, 1];
+  for (let i = 2; i < n; i++) {
+    fib.push(fib[i - 1] + fib[i - 2]);
+  }
+  return fib.slice(0, n);
+}
+console.log("Fibonacci (8 terms):", printFibonacci(8));</code></pre>
+            <div class="output-box">Output: [0, 1, 1, 2, 3, 5, 8, 13]</div>
+          </div>
+
+          <!-- Q10 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-success mb-2">Question 10 &bull; Even or Odd via Ternary Operator</span>
+            <h5 class="fw-bold text-white mb-2">Write a program using the ternary operator to check whether a given number is even or odd.</h5>
+            <pre class="code-box"><code>let num = 17;
+let result = (num % 2 === 0) ? "Even" : "Odd";
+console.log(`${num} is ${result}`);</code></pre>
+            <div class="output-box">Output: 17 is Odd</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================================================
+           PART C: BUSINESS LOGIC / PRACTICAL JAVASCRIPT (11 to 15)
+           ========================================================================== -->
+      <div class="tab-pane fade" id="partC" role="tabpanel">
+        <div class="d-flex flex-column gap-4">
+
+          <!-- Q11 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-warning text-dark mb-2">Question 11 &bull; Array Mutators (push, pop, unshift, shift)</span>
+            <h5 class="fw-bold text-white mb-2">Create an array of product names. Add a new product at the end, remove the last product, add a product at the beginning, and finally remove the first product.</h5>
+            <pre class="code-box"><code>let products = ["Laptop", "Phone", "Tablet"];
+console.log("Initial:", products);
+
+// 1. Add product at the end (push)
+products.push("Smartwatch");
+console.log("After push:", products); // ["Laptop", "Phone", "Tablet", "Smartwatch"]
+
+// 2. Remove the last product (pop)
+let removedLast = products.pop();
+console.log("Popped:", removedLast, "| Array:", products); // ["Laptop", "Phone", "Tablet"]
+
+// 3. Add product at the beginning (unshift)
+products.unshift("Monitor");
+console.log("After unshift:", products); // ["Monitor", "Laptop", "Phone", "Tablet"]
+
+// 4. Remove the first product (shift)
+let removedFirst = products.shift();
+console.log("Shifted:", removedFirst, "| Final Array:", products); // ["Laptop", "Phone", "Tablet"]</code></pre>
+            <div class="output-box">Output: Final Products Array: ["Laptop", "Phone", "Tablet"]</div>
+          </div>
+
+          <!-- Q12 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-warning text-dark mb-2">Question 12 &bull; Object Mutation &amp; Property Access</span>
+            <h5 class="fw-bold text-white mb-2">Create an employee object containing name, age, department, and salary. Access the values, update the salary, and add a new property called experience.</h5>
+            <pre class="code-box"><code>let employee = {
+  name: "Sakthi",
+  age: 24,
+  department: "FullStack Engineering",
+  salary: 65000
+};
+
+// Accessing values
+console.log(`Employee: ${employee.name}, Dept: ${employee.department}, Salary: $${employee.salary}`);
+
+// Updating salary
+employee.salary = 85000;
+
+// Adding new property
+employee.experience = "3 Years";
+
+console.log("Updated Employee Object:", employee);</code></pre>
+            <div class="output-box">Output: { name: "Sakthi", age: 24, department: "FullStack Engineering", salary: 85000, experience: "3 Years" }</div>
+          </div>
+
+          <!-- Q13 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-warning text-dark mb-2">Question 13 &bull; Student Array Iteration</span>
+            <h5 class="fw-bold text-white mb-2">Create an array of 5 student names. Using a loop, display each student name with its index number.</h5>
+            <pre class="code-box"><code>const students = ["Sakthi", "Priya", "Kiran", "Ravi", "Anitha"];
+
+for (let i = 0; i < students.length; i++) {
+  console.log(`Index ${i}: ${students[i]}`);
+}</code></pre>
+            <div class="output-box">
+              Index 0: Sakthi<br>
+              Index 1: Priya<br>
+              Index 2: Kiran<br>
+              Index 3: Ravi<br>
+              Index 4: Anitha
+            </div>
+          </div>
+
+          <!-- Q14 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-warning text-dark mb-2">Question 14 &bull; calculateTotal Function</span>
+            <h5 class="fw-bold text-white mb-2">Create a function called <code>calculateTotal</code> that accepts price and quantity as parameters and returns the total amount. Call the function with different arguments.</h5>
+            <pre class="code-box"><code>function calculateTotal(price, quantity) {
+  return price * quantity;
+}
+
+console.log("Order 1 (Price $25, Qty 4):", calculateTotal(25, 4));   // $100
+console.log("Order 2 (Price $120, Qty 2):", calculateTotal(120, 2)); // $240
+console.log("Order 3 (Price $9.99, Qty 10):", calculateTotal(9.99, 10)); // $99.90</code></pre>
+            <div class="output-box">
+              Order 1 Total: $100<br>
+              Order 2 Total: $240<br>
+              Order 3 Total: $99.90
+            </div>
+          </div>
+
+          <!-- Q15 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-warning text-dark mb-2">Question 15 &bull; Shop Discount via Ternary Operator</span>
+            <h5 class="fw-bold text-white mb-2">A shop gives a discount based on the bill amount. If the bill amount is greater than or equal to 1000, display 'Discount Applied'; otherwise display 'No Discount'. Solve this using the ternary operator.</h5>
+            <pre class="code-box"><code>function checkShopDiscount(billAmount) {
+  let message = (billAmount >= 1000) ? "Discount Applied" : "No Discount";
+  return `Bill: $${billAmount} &rarr; ${message}`;
+}
+
+console.log(checkShopDiscount(1250)); // Bill: $1250 &rarr; Discount Applied
+console.log(checkShopDiscount(850));  // Bill: $850 &rarr; No Discount</code></pre>
+            <div class="output-box">
+              Bill: $1250 &rarr; Discount Applied<br>
+              Bill: $850 &rarr; No Discount
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================================================
+           PART D: 10 MULTIPLE CHOICE QUESTIONS (16 to 25)
+           ========================================================================== -->
+      <div class="tab-pane fade" id="partD" role="tabpanel">
+        
+        <!-- Score Bar -->
+        <div class="custom-card p-3 mb-4 d-flex justify-content-between align-items-center">
+          <div>
+            <span class="text-muted small">Part D Score:</span>
+            <h4 class="fw-bold text-success mb-0" id="mcqScore">0 / 10</h4>
+          </div>
+          <button class="btn btn-outline-light btn-sm" onclick="resetMCQs()">
+            <i class="bi bi-arrow-clockwise me-1"></i>Reset MCQs
+          </button>
+        </div>
+
+        <div class="d-flex flex-column gap-4">
+
+          <!-- Q16 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-info text-dark mb-2">Question 16</span>
+            <h6 class="fw-bold text-white mb-3">16. You need to run a block of code exactly 5 times. Which loop is the clearest choice?</h6>
+            <div class="options">
+              <button class="option-btn" onclick="checkMCQ(this, true, 'exp16')">A) for loop</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp16')">B) while loop</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp16')">C) do...while loop</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp16')">D) None</button>
+            </div>
+            <div class="exp-box" id="exp16"><i class="bi bi-check-circle text-success me-1"></i><strong>Correct: A) for loop.</strong> It packages initialization, condition, and increment together for known iteration counts.</div>
+          </div>
+
+          <!-- Q17 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-info text-dark mb-2">Question 17</span>
+            <h6 class="fw-bold text-white mb-3">17. A program should execute at least once before checking its condition. Which loop should you choose?</h6>
+            <div class="options">
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp17')">A) for loop</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp17')">B) while loop</button>
+              <button class="option-btn" onclick="checkMCQ(this, true, 'exp17')">C) do...while loop</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp17')">D) Nested loop</button>
+            </div>
+            <div class="exp-box" id="exp17"><i class="bi bi-check-circle text-success me-1"></i><strong>Correct: C) do...while loop.</strong> It is exit-controlled, ensuring the body executes at least once before condition check.</div>
+          </div>
+
+          <!-- Q18 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-info text-dark mb-2">Question 18</span>
+            <h6 class="fw-bold text-white mb-3">18. You need to add a new value to the end of an existing array without manually assigning an index. Which method is best?</h6>
+            <div class="options">
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp18')">A) pop()</button>
+              <button class="option-btn" onclick="checkMCQ(this, true, 'exp18')">B) push()</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp18')">C) shift()</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp18')">D) unshift()</button>
+            </div>
+            <div class="exp-box" id="exp18"><i class="bi bi-check-circle text-success me-1"></i><strong>Correct: B) push().</strong> <code>push()</code> appends elements to the end of an array.</div>
+          </div>
+
+          <!-- Q19 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-info text-dark mb-2">Question 19</span>
+            <h6 class="fw-bold text-white mb-3">19. An array represents a queue of customers. The customer who came first should be removed first. Which method should be used?</h6>
+            <div class="options">
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp19')">A) push()</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp19')">B) pop()</button>
+              <button class="option-btn" onclick="checkMCQ(this, true, 'exp19')">C) shift()</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp19')">D) concat()</button>
+            </div>
+            <div class="exp-box" id="exp19"><i class="bi bi-check-circle text-success me-1"></i><strong>Correct: C) shift().</strong> In a FIFO (First-In, First-Out) Queue, <code>shift()</code> removes the first item from index 0.</div>
+          </div>
+
+          <!-- Q20 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-info text-dark mb-2">Question 20</span>
+            <h6 class="fw-bold text-white mb-3">20. You need to combine two arrays but should not modify either original array. Which method is the best choice?</h6>
+            <div class="options">
+              <button class="option-btn" onclick="checkMCQ(this, true, 'exp20')">A) concat()</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp20')">B) pop()</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp20')">C) shift()</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp20')">D) unshift()</button>
+            </div>
+            <div class="exp-box" id="exp20"><i class="bi bi-check-circle text-success me-1"></i><strong>Correct: A) concat().</strong> <code>concat()</code> merges arrays and returns a new combined array without mutating originals.</div>
+          </div>
+
+          <!-- Q21 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-info text-dark mb-2">Question 21</span>
+            <h6 class="fw-bold text-white mb-3">21. A function needs to give a calculated value back to the place where it was called. Which keyword is required?</h6>
+            <div class="options">
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp21')">A) break</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp21')">B) continue</button>
+              <button class="option-btn" onclick="checkMCQ(this, true, 'exp21')">C) return</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp21')">D) const</button>
+            </div>
+            <div class="exp-box" id="exp21"><i class="bi bi-check-circle text-success me-1"></i><strong>Correct: C) return.</strong> The <code>return</code> statement outputs the function result and terminates its execution.</div>
+          </div>
+
+          <!-- Q22 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-info text-dark mb-2">Question 22</span>
+            <h6 class="fw-bold text-white mb-3">22. You want a variable to be accessible only inside an if block. Which declaration is the best choice?</h6>
+            <div class="options">
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp22')">A) var</button>
+              <button class="option-btn" onclick="checkMCQ(this, true, 'exp22')">B) let</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp22')">C) global variable</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp22')">D) function declaration</button>
+            </div>
+            <div class="exp-box" id="exp22"><i class="bi bi-check-circle text-success me-1"></i><strong>Correct: B) let.</strong> <code>let</code> is block-scoped, confining accessibility within <code>{ ... }</code>.</div>
+          </div>
+
+          <!-- Q23 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-info text-dark mb-2">Question 23</span>
+            <h6 class="fw-bold text-white mb-3">23. A variable should never be reassigned after its initial value is set. Which keyword is the best choice?</h6>
+            <div class="options">
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp23')">A) var</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp23')">B) let</button>
+              <button class="option-btn" onclick="checkMCQ(this, true, 'exp23')">C) const</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp23')">D) return</button>
+            </div>
+            <div class="exp-box" id="exp23"><i class="bi bi-check-circle text-success me-1"></i><strong>Correct: C) const.</strong> <code>const</code> creates an immutable variable binding that cannot be reassigned.</div>
+          </div>
+
+          <!-- Q24 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-info text-dark mb-2">Question 24</span>
+            <h6 class="fw-bold text-white mb-3">24. You need to assign one of two values based on a simple true/false condition in a single line. Which JavaScript feature is most suitable?</h6>
+            <div class="options">
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp24')">A) for loop</button>
+              <button class="option-btn" onclick="checkMCQ(this, true, 'exp24')">B) ternary operator</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp24')">C) function declaration</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp24')">D) concat()</button>
+            </div>
+            <div class="exp-box" id="exp24"><i class="bi bi-check-circle text-success me-1"></i><strong>Correct: B) ternary operator.</strong> The conditional ternary operator <code>condition ? val1 : val2</code> assigns inline.</div>
+          </div>
+
+          <!-- Q25 -->
+          <div class="custom-card p-4">
+            <span class="badge bg-info text-dark mb-2">Question 25</span>
+            <h6 class="fw-bold text-white mb-3">25. A number is stored in a variable. You want to display 'Positive' when it is greater than 0; otherwise display 'Not Positive' using a short conditional expression. Which operator is best?</h6>
+            <div class="options">
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp25')">A) Assignment operator</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp25')">B) Logical AND operator</button>
+              <button class="option-btn" onclick="checkMCQ(this, true, 'exp25')">C) Ternary operator</button>
+              <button class="option-btn" onclick="checkMCQ(this, false, 'exp25')">D) Increment operator</button>
+            </div>
+            <div class="exp-box" id="exp25"><i class="bi bi-check-circle text-success me-1"></i><strong>Correct: C) Ternary operator.</strong> <code>num > 0 ? 'Positive' : 'Not Positive'</code> provides a concise inline evaluation.</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center text-muted small mt-5 pt-4 border-top border-secondary">
+      &copy; 2026 FullStack JS &bull; 25 Questions Test &amp; Solutions Reference Suite for Sakthi
+    </div>
+
+  </div>
+
+  <script>
+    let mcqScore = 0;
+    const answeredMCQs = new Set();
+    const totalMCQs = 10;
+
+    function checkMCQ(btn, isCorrect, expId) {
+      const parent = btn.closest('.custom-card');
+      if (answeredMCQs.has(expId)) return;
+      answeredMCQs.add(expId);
+
+      parent.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+
+      if (isCorrect) {
+        btn.classList.add('correct');
+        mcqScore++;
+      } else {
+        btn.classList.add('incorrect');
+      }
+
+      document.getElementById('mcqScore').textContent = `${mcqScore} / ${totalMCQs}`;
+      const exp = document.getElementById(expId);
+      if (exp) exp.style.display = 'block';
+    }
+
+    function resetMCQs() {
+      mcqScore = 0;
+      answeredMCQs.clear();
+      document.getElementById('mcqScore').textContent = `0 / ${totalMCQs}`;
+      document.querySelectorAll('.option-btn').forEach(b => {
+        b.disabled = false;
+        b.classList.remove('correct', 'incorrect');
+      });
+      document.querySelectorAll('.exp-box').forEach(e => e.style.display = 'none');
+    }
+  </script>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

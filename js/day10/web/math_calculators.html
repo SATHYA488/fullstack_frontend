@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematical & Algorithmic Computations Hub | Day 10</title>
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: #f9fafb;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    .math-card {
+      background-color: #111827;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 1rem;
+      transition: all 0.25s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .math-card:hover {
+      transform: translateY(-4px);
+      border-color: #3b82f6;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+    .formula-badge {
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      font-family: 'Fira Code', monospace;
+      padding: 0.35rem 0.65rem;
+      border-radius: 0.5rem;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+    .result-box {
+      background: #030712;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 0.5rem;
+      padding: 0.6rem 0.85rem;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      color: #34d399;
+      margin-top: auto;
+    }
+    .form-control-dark {
+      background-color: #030712;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      font-size: 0.85rem;
+    }
+    .form-control-dark:focus {
+      background-color: #030712;
+      border-color: #3b82f6;
+      color: #ffffff;
+      box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+    }
+  </style>
+</head>
+<body class="py-5">
+
+  <div class="container">
+    
+    <!-- Header -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between mb-4 pb-3 border-bottom border-secondary gap-3">
+      <div>
+        <div class="badge bg-primary px-3 py-1 rounded-pill mb-2">Algorithm & Mathematics Engine</div>
+        <h1 class="display-6 fw-bold text-white mb-1">Mathematical Computations &amp; Formulas</h1>
+        <p class="text-muted mb-0">Definitions, formulas, example values, and interactive calculators for 21 core algorithms.</p>
+      </div>
+      <div class="d-flex gap-2">
+        <a href="index.html" class="btn btn-outline-info btn-sm"><i class="bi bi-arrow-left me-1"></i>Master Dashboard</a>
+        <a href="../tasks/index.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-folder me-1"></i>20 Tasks Hub</a>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- 1. Factorial -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">1. Factorial (n!)</h5>
+            <span class="badge bg-primary">O(N) Linear</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> The product of all positive integers less than or equal to $n$, with base case $0! = 1$.</p>
+          <div class="formula-badge">n! = n &times; (n-1) &times; ... &times; 1</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Combinatorics &amp; Permutations ($^n P_r$).</div>
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text bg-dark border-secondary text-muted">n =</span>
+            <input type="number" id="factInput" class="form-control form-control-dark" value="5" min="0" max="25">
+            <button class="btn btn-primary btn-sm" onclick="calcFactorial()">Calc</button>
+          </div>
+          <div class="result-box" id="factResult">5! = 120</div>
+        </div>
+      </div>
+
+      <!-- 2. Sum -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">2. Sum of Numbers</h5>
+            <span class="badge bg-primary">O(N) Fold</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> The total scalar aggregate obtained by the commutative addition of a set of values.</p>
+          <div class="formula-badge">Sum = &Sigma; x = a1 + a2 + ... + an</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Financial balances &amp; Cart totals.</div>
+          <div class="input-group input-group-sm mb-2">
+            <input type="text" id="sumInput" class="form-control form-control-dark" value="10, 20, 30, 40">
+            <button class="btn btn-primary btn-sm" onclick="calcSum()">Sum</button>
+          </div>
+          <div class="result-box" id="sumResult">Sum([10, 20, 30, 40]) = 100</div>
+        </div>
+      </div>
+
+      <!-- 3. Average -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">3. Average (Mean)</h5>
+            <span class="badge bg-primary">O(N) Statistics</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> The primary measure of central tendency representing total sum divided by sample count ($n$).</p>
+          <div class="formula-badge">Mean (&mu;) = (&Sigma; x) / n</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Grade point averages (GPA), benchmark KPIs.</div>
+          <div class="input-group input-group-sm mb-2">
+            <input type="text" id="avgInput" class="form-control form-control-dark" value="10, 20, 30, 40, 50">
+            <button class="btn btn-primary btn-sm" onclick="calcAverage()">Avg</button>
+          </div>
+          <div class="result-box" id="avgResult">Average([10..50]) = 30</div>
+        </div>
+      </div>
+
+      <!-- 4. Square -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">4. Square (x&sup2;)</h5>
+            <span class="badge bg-primary">O(1) Quadric</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> The product of multiplying a number by itself, representing geometric 2D quadric area.</p>
+          <div class="formula-badge">Square(x) = x &times; x = x&sup2;</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Quadratic equations &amp; Euclidean distances.</div>
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text bg-dark border-secondary text-muted">x =</span>
+            <input type="number" id="squareInput" class="form-control form-control-dark" value="7">
+            <button class="btn btn-primary btn-sm" onclick="calcSquare()">Square</button>
+          </div>
+          <div class="result-box" id="squareResult">7&sup2; = 49</div>
+        </div>
+      </div>
+
+      <!-- 5. Cube -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">5. Cube (x&sup3;)</h5>
+            <span class="badge bg-primary">O(1) Cubic</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> The product of multiplying a number by itself twice, representing 3D volumetric space.</p>
+          <div class="formula-badge">Cube(x) = x &times; x &times; x = x&sup3;</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: 3D spatial simulations &amp; Volume metrics.</div>
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text bg-dark border-secondary text-muted">x =</span>
+            <input type="number" id="cubeInput" class="form-control form-control-dark" value="4">
+            <button class="btn btn-primary btn-sm" onclick="calcCube()">Cube</button>
+          </div>
+          <div class="result-box" id="cubeResult">4&sup3; = 64</div>
+        </div>
+      </div>
+
+      <!-- 6. Power -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">6. Power (x^y)</h5>
+            <span class="badge bg-primary">O(1) Exponent</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Exponential scaling representing base $x$ multiplied by itself $y$ times ($x^0 = 1$).</p>
+          <div class="formula-badge">Power = Math.pow(x, y) = x^y</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Cryptographic keys &amp; Scientific scales.</div>
+          <div class="d-flex gap-2 mb-2">
+            <input type="number" id="powBase" class="form-control form-control-sm form-control-dark" placeholder="Base" value="2">
+            <input type="number" id="powExp" class="form-control form-control-sm form-control-dark" placeholder="Exp" value="5">
+            <button class="btn btn-primary btn-sm" onclick="calcPower()">Pow</button>
+          </div>
+          <div class="result-box" id="powerResult">2^5 = 32</div>
+        </div>
+      </div>
+
+      <!-- 7. Multiplication -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">7. Multiplication</h5>
+            <span class="badge bg-primary">O(1) Arithmetic</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> The fundamental arithmetic operation scaling a multiplicand by a multiplier.</p>
+          <div class="formula-badge">Product = a &times; b</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Item pricing &times; quantity calculations.</div>
+          <div class="d-flex gap-2 mb-2">
+            <input type="number" id="mulA" class="form-control form-control-sm form-control-dark" value="12">
+            <input type="number" id="mulB" class="form-control form-control-sm form-control-dark" value="8">
+            <button class="btn btn-primary btn-sm" onclick="calcMul()">Product</button>
+          </div>
+          <div class="result-box" id="mulResult">12 &times; 8 = 96</div>
+        </div>
+      </div>
+
+      <!-- 8. Percentage -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">8. Percentage (%)</h5>
+            <span class="badge bg-primary">O(1) Proportional</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Dimensionless proportional ratio expressed as a fraction of 100.</p>
+          <div class="formula-badge">% = (Part / Total) &times; 100</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Tax percentages, performance margins.</div>
+          <div class="d-flex gap-2 mb-2">
+            <input type="number" id="pctPart" class="form-control form-control-sm form-control-dark" placeholder="Part" value="45">
+            <input type="number" id="pctTotal" class="form-control form-control-sm form-control-dark" placeholder="Total" value="50">
+            <button class="btn btn-primary btn-sm" onclick="calcPct()">%</button>
+          </div>
+          <div class="result-box" id="pctResult">45 of 50 = 90.00%</div>
+        </div>
+      </div>
+
+      <!-- 9. Simple Interest -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">9. Simple Interest (SI)</h5>
+            <span class="badge bg-warning text-dark">O(1) Linear</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Linear financial interest accrued strictly on the original uncompounded principal amount.</p>
+          <div class="formula-badge">SI = (P &times; R &times; T) / 100</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Short-term bonds, automotive financing.</div>
+          <div class="d-flex gap-1 mb-2">
+            <input type="number" id="siP" class="form-control form-control-sm form-control-dark" placeholder="P ($)" value="10000">
+            <input type="number" id="siR" class="form-control form-control-sm form-control-dark" placeholder="R (%)" value="5">
+            <input type="number" id="siT" class="form-control form-control-sm form-control-dark" placeholder="T (yr)" value="3">
+            <button class="btn btn-primary btn-sm" onclick="calcSI()">SI</button>
+          </div>
+          <div class="result-box" id="siResult">SI = $1,500 | Total = $11,500</div>
+        </div>
+      </div>
+
+      <!-- 10. Compound Interest -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">10. Compound Interest</h5>
+            <span class="badge bg-warning text-dark">O(1) Exponential</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Exponential capital growth where interest earns interest over consecutive cycles.</p>
+          <div class="formula-badge">A = P(1 + r/n)^(nt)</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Mutual funds, banking deposits, mortgages.</div>
+          <div class="d-flex gap-1 mb-2">
+            <input type="number" id="ciP" class="form-control form-control-sm form-control-dark" placeholder="P" value="10000">
+            <input type="number" id="ciR" class="form-control form-control-sm form-control-dark" placeholder="R%" value="5">
+            <input type="number" id="ciT" class="form-control form-control-sm form-control-dark" placeholder="T" value="3">
+            <button class="btn btn-primary btn-sm" onclick="calcCI()">CI</button>
+          </div>
+          <div class="result-box" id="ciResult">CI = $1,576.25 | Total = $11,576.25</div>
+        </div>
+      </div>
+
+      <!-- 11. Area -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">11. Area (Rectangle)</h5>
+            <span class="badge bg-info text-dark">O(1) 2D Space</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Two-dimensional surface capacity contained within the shape boundary.</p>
+          <div class="formula-badge">Area = Length &times; Width</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Real estate floor plans &amp; Canvas sizing.</div>
+          <div class="d-flex gap-2 mb-2">
+            <input type="number" id="areaL" class="form-control form-control-sm form-control-dark" placeholder="Length" value="10">
+            <input type="number" id="areaW" class="form-control form-control-sm form-control-dark" placeholder="Width" value="5">
+            <button class="btn btn-primary btn-sm" onclick="calcArea()">Area</button>
+          </div>
+          <div class="result-box" id="areaResult">Area = 10 &times; 5 = 50 sq units</div>
+        </div>
+      </div>
+
+      <!-- 12. Perimeter -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">12. Perimeter</h5>
+            <span class="badge bg-info text-dark">O(1) 1D Boundary</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Total continuous linear distance encompassing a closed 2D polygon path.</p>
+          <div class="formula-badge">Perimeter = 2(L + W)</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Fencing, framing, CSS border outlines.</div>
+          <div class="d-flex gap-2 mb-2">
+            <input type="number" id="periL" class="form-control form-control-sm form-control-dark" placeholder="Length" value="10">
+            <input type="number" id="periW" class="form-control form-control-sm form-control-dark" placeholder="Width" value="5">
+            <button class="btn btn-primary btn-sm" onclick="calcPeri()">Peri</button>
+          </div>
+          <div class="result-box" id="periResult">Perimeter = 2(10 + 5) = 30 units</div>
+        </div>
+      </div>
+
+      <!-- 13. Volume -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">13. Volume (Cuboid)</h5>
+            <span class="badge bg-info text-dark">O(1) 3D Capacity</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Total three-dimensional space occupied by a solid closed body.</p>
+          <div class="formula-badge">Volume = L &times; W &times; H</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Container shipping capacity &amp; Warehousing.</div>
+          <div class="d-flex gap-1 mb-2">
+            <input type="number" id="volL" class="form-control form-control-sm form-control-dark" placeholder="L" value="4">
+            <input type="number" id="volW" class="form-control form-control-sm form-control-dark" placeholder="W" value="3">
+            <input type="number" id="volH" class="form-control form-control-sm form-control-dark" placeholder="H" value="5">
+            <button class="btn btn-primary btn-sm" onclick="calcVol()">Vol</button>
+          </div>
+          <div class="result-box" id="volResult">Volume = 4 &times; 3 &times; 5 = 60 cubic units</div>
+        </div>
+      </div>
+
+      <!-- 14. Speed Distance Time -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">14. Speed / Distance / Time</h5>
+            <span class="badge bg-success">O(1) Kinematics</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Kinematic rate of change describing distance covered over elapsed unit time.</p>
+          <div class="formula-badge">Speed = Distance / Time</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: GPS routing, vehicle telemetry, ETA computation.</div>
+          <div class="d-flex gap-2 mb-2">
+            <input type="number" id="sdtDist" class="form-control form-control-sm form-control-dark" placeholder="Dist (km)" value="150">
+            <input type="number" id="sdtTime" class="form-control form-control-sm form-control-dark" placeholder="Time (hr)" value="3">
+            <button class="btn btn-primary btn-sm" onclick="calcSDT()">Speed</button>
+          </div>
+          <div class="result-box" id="sdtResult">Speed = 150 km / 3 hr = 50 km/h</div>
+        </div>
+      </div>
+
+      <!-- 15. Profit / Loss -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">15. Profit &amp; Loss</h5>
+            <span class="badge bg-warning text-dark">O(1) Commercial</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Commercial net margin calculated between Selling Price (SP) and Cost Price (CP).</p>
+          <div class="formula-badge">Profit = SP - CP | % = (Profit/CP)&times;100</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Retail margin analytics &amp; Trading PnL.</div>
+          <div class="d-flex gap-2 mb-2">
+            <input type="number" id="plCP" class="form-control form-control-sm form-control-dark" placeholder="Cost CP" value="200">
+            <input type="number" id="plSP" class="form-control form-control-sm form-control-dark" placeholder="Sell SP" value="250">
+            <button class="btn btn-primary btn-sm" onclick="calcPL()">Evaluate</button>
+          </div>
+          <div class="result-box" id="plResult">Profit = +$50.00 (+25.00%)</div>
+        </div>
+      </div>
+
+      <!-- 16. Discount -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">16. Discount</h5>
+            <span class="badge bg-warning text-dark">O(1) Retail</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Concession deducted from marked price to calculate net consumer billing.</p>
+          <div class="formula-badge">Disc = Marked &times; (Disc% / 100)</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Black Friday promos, coupon codes.</div>
+          <div class="d-flex gap-2 mb-2">
+            <input type="number" id="discPrice" class="form-control form-control-sm form-control-dark" placeholder="Marked $" value="500">
+            <input type="number" id="discPct" class="form-control form-control-sm form-control-dark" placeholder="Disc %" value="20">
+            <button class="btn btn-primary btn-sm" onclick="calcDiscount()">Bill</button>
+          </div>
+          <div class="result-box" id="discResult">Disc = -$100 | Final = $400.00</div>
+        </div>
+      </div>
+
+      <!-- 17. LCM -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">17. LCM (Least Common Multiple)</h5>
+            <span class="badge bg-primary">O(log N) Euclid</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> The smallest positive integer divisible by two integers $a$ and $b$.</p>
+          <div class="formula-badge">LCM(a, b) = |a &times; b| / GCD(a, b)</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Periodic event synchronizing, gear trains.</div>
+          <div class="d-flex gap-2 mb-2">
+            <input type="number" id="lcmA" class="form-control form-control-sm form-control-dark" value="12">
+            <input type="number" id="lcmB" class="form-control form-control-sm form-control-dark" value="18">
+            <button class="btn btn-primary btn-sm" onclick="calcLCM()">LCM</button>
+          </div>
+          <div class="result-box" id="lcmResult">LCM(12, 18) = 36</div>
+        </div>
+      </div>
+
+      <!-- 18. GCD / HCF -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">18. GCD / HCF</h5>
+            <span class="badge bg-primary">O(log(min(a,b)))</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Highest common integer dividing two numbers without remainder via Euclidean division.</p>
+          <div class="formula-badge">Euclidean Algorithm: GCD(a, b) = GCD(b, a%b)</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Cryptography (RSA Keygen) &amp; Fraction simplification.</div>
+          <div class="d-flex gap-2 mb-2">
+            <input type="number" id="gcdA" class="form-control form-control-sm form-control-dark" value="48">
+            <input type="number" id="gcdB" class="form-control form-control-sm form-control-dark" value="18">
+            <button class="btn btn-primary btn-sm" onclick="calcGCD()">GCD</button>
+          </div>
+          <div class="result-box" id="gcdResult">GCD(48, 18) = 6</div>
+        </div>
+      </div>
+
+      <!-- 19. Arithmetic Progression -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">19. Arithmetic Progression (AP)</h5>
+            <span class="badge bg-primary">O(N) Sequence</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Uniform discrete sequence with constant common difference $d$ between terms.</p>
+          <div class="formula-badge">an = a + (n-1)d | Sn = (n/2)[2a+(n-1)d]</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Loan depreciation schedules, ladder pricing.</div>
+          <div class="d-flex gap-1 mb-2">
+            <input type="number" id="apA" class="form-control form-control-sm form-control-dark" placeholder="a" value="3">
+            <input type="number" id="apD" class="form-control form-control-sm form-control-dark" placeholder="d" value="2">
+            <input type="number" id="apN" class="form-control form-control-sm form-control-dark" placeholder="n" value="5">
+            <button class="btn btn-primary btn-sm" onclick="calcAP()">AP</button>
+          </div>
+          <div class="result-box" id="apResult">[3, 5, 7, 9, 11] | a5=11 | Sum=35</div>
+        </div>
+      </div>
+
+      <!-- 20. Fibonacci Series -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">20. Fibonacci Series</h5>
+            <span class="badge bg-primary">O(N) Recurrence</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Recurrence sequence where each term is the sum of preceding two: $F_n = F_{n-1} + F_{n-2}$.</p>
+          <div class="formula-badge">F(n) = F(n-1) + F(n-2) | &Phi; &approx; 1.618</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Golden ratio UI design, Agile sprint estimations.</div>
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text bg-dark border-secondary text-muted">n terms:</span>
+            <input type="number" id="fibN" class="form-control form-control-dark" value="8" min="1" max="30">
+            <button class="btn btn-primary btn-sm" onclick="calcFib()">Fib</button>
+          </div>
+          <div class="result-box" id="fibResult">[0, 1, 1, 2, 3, 5, 8, 13]</div>
+        </div>
+      </div>
+
+      <!-- 21. Sum of Series -->
+      <div class="col-md-6 col-lg-4">
+        <div class="math-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="fw-bold text-white mb-0">21. Sum of Natural Series</h5>
+            <span class="badge bg-primary">O(1) Gauss Closed</span>
+          </div>
+          <p class="small text-muted mb-2"><strong>Definition:</strong> Carl Friedrich Gauss closed-form summation of first $n$ positive natural integers.</p>
+          <div class="formula-badge">Sn = n(n + 1) / 2</div>
+          <div class="small text-info mb-2"><i class="bi bi-gear-fill me-1"></i> Use Case: Loop complexity reduction from $O(N)$ to $O(1)$.</div>
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text bg-dark border-secondary text-muted">n =</span>
+            <input type="number" id="seriesN" class="form-control form-control-dark" value="10" min="1">
+            <button class="btn btn-primary btn-sm" onclick="calcSumSeries()">Sum</button>
+          </div>
+          <div class="result-box" id="seriesResult">1 + 2 + ... + 10 = 55</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center text-muted small mt-5 pt-4 border-top border-secondary">
+      &copy; 2026 FullStack JS &bull; Comprehensive Mathematical & Algorithmic Computation Reference
+    </div>
+
+  </div>
+
+  <!-- Computational Logic Scripts -->
+  <script>
+    function calcFactorial() {
+      const n = parseInt(document.getElementById('factInput').value) || 0;
+      let res = 1;
+      for (let i = 2; i <= n; i++) res *= i;
+      document.getElementById('factResult').textContent = `${n}! = ${res.toLocaleString()}`;
+    }
+
+    function calcSum() {
+      const vals = document.getElementById('sumInput').value.split(',').map(v => parseFloat(v.trim()) || 0);
+      const sum = vals.reduce((a, b) => a + b, 0);
+      document.getElementById('sumResult').textContent = `Sum([${vals.join(', ')}]) = ${sum}`;
+    }
+
+    function calcAverage() {
+      const vals = document.getElementById('avgInput').value.split(',').map(v => parseFloat(v.trim()) || 0);
+      const sum = vals.reduce((a, b) => a + b, 0);
+      const avg = vals.length ? (sum / vals.length).toFixed(2) : 0;
+      document.getElementById('avgResult').textContent = `Avg([${vals.join(', ')}]) = ${avg}`;
+    }
+
+    function calcSquare() {
+      const x = parseFloat(document.getElementById('squareInput').value) || 0;
+      document.getElementById('squareResult').textContent = `${x}² = ${x * x}`;
+    }
+
+    function calcCube() {
+      const x = parseFloat(document.getElementById('cubeInput').value) || 0;
+      document.getElementById('cubeResult').textContent = `${x}³ = ${x * x * x}`;
+    }
+
+    function calcPower() {
+      const b = parseFloat(document.getElementById('powBase').value) || 0;
+      const e = parseFloat(document.getElementById('powExp').value) || 0;
+      document.getElementById('powerResult').textContent = `${b}^${e} = ${Math.pow(b, e)}`;
+    }
+
+    function calcMul() {
+      const a = parseFloat(document.getElementById('mulA').value) || 0;
+      const b = parseFloat(document.getElementById('mulB').value) || 0;
+      document.getElementById('mulResult').textContent = `${a} × ${b} = ${a * b}`;
+    }
+
+    function calcPct() {
+      const part = parseFloat(document.getElementById('pctPart').value) || 0;
+      const total = parseFloat(document.getElementById('pctTotal').value) || 1;
+      const pct = ((part / total) * 100).toFixed(2);
+      document.getElementById('pctResult').textContent = `${part} of ${total} = ${pct}%`;
+    }
+
+    function calcSI() {
+      const p = parseFloat(document.getElementById('siP').value) || 0;
+      const r = parseFloat(document.getElementById('siR').value) || 0;
+      const t = parseFloat(document.getElementById('siT').value) || 0;
+      const si = (p * r * t) / 100;
+      document.getElementById('siResult').textContent = `SI = $${si.toFixed(2)} | Total = $${(p + si).toFixed(2)}`;
+    }
+
+    function calcCI() {
+      const p = parseFloat(document.getElementById('ciP').value) || 0;
+      const r = parseFloat(document.getElementById('ciR').value) || 0;
+      const t = parseFloat(document.getElementById('ciT').value) || 0;
+      const amount = p * Math.pow(1 + (r / 100), t);
+      const ci = amount - p;
+      document.getElementById('ciResult').textContent = `CI = $${ci.toFixed(2)} | Total = $${amount.toFixed(2)}`;
+    }
+
+    function calcArea() {
+      const l = parseFloat(document.getElementById('areaL').value) || 0;
+      const w = parseFloat(document.getElementById('areaW').value) || 0;
+      document.getElementById('areaResult').textContent = `Area = ${l} × ${w} = ${l * w} sq units`;
+    }
+
+    function calcPeri() {
+      const l = parseFloat(document.getElementById('periL').value) || 0;
+      const w = parseFloat(document.getElementById('periW').value) || 0;
+      document.getElementById('periResult').textContent = `Perimeter = 2(${l} + ${w}) = ${2 * (l + w)} units`;
+    }
+
+    function calcVol() {
+      const l = parseFloat(document.getElementById('volL').value) || 0;
+      const w = parseFloat(document.getElementById('volW').value) || 0;
+      const h = parseFloat(document.getElementById('volH').value) || 0;
+      document.getElementById('volResult').textContent = `Volume = ${l} × ${w} × ${h} = ${l * w * h} cu units`;
+    }
+
+    function calcSDT() {
+      const d = parseFloat(document.getElementById('sdtDist').value) || 0;
+      const t = parseFloat(document.getElementById('sdtTime').value) || 1;
+      const s = (d / t).toFixed(2);
+      document.getElementById('sdtResult').textContent = `Speed = ${d} km / ${t} hr = ${s} km/h`;
+    }
+
+    function calcPL() {
+      const cp = parseFloat(document.getElementById('plCP').value) || 0;
+      const sp = parseFloat(document.getElementById('plSP').value) || 0;
+      const diff = sp - cp;
+      if (diff >= 0) {
+        const pct = cp ? ((diff / cp) * 100).toFixed(2) : 0;
+        document.getElementById('plResult').textContent = `Profit = +$${diff.toFixed(2)} (+${pct}%)`;
+        document.getElementById('plResult').style.color = '#34d399';
+      } else {
+        const loss = Math.abs(diff);
+        const pct = cp ? ((loss / cp) * 100).toFixed(2) : 0;
+        document.getElementById('plResult').textContent = `Loss = -$${loss.toFixed(2)} (-${pct}%)`;
+        document.getElementById('plResult').style.color = '#f87171';
+      }
+    }
+
+    function calcDiscount() {
+      const p = parseFloat(document.getElementById('discPrice').value) || 0;
+      const d = parseFloat(document.getElementById('discPct').value) || 0;
+      const discAmt = p * (d / 100);
+      const finalPrice = p - discAmt;
+      document.getElementById('discResult').textContent = `Disc = -$${discAmt.toFixed(2)} | Final = $${finalPrice.toFixed(2)}`;
+    }
+
+    function gcd(a, b) {
+      return b === 0 ? a : gcd(b, a % b);
+    }
+
+    function calcGCD() {
+      const a = parseInt(document.getElementById('gcdA').value) || 1;
+      const b = parseInt(document.getElementById('gcdB').value) || 1;
+      const res = gcd(a, b);
+      document.getElementById('gcdResult').textContent = `GCD(${a}, ${b}) = ${res}`;
+    }
+
+    function calcLCM() {
+      const a = parseInt(document.getElementById('lcmA').value) || 1;
+      const b = parseInt(document.getElementById('lcmB').value) || 1;
+      const res = Math.abs(a * b) / gcd(a, b);
+      document.getElementById('lcmResult').textContent = `LCM(${a}, ${b}) = ${res}`;
+    }
+
+    function calcAP() {
+      const a = parseFloat(document.getElementById('apA').value) || 0;
+      const d = parseFloat(document.getElementById('apD').value) || 0;
+      const n = parseInt(document.getElementById('apN').value) || 1;
+      const terms = [];
+      for (let i = 0; i < n; i++) terms.push(a + (i * d));
+      const an = a + (n - 1) * d;
+      const sn = (n / 2) * (2 * a + (n - 1) * d);
+      document.getElementById('apResult').textContent = `[${terms.join(', ')}] | a${n}=${an} | Sum=${sn}`;
+    }
+
+    function calcFib() {
+      const n = Math.min(30, Math.max(1, parseInt(document.getElementById('fibN').value) || 1));
+      const fib = [0];
+      if (n > 1) fib.push(1);
+      for (let i = 2; i < n; i++) fib.push(fib[i - 1] + fib[i - 2]);
+      document.getElementById('fibResult').textContent = `[${fib.join(', ')}]`;
+    }
+
+    function calcSumSeries() {
+      const n = parseInt(document.getElementById('seriesN').value) || 1;
+      const sum = (n * (n + 1)) / 2;
+      document.getElementById('seriesResult').textContent = `1 + 2 + ... + ${n} = ${sum}`;
+    }
+  </script>
+</body>
+</html>

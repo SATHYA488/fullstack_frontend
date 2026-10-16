@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8 - Optional Chaining & Payment Calculation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <script src="assets/js/task8.js"></script>
+    <div class="task-page-wrapper">
+        <a href="index.html" class="task-nav-back">← Back to Main Dashboard</a>
+        <div class="hero-badge">Topic 8</div>
+        <h1>Optional Chaining</h1>
+        <p style="color: var(--text-secondary); margin: 1rem 0;">
+            Inspect the browser Console (F12) to see execution outputs from <code>assets/js/task8.js</code>.
+        </p>
+        <pre class="tech-code-snippet"><code>const price = order?.item?.pricing?.unitPrice ?? 100;
+function calculateTotal(price, qty) { return price * qty; }</code></pre>
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem;">
+            <a href="task7.html" class="btn btn-secondary">← Prev</a>
+            <a href="task9.html" class="btn btn-primary">Next: Task 9 (Array Methods) →</a>
+        </div>
+    </div>
+</body>
+</html>

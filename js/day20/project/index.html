@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Future Without IT vs Future With IT - Advanced interactive comparative platform evaluating Information Technology's trajectory in human society, impact analysis, and ethical governance solutions.">
+  <meta name="keywords" content="Future With IT, Future Without IT, Technology Impact, AI, Smart Cities, Cybersecurity, College Final Year Project, Information Technology">
+  <title>Future Without IT vs Future With IT | TechHorizon Platform</title>
+  
+  <!-- FontAwesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- Neural Particle Constellation Background Canvas -->
+  <canvas id="neuralCanvas"></canvas>
+
+  <!-- ==========================================================================
+       Navigation Bar (Exactly 3 Main Navigation Items)
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand" aria-label="TechHorizon Home">
+        <div class="brand-icon">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <span>Tech<span class="brand-highlight">Horizon</span></span>
+      </a>
+
+      <!-- The Exactly 3 Main Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#future-with-it" class="nav-link">
+          <i class="fa-solid fa-rocket" style="margin-right: 6px; color: var(--it-cyan);"></i> Future with IT
+        </a>
+        <a href="#future-without-it" class="nav-link link-no-it">
+          <i class="fa-solid fa-ban" style="margin-right: 6px; color: var(--no-it-crimson);"></i> Future without IT
+        </a>
+        <a href="#impact-solutions" class="nav-link link-impact">
+          <i class="fa-solid fa-scale-balanced" style="margin-right: 6px; color: var(--sol-purple);"></i> Impact & Solutions
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-btn-present" id="openPresentationModeBtn" title="Launch Projector Presentation Mode (F)">
+          <i class="fa-solid fa-display"></i>
+          <span>Present Mode</span>
+        </button>
+        <button class="nav-btn-icon" id="openSearchModalBtn" aria-label="Search Platform (Ctrl+K)" title="Search Platform (Ctrl+K)">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="nav-btn-icon" id="soundToggleBtn" aria-label="Toggle Sci-Fi Audio" title="Sound Effects">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button class="nav-btn-icon" id="themeToggleBtn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>College Final-Year Presentation Demonstration &bull; 2026</span>
+      </div>
+
+      <h1 class="hero-title">
+        The Future of IT: <br>
+        <span class="title-gradient-it">With Technology</span> vs <span class="title-gradient-no-it">Without Technology</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Explore how Information Technology can shape our future, understand its impact, and discover solutions for a better tomorrow.
+      </p>
+
+      <!-- Two Prominent Action Buttons & Audio Narrator -->
+      <div class="hero-actions">
+        <a href="#future-with-it" class="btn btn-with-it">
+          <i class="fa-solid fa-microchip"></i>
+          Explore Future with IT
+        </a>
+        <a href="#future-without-it" class="btn btn-without-it">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Explore Future without IT
+        </a>
+        <button class="audio-narrate-btn" data-text="Welcome to TechHorizon. Explore how Information Technology can shape our future, understand its impact, and discover solutions for a better tomorrow.">
+          <div class="wave-bars">
+            <span class="wave-bar"></span>
+            <span class="wave-bar"></span>
+            <span class="wave-bar"></span>
+          </div>
+          <span>Listen Overview</span>
+        </button>
+      </div>
+
+      <!-- Live Animated Key Metric Counters -->
+      <div class="hero-stats-grid">
+        <div class="stat-card">
+          <div class="stat-value cyan counter-number" data-target="50" data-suffix="B+">0</div>
+          <div class="stat-label">Connected IoT Devices by 2030</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value emerald counter-number" data-target="99.4" data-suffix="%" data-decimal="true">0</div>
+          <div class="stat-label">AI Diagnostic Accuracy Rate</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value amber counter-number" data-target="70" data-suffix="%+">0</div>
+          <div class="stat-label">GDP Loss in World Without IT</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value purple counter-number" data-target="85" data-suffix="M">0</div>
+          <div class="stat-label">Jobs Reskilling Transition Target</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Advanced Feature: Interactive 50/50 Before/After Visual Drag Slider
+       ========================================================================== -->
+  <section class="split-slider-section" id="visual-split">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 30px;">
+        <div class="section-tag tag-it">
+          <i class="fa-solid fa-arrows-left-right"></i> Interactive Visual Contrast
+        </div>
+        <h2 class="section-title">Slide to Compare Civilizations</h2>
+        <p class="section-desc">Drag the interactive slider handle left and right to transition between a world powered by Information Technology and a world without IT.</p>
+      </div>
+
+      <div class="split-slider-container" id="splitSliderContainer">
+        <!-- Future With IT (Underneath / Right) -->
+        <div class="split-pane pane-with-it">
+          <div class="split-content-box" style="margin-left: auto; text-align: right;">
+            <span class="split-badge badge-tech-cyan">
+              <i class="fa-solid fa-sparkles"></i> Future With IT (2050)
+            </span>
+            <h3 class="split-title" style="color: var(--it-cyan);">Autonomous & Connected</h3>
+            <p class="split-desc">
+              Clean fusion energy grids, nanomedicine, zero-accident autonomous transportation, and universal AI mentorship for all humanity.
+            </p>
+          </div>
+        </div>
+
+        <!-- Future Without IT (Overlaid / Left Clip) -->
+        <div class="split-pane pane-without-it" id="paneWithoutIT">
+          <div class="split-content-box">
+            <span class="split-badge badge-manual-red">
+              <i class="fa-solid fa-ban"></i> Future Without IT
+            </span>
+            <h3 class="split-title" style="color: #fca5a5;">Manual & Disconnected</h3>
+            <p class="split-desc">
+              Hospitals crippled by paper charts, international commerce frozen, extreme traffic gridlocks, and regional educational isolation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Draggable Handle -->
+        <div class="split-slider-handle" id="splitSliderHandle">
+          <div class="split-handle-btn">
+            <i class="fa-solid fa-arrows-left-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Important Feature: Dynamic "With IT vs Without IT" Comparison Section
+       ========================================================================== -->
+  <section class="comparison-section" id="comparison-engine">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag tag-it">
+          <i class="fa-solid fa-code-compare"></i> Dynamic Domain Comparison Engine
+        </div>
+        <h2 class="section-title">With IT vs Without IT: Sector Explorer</h2>
+        <p class="section-desc">
+          Select any domain below to dynamically analyze its transformation path across all 5 dimensions: 
+          <strong>Current Situation &rarr; Future With IT &rarr; Future Without IT &rarr; Impact &rarr; Possible Solution</strong>.
+        </p>
+      </div>
+
+      <!-- 8 Domain Selector Tabs -->
+      <div class="comparison-selector-tabs" id="comparisonTabsContainer">
+        <!-- Injected via JavaScript from assets/data.js -->
+      </div>
+
+      <!-- View Controls & Header -->
+      <div class="comparison-view-controls">
+        <div class="current-area-badge" id="currentAreaBadge">
+          <i class="fa-solid fa-graduation-cap" style="color: var(--it-cyan);"></i> Education & Learning
+        </div>
+        <div class="view-mode-pills">
+          <span class="mode-pill active"><i class="fa-solid fa-timeline"></i> 5-Stage Transformation View</span>
+        </div>
+      </div>
+
+      <!-- Dynamic 5-Stage Transformation Flow Container -->
+      <div class="pipeline-flow-container" id="comparisonFlowContainer">
+        <!-- Rendered dynamically by assets/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Navbar Item 1: Future with IT Section (#future-with-it)
+       ========================================================================== -->
+  <section class="future-with-it-section" id="future-with-it">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag tag-it">
+          <i class="fa-solid fa-sparkles"></i> Technological Super-Abundance
+        </div>
+        <h2 class="section-title">1. Future With IT: The Intelligent Civilization</h2>
+        <p class="section-desc">
+          Discover how Information Technology, Artificial Intelligence, Quantum Networks, and Robotics unlock unprecedented human potential and sustainable global prosperity.
+        </p>
+        <div style="margin-top: 16px;">
+          <button class="audio-narrate-btn" data-text="Future With IT. Discover how Artificial Intelligence, Quantum Networks, and Smart Cities unlock unprecedented human potential and sustainable global prosperity.">
+            <div class="wave-bars">
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+            </div>
+            <span>Listen Section Summary</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 9 Modern Domain Cards Grid -->
+      <div class="cards-grid-3" id="futureWithITGrid">
+        <!-- Injected via JavaScript from assets/data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Navbar Item 2: Future without IT Section (#future-without-it)
+       ========================================================================== -->
+  <section class="future-without-it-section" id="future-without-it">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag tag-no-it">
+          <i class="fa-solid fa-triangle-exclamation"></i> Systemic Vulnerability & Paralysis
+        </div>
+        <h2 class="section-title">2. Future Without IT: A World in Disconnection</h2>
+        <p class="section-desc">
+          Examine the catastrophic bottlenecks, severe manual regression, medical blindness, and economic stagnation that would unfold if Information Technology ceased to exist.
+        </p>
+        <div style="margin-top: 16px;">
+          <button class="audio-narrate-btn" data-text="Future Without IT. Examine the catastrophic bottlenecks, severe manual regression, medical blindness, and economic stagnation if Information Technology ceased to exist.">
+            <div class="wave-bars">
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+            </div>
+            <span>Listen Section Summary</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 8 Danger / Vulnerability Cards Grid -->
+      <div class="cards-grid-4" id="futureWithoutITGrid">
+        <!-- Injected via JavaScript from assets/data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Navbar Item 3: Impact & Solutions Section (#impact-solutions)
+       ========================================================================== -->
+  <section class="impact-solutions-section" id="impact-solutions">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag tag-impact">
+          <i class="fa-solid fa-scale-balanced"></i> Dual Analysis & Strategy
+        </div>
+        <h2 class="section-title">3. Impact & Solutions: Balancing Innovation & Humanity</h2>
+        <p class="section-desc">
+          Evaluate the profound positive benefits alongside critical technological risks, backed by actionable mitigation frameworks and ethical roadmaps.
+        </p>
+      </div>
+
+      <!-- Positive vs Negative Overview -->
+      <div class="impact-dual-overview">
+        <div class="impact-overview-box box-positive">
+          <div class="overview-box-header">
+            <div class="overview-box-icon">
+              <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; color: var(--it-emerald);">Positive Transformative Impacts</h3>
+          </div>
+          <div class="overview-points-list">
+            <div class="overview-point-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <span><strong>Universal Democratization:</strong> Global access to world-class education, medical diagnostics, and digital finance for underserved populations.</span>
+            </div>
+            <div class="overview-point-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <span><strong>Exponential Scientific Discovery:</strong> Accelerating clean fusion energy, CRISPR cures, and planetary climate modeling from decades into months.</span>
+            </div>
+            <div class="overview-point-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <span><strong>Automated Hazardous Labor:</strong> Eliminating human fatalities in mining, high-voltage electrical repair, firefighting, and toxic manufacturing.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-overview-box box-negative">
+          <div class="overview-box-header">
+            <div class="overview-box-icon">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; color: var(--no-it-crimson);">Critical Challenges & Risks</h3>
+          </div>
+          <div class="overview-points-list">
+            <div class="overview-point-item">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span><strong>Automation Disruption:</strong> Cognitive and physical job displacement outpacing worker retraining programs, sparking labor anxiety.</span>
+            </div>
+            <div class="overview-point-item">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span><strong>Cyber-Warfare & Infrastructure Fragility:</strong> Cloud-connected water, power grids, and hospital telemetry vulnerable to state-sponsored sabotage.</span>
+            </div>
+            <div class="overview-point-item">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span><strong>Surveillance & Digital Divide:</strong> Loss of individual privacy, dark algorithmic patterns, and deepening socio-economic inequality.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem -> Impact -> Solution Matrix -->
+      <div class="matrix-container">
+        <div class="matrix-header">
+          <div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 6px;">
+              <i class="fa-solid fa-diagram-project" style="color: var(--sol-purple); margin-right: 8px;"></i>
+              Problem &rarr; Impact &rarr; Possible Solution Matrix
+            </h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">Practical actionable roadmaps to resolve major 21st-century technological challenges.</p>
+          </div>
+          <div class="matrix-filter-pills">
+            <button class="matrix-filter-btn active" data-category="all">All Challenges</button>
+            <button class="matrix-filter-btn" data-category="Economy">Economy</button>
+            <button class="matrix-filter-btn" data-category="Security">Security</button>
+            <button class="matrix-filter-btn" data-category="Human Rights">Privacy</button>
+            <button class="matrix-filter-btn" data-category="Wellbeing">Wellbeing</button>
+            <button class="matrix-filter-btn" data-category="Social Equity">Digital Divide</button>
+            <button class="matrix-filter-btn" data-category="Environment">E-Waste</button>
+          </div>
+        </div>
+
+        <div class="matrix-grid" id="matrixGridContainer">
+          <!-- Injected via JavaScript from assets/data.js -->
+        </div>
+      </div>
+
+      <!-- Responsible IT for Humanity Closing Section -->
+      <div class="responsible-it-banner">
+        <div style="text-align: center; max-width: 780px; margin: 0 auto;">
+          <span class="stage-step-tag step-tag-with-it" style="margin-bottom: 12px;">
+            <i class="fa-solid fa-hands-holding-circle"></i> Ethical Manifesto
+          </span>
+          <h3 style="font-size: 1.85rem; margin-bottom: 14px;">Responsible IT for Humanity's Future</h3>
+          <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.6;">
+            Information Technology is the most potent amplifier of human capability ever invented. To secure a thriving, equitable future, technology must remain a benevolent servant of humanity governed by four foundational ethical pillars:
+          </p>
+        </div>
+
+        <div class="responsible-grid">
+          <div class="responsible-pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-user-shield"></i></div>
+            <h4 class="pillar-title">Human-in-the-Loop</h4>
+            <p class="pillar-desc">Ensuring critical decisions in medicine, justice, and defense maintain human moral oversight and veto power.</p>
+          </div>
+          <div class="responsible-pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-fingerprint"></i></div>
+            <h4 class="pillar-title">Privacy-by-Design</h4>
+            <p class="pillar-desc">Building zero-trust encryption and sovereign verifiable identity into digital architecture from day one.</p>
+          </div>
+          <div class="responsible-pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-seedling"></i></div>
+            <h4 class="pillar-title">Green Computing</h4>
+            <p class="pillar-desc">Powering all hyper-scale cloud nodes and AI clusters exclusively with 100% renewable energy and closed-loop liquid cooling.</p>
+          </div>
+          <div class="responsible-pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-bridge-water"></i></div>
+            <h4 class="pillar-title">Universal Inclusion</h4>
+            <p class="pillar-desc">Guaranteeing affordable high-speed connectivity and open-source educational resources as universal human rights.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Advanced Feature: Evolution Timeline (1950 - 2050)
+       ========================================================================== -->
+  <section class="timeline-section" id="timeline-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag tag-it">
+          <i class="fa-solid fa-clock"></i> Century of Computing
+        </div>
+        <h2 class="section-title">Evolution of IT: From Punchcards to Quantum AI</h2>
+        <p class="section-desc">Trace the century-long acceleration of computing from 1950s vacuum tubes to 2050 post-scarcity synthesis.</p>
+      </div>
+
+      <div class="timeline-track" id="timelineTrack">
+        <!-- Injected via JavaScript from assets/data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Advanced Feature: Build Your 2050 Smart City Simulator Game
+       ========================================================================== -->
+  <section class="city-builder-section" id="city-builder">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag tag-it">
+          <i class="fa-solid fa-city"></i> Interactive City Planning Game
+        </div>
+        <h2 class="section-title">Build Your 2050 Smart City</h2>
+        <p class="section-desc">Allocate your 100 technology credits across 5 core pillars to simulate your future city's happiness, carbon offset, and safety ratings.</p>
+      </div>
+
+      <div class="city-builder-box">
+        <div class="city-sliders-col">
+          <div class="budget-badge" id="budgetRemainingCounter">
+            <i class="fa-solid fa-coins"></i> 0 Credits Left
+          </div>
+          <div id="citySlidersContainer" style="display: flex; flex-direction: column; gap: 18px;">
+            <!-- Injected via JavaScript from assets/data.js -->
+          </div>
+        </div>
+
+        <div class="city-results-col">
+          <div class="city-score-circle">
+            <span class="city-score-val" id="cityHappinessVal">95%</span>
+            <span class="city-score-label">Happiness</span>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Civilization Score</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Dynamic evaluation based on current technology credit allocation.</p>
+
+          <div class="city-impact-bars">
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600;">
+              <span>Carbon Offset Index</span>
+              <span id="cityCarbonVal" style="color: var(--it-emerald);">92%</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600;">
+              <span>Disaster Resilience Rating</span>
+              <span id="citySafetyVal" style="color: var(--it-cyan);">94%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       College Presentation Interactive Tools (Scenario Simulator & Quiz)
+       ========================================================================== -->
+  <section class="presentation-section" id="presentation-tools">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag tag-it">
+          <i class="fa-solid fa-chalkboard-user"></i> Presentation & Demonstration Suite
+        </div>
+        <h2 class="section-title">Interactive Demonstration Tools</h2>
+        <p class="section-desc">
+          Live tools designed for classroom presentation, professor evaluations, and audience participation.
+        </p>
+      </div>
+
+      <!-- Feature 1: Global Tech Level Interactive Scenario Simulator -->
+      <div class="simulator-box">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 4px;">
+              <i class="fa-solid fa-gauge-high" style="color: var(--it-cyan); margin-right: 8px;"></i>
+              Global Tech Level Scenario Simulator
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Slide the global IT adoption level to observe real-time calculated impacts on civilization benchmarks.</p>
+          </div>
+          <button class="btn btn-tertiary" id="openSummaryBtn" style="padding: 8px 18px; font-size: 0.88rem;">
+            <i class="fa-solid fa-file-lines"></i> View Presentation Dossier
+          </button>
+        </div>
+
+        <div class="slider-wrapper">
+          <div class="slider-labels">
+            <span>0% (Manual Dark Age)</span>
+            <span>25% (1980s Mainframe)</span>
+            <span>50% (Current 2026)</span>
+            <span>75% (Smart Era 2035)</span>
+            <span>100% (Hyper-Tech 2050)</span>
+          </div>
+          <input type="range" min="0" max="100" step="25" value="50" class="tech-slider" id="techLevelSlider" aria-label="Global Tech Level Slider">
+        </div>
+
+        <div class="sim-output-grid">
+          <div>
+            <span class="stage-step-tag step-tag-with-it" style="margin-bottom: 8px;">Simulated Epoch State</span>
+            <h4 class="sim-status-title" id="simStatusTitle" style="color: var(--it-cyan);">50% - Current Baseline (2026): Hybrid Connected Civilization</h4>
+            <p class="sim-status-desc" id="simStatusDesc">
+              Cloud computing, smartphones, 5G networks, e-commerce, electric vehicles, and emerging generative AI tools.
+            </p>
+            <div style="margin-top: 16px; font-size: 0.88rem; color: var(--text-dim);">
+              <div><strong>Supply Chain Latency:</strong> <span id="simLatencyVal" style="color: var(--text-main);">7 Days</span></div>
+              <div><strong>Fatal Traffic Risk:</strong> <span id="simAccidentsVal" style="color: var(--text-main);">Moderate-Low (45%)</span></div>
+            </div>
+          </div>
+
+          <div class="sim-metrics-bars">
+            <div class="sim-metric-row">
+              <div class="sim-metric-meta">
+                <span>Global Economic Velocity</span>
+                <span id="simGdpVal" style="color: var(--it-cyan);">75%</span>
+              </div>
+              <div class="sim-progress-track">
+                <div class="sim-progress-fill" id="simGdpFill" style="width: 75%;"></div>
+              </div>
+            </div>
+
+            <div class="sim-metric-row">
+              <div class="sim-metric-meta">
+                <span>Healthcare Diagnostic Precision</span>
+                <span id="simHealthVal" style="color: var(--it-emerald);">84%</span>
+              </div>
+              <div class="sim-progress-track">
+                <div class="sim-progress-fill" id="simHealthFill" style="width: 84%; background: linear-gradient(90deg, #10b981, #06b6d4);"></div>
+              </div>
+            </div>
+
+            <div class="sim-metric-row">
+              <div class="sim-metric-meta">
+                <span>Universal Knowledge Access Index</span>
+                <span id="simKnowVal" style="color: var(--sol-purple);">70%</span>
+              </div>
+              <div class="sim-progress-track">
+                <div class="sim-progress-fill" id="simKnowFill" style="width: 70%; background: linear-gradient(90deg, #8b5cf6, #ec4899);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: Interactive Audience Presentation Quiz -->
+      <div class="quiz-box">
+        <div class="quiz-header">
+          <div class="quiz-step-indicator" id="quizStepIndicator">Question 1 of 4</div>
+          <div class="quiz-score-badge" id="quizScoreBadge">Score: 0 / 4</div>
+        </div>
+
+        <h3 class="quiz-question-text" id="quizQuestion">Loading question...</h3>
+
+        <div class="quiz-options-list" id="quizOptions">
+          <!-- Injected via JavaScript from assets/data.js -->
+        </div>
+
+        <div class="quiz-feedback-box" id="quizFeedbackBox">
+          <div style="font-weight: 700; margin-bottom: 6px; color: var(--it-cyan);">
+            <i class="fa-solid fa-circle-info"></i> Evaluation Note:
+          </div>
+          <div class="quiz-explanation-text" id="quizExplanation"></div>
+          <div class="quiz-actions">
+            <button class="btn btn-with-it" id="quizNextBtn" style="padding: 10px 24px; font-size: 0.9rem;">
+              Next Question <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Full-Screen Presentation Slide Deck (for Projector)
+       ========================================================================== -->
+  <div class="presentation-deck-overlay" id="presentationDeckOverlay">
+    <div class="deck-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="brand-icon"><i class="fa-solid fa-microchip"></i></div>
+        <span style="font-weight: 700; font-size: 1.1rem;">TechHorizon &bull; Slide Mode</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span id="deckSlideIndicator" style="font-size: 0.9rem; color: var(--it-cyan); font-weight: 600;">Slide 1 of 4</span>
+        <button class="btn btn-tertiary" id="closeDeckBtn" style="padding: 6px 14px; font-size: 0.85rem;">
+          <i class="fa-solid fa-xmark"></i> Exit (Esc)
+        </button>
+      </div>
+    </div>
+
+    <div class="deck-slide-container" id="deckSlideContent">
+      <!-- Injected via JavaScript from assets/app.js -->
+    </div>
+
+    <div class="deck-footer">
+      <div style="font-size: 0.85rem; color: var(--text-dim);">
+        Use <kbd>&larr;</kbd> and <kbd>&rarr;</kbd> arrow keys to navigate slides.
+      </div>
+      <div style="display: flex; gap: 10px;">
+        <button class="btn btn-tertiary" id="prevSlideBtn" style="padding: 8px 18px; font-size: 0.9rem;">
+          <i class="fa-solid fa-arrow-left"></i> Previous
+        </button>
+        <button class="btn btn-with-it" id="nextSlideBtn" style="padding: 8px 22px; font-size: 0.9rem;">
+          Next <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Global Search Modal (Ctrl + K)
+       ========================================================================== -->
+  <div class="search-modal-overlay" id="searchModal">
+    <div class="search-modal-box">
+      <div class="search-input-wrapper">
+        <i class="fa-solid fa-magnifying-glass" style="color: var(--it-cyan);"></i>
+        <input type="text" id="globalSearchInput" class="search-input-field" placeholder="Search sectors, technologies, pitfalls, or solutions...">
+        <span style="font-size: 0.75rem; background: var(--bg-tertiary); padding: 3px 8px; border-radius: 4px; color: var(--text-dim);">ESC</span>
+      </div>
+      <div class="search-results-list" id="searchResultsContainer">
+        <!-- Injected via JavaScript from assets/app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Presentation Dossier Modal (Printable / Eval Sheet)
+       ========================================================================== -->
+  <div class="modal-overlay" id="summaryModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="closeSummaryBtn" aria-label="Close Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 16px; margin-bottom: 20px;">
+        <span class="stage-step-tag step-tag-with-it">College Presentation Summary Dossier</span>
+        <h2 style="font-size: 1.6rem; margin-top: 8px;">Future Without IT vs Future With IT</h2>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Executive project abstract, key comparative findings, and strategic takeaways.</p>
+      </div>
+
+      <div style="font-size: 0.92rem; line-height: 1.6; color: var(--text-muted); display: flex; flex-direction: column; gap: 16px;">
+        <div>
+          <h4 style="color: var(--text-main); margin-bottom: 4px;">1. Project Objective & Core Concept</h4>
+          <p>This project conducts a comprehensive comparative inquiry into the pivotal role of Information Technology in shaping human civilization. By contrasting a future empowered by IT against a counterfactual world without IT, it illustrates why technology is essential for solving planetary challenges while outlining guardrails against catastrophic technological risks.</p>
+        </div>
+
+        <div>
+          <h4 style="color: var(--text-main); margin-bottom: 4px;">2. Key Domain Takeaways</h4>
+          <ul style="list-style: disc; margin-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+            <li><strong>Healthcare:</strong> AI predictive diagnostics and robotic surgery boost life expectancy to 90+, whereas a world without IT suffers severe delays and preventable epidemic mortality.</li>
+            <li><strong>Education:</strong> Immersive VR spatial learning and adaptive AI mentors democratize universal literacy, compared to extreme knowledge isolation with physical paper textbooks.</li>
+            <li><strong>Commerce & Finance:</strong> Instant quantum finance prevents liquidity paralysis, whereas a cash-only economy shrinks global trade by over 70%.</li>
+            <li><strong>Mobility:</strong> Synchronized V2X autonomous networks eradicate 1.3M annual traffic fatalities.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: var(--text-main); margin-bottom: 4px;">3. Ethical Governance Framework</h4>
+          <p>To overcome job displacement, cybersecurity vulnerabilities, and privacy erosion, societies must enforce Privacy-by-Design, lifelong reskilling programs, green renewable computing architectures, and human-in-the-loop governance.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-color); display: flex; justify-content: flex-end; gap: 12px;">
+        <button class="btn btn-tertiary" id="printSummaryBtn" style="padding: 8px 20px; font-size: 0.9rem;">
+          <i class="fa-solid fa-print"></i> Print / Save as PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand">
+            <div class="brand-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <span>Tech<span class="brand-highlight">Horizon</span></span>
+          </div>
+          <p class="footer-brand-desc">
+            A comprehensive comparative platform evaluating the trajectory of Information Technology in global society. Designed for academic presentation, debate, and future policy design.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Main Sections</h4>
+          <div class="footer-links">
+            <a href="#future-with-it" class="footer-link">Future with IT</a>
+            <a href="#future-without-it" class="footer-link">Future without IT</a>
+            <a href="#impact-solutions" class="footer-link">Impact & Solutions</a>
+            <a href="#comparison-engine" class="footer-link">Sector Comparison</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Interactive Modules</h4>
+          <div class="footer-links">
+            <a href="#visual-split" class="footer-link">50/50 Drag Slider</a>
+            <a href="#timeline-section" class="footer-link">Evolution Timeline</a>
+            <a href="#city-builder" class="footer-link">2050 City Simulator</a>
+            <a href="#presentation-tools" class="footer-link">Presentation Quiz</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Academic Details</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">
+            <strong>Project Title:</strong> Future Without IT vs Future With IT<br>
+            <strong>Presentation Level:</strong> College Final-Year Presentation & Demonstration<br>
+            <strong>Stack:</strong> HTML5, CSS3, ES6+ JavaScript
+          </p>
+          <button class="btn btn-tertiary" id="footerPresentBtn" onclick="document.getElementById('openPresentationModeBtn').click()" style="padding: 6px 14px; font-size: 0.85rem; width: fit-content;">
+            <i class="fa-solid fa-display"></i> Open Slide Deck
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>TechHorizon Project</strong> &bull; Future Without IT vs Future With IT. All Rights Reserved.
+        </div>
+        <a href="#navbar" class="back-to-top-btn">
+          Back to Top <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

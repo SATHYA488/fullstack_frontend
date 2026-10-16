@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input {
+      margin: 5px;
+      padding: 8px;
+    }
+    button {
+      padding: 8px 12px;
+      margin: 5px;
+      cursor: pointer;
+    }
+   
+  </style>
+</head>
+<body>
+  <h2>Employee Registration</h2>
+  
+  <form id="employeeForm">
+    <input type="text" id="empName" placeholder="Employee Name" required><br>
+    <input type="text" id="department" placeholder="Department" required><br>
+    <input type="number" id="salary" placeholder="Salary" required><br>
+    <button id="addEmployee">Add Employee</button>
+  </form>
+  
+  <h3>Employee List:</h3>
+  <table id="employeeTable">
+    <tr>
+      <th>Name</th>
+      <th>Department</th>
+      <th>Salary</th>
+    </tr>
+  </table>
+  
+ <script src="assets/js/task2.js"></script>
+</body>
+</html>
